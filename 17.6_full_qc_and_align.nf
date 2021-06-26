@@ -80,26 +80,24 @@ process multiqc {
 myDir3 = file('/home/jbrenton/nextflow_test/output/multiqc')
 myDir3.mkdir()
 
-publishDir '/home/jbrenton/nextflow_test/output/multiqc', mode: 'copy', overwrite: true
+publishDir "/home/jbrenton/nextflow_test/output/multiqc", mode: 'copy', overwrite: true
 
     input:
     path(htmls)
     val(files)
 
     output:
-    stdout
+    path("*")
 
     script:
       """
-      multiqc $files -n "multiqc_exp" -o /home/jbrenton/nextflow_test/output/multiqc
+      multiqc $files -n "multiqc_exp"
       """
 }
 
 process STAR_genome_gen {
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/genome_dir', mode: 'copy', overwrite: true
-
-storeDir '/home/jbrenton/nextflow_test/output/STAR/genome_dir'
 
     output:
     path("*"), emit: stdout_genome_gen
@@ -117,7 +115,6 @@ storeDir '/home/jbrenton/nextflow_test/output/STAR/genome_dir'
   --genomeFastaFiles /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa \
   --sjdbGTFfile /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.gtf \
   --sjdbOverhang 99
-
   """
 }
 
@@ -187,7 +184,6 @@ myDir2.mkdir()
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
 
-storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
 echo true
 
   input:
@@ -228,8 +224,6 @@ process STAR_merge {
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
 
-// storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
-
 echo true
 
     input:
@@ -250,7 +244,7 @@ process STAR_pass2 {
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
 
-storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
+// storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
     echo true
 
     input:
@@ -291,23 +285,29 @@ storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
 
 workflow {
   data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/files/*R{1,3}*.fastq.gz')
-// data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fastq.gz')
+//   data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*trimmed.fastq.gz')
 // data2.view { "value: $it" }
      fastp(data)
 	fastqc(fastp.out.reads)
-           multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
+	x=fastqc.out.html.collect().flatten().first()
+           multiqc(x, fastqc.out.fqc_files)
 
-  		STAR_genome_gen() 
-   		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect(), STAR_genome_gen.out.gdir_val)
+//	fastqc(data)
+//	x=fastqc.out.html.collect().flatten().first()
+//	multiqc(x, fastqc.out.fqc_files)
+//	multiqc('/home/jbrenton/nextflow_test/output/')
 
-			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
+
+		STAR_genome_gen() 
+		y=STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first()
+  		STAR_pass1_post_genome_gen(fastp.out.reads, y, STAR_genome_gen.out.gdir_val)
+			z=STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect()
+			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, z)
 
 // data=Channel.fromPath('/home/jbrenton/nextflow_test/output/STAR/align/*.tab')
 // data.view()
 // sj_loc='/home/jbrenton/nextflow_test/output/STAR/align'
 // STAR_merge(sj_loc, data.collect())
-
-
 
 //        STAR_1(fastp.out.reads)
 //	  data.view()
@@ -317,6 +317,6 @@ workflow {
 //	  STAR_1.out.sj_loc.view{"sj loc: $it"}
 //          STAR_merge(STAR_1.out.sj_loc, x)
 	
- 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
+// 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
       }
 
