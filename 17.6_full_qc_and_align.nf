@@ -284,23 +284,23 @@ storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
 }
 
 workflow {
-  data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/files/*R{1,3}*.fastq.gz')
-// data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fastq.gz')
+//  data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/files/*R{1,3}*.fastq.gz')
+  data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fastq.gz')
 // data2.view { "value: $it" }
-     fastp(data)
-	fastqc(fastp.out.reads)
-           multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
+//     fastp(data)
+//	fastqc(fastp.out.reads)
+//           multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
 
-//  		STAR_genome_gen() 
+//		STAR_genome_gen() 
 
 // y=STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect()
-   		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
+// 		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
 
 //	STAR_pass1_post_genome_gen(data, y, STAR_genome_gen.out.gdir_val)
 //  STAR_pass1_post_genome_gen(data, STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect(), STAR_genome_gen.out.gdir_val)
 
 // need to collect below as after first instance passes the sj_loc would go ahead before all are done
-			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
+//			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
 
 // data=Channel.fromPath('/home/jbrenton/nextflow_test/output/STAR/align/*.tab')
 // data.view()
@@ -317,6 +317,9 @@ workflow {
 //	  STAR_1.out.sj_loc.view{"sj loc: $it"}
 //          STAR_merge(STAR_1.out.sj_loc, x)
 	
- 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
-      }
+// 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
+
+merged_tab=file('/home/jbrenton/nextflow_test/output/STAR/align/merged_junctions.SJ.out.tab')
+STAR_pass2(data, merged_tab)  
+}
 

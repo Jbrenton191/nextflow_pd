@@ -10,3 +10,5 @@ if [ $limits -lt 1000000 ]; then
 else
 	limits=$limits
 fi
+
+echo "$limits"
