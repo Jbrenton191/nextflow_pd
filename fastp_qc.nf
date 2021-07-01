@@ -96,11 +96,11 @@ publishDir '/home/jbrenton/nextflow_test/output/multiqc', mode: 'copy', overwrit
     path(files)
 
     output:
-	stdout
+	path('*')
 
 	script:
     	"""
-    	multiqc $files -o /home/jbrenton/nextflow_test/output/multiqc -n "multiqc_exp"
+	multiqc $files -o . -n "multiqc_exp"
     	"""
 }
 

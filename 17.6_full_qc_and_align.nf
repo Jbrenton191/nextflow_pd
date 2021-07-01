@@ -80,7 +80,7 @@ process multiqc {
 myDir3 = file('/home/jbrenton/nextflow_test/output/multiqc')
 myDir3.mkdir()
 
-publishDir "/home/jbrenton/nextflow_test/output/multiqc", mode: 'copy', overwrite: true
+publishDir '/home/jbrenton/nextflow_test/output/multiqc', mode: 'copy', overwrite: true
 
     input:
     path(htmls)
@@ -91,7 +91,7 @@ publishDir "/home/jbrenton/nextflow_test/output/multiqc", mode: 'copy', overwrit
 
     script:
       """
-      multiqc $files -n "multiqc_exp"
+      multiqc $files -n "multiqc_exp" -o .
       """
 }
 
@@ -99,26 +99,7 @@ process STAR_genome_gen {
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/genome_dir', mode: 'copy', overwrite: true
 
-    output:
-    path("*"), emit: stdout_genome_gen
-    val(gdir_val), emit: gdir_val
-
-    script:
-    gdir_val=file('/home/jbrenton/nextflow_test/output/STAR/genome_dir')
-    """
-  cp /data/references/fasta/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa /home/jbrenton/nextflow_test/output/STAR/genome_dir
-  cp /data/references/ensembl/gtf_gff3/v97/Homo_sapiens.GRCh38.97.gtf /home/jbrenton/nextflow_test/output/STAR/genome_dir
-
-  STAR --runThreadN 20 \
-  --runMode genomeGenerate \
-  --genomeDir /home/jbrenton/nextflow_test/output/STAR/genome_dir \
-  --genomeFastaFiles /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa \
-  --sjdbGTFfile /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.gtf \
-  --sjdbOverhang 99
-  """
-}
-
-process STAR_pass1_post_genome_gen {
+// storeDir '/home/jbrenton/nextflow_test/output/STAR/genome_dir'
 
 myDir = file('/home/jbrenton/nextflow_test/output/STAR')
 myDir.mkdir()
@@ -126,13 +107,32 @@ myDir.mkdir()
 myDir2 = file('/home/jbrenton/nextflow_test/output/STAR/genome_dir')
 myDir2.mkdir()
 
+    output:
+    path("*.tab"), emit: stdout_genome_gen
+    val(gdir_val), emit: gdir_val
+    path("*"), emit: full_stdout_genome_gen	
+
+    script:
+    gdir_val=file('/home/jbrenton/nextflow_test/output/STAR/genome_dir')
+    """
+cp /data/references/fasta/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa /home/jbrenton/nextflow_test/output/STAR/genome_dir
+cp /data/references/ensembl/gtf_gff3/v97/Homo_sapiens.GRCh38.97.gtf /home/jbrenton/nextflow_test/output/STAR/genome_dir
+
+STAR --runThreadN 25 \
+--runMode genomeGenerate \
+--genomeDir . \
+--genomeFastaFiles /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa \
+--sjdbGTFfile /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.gtf \
+--sjdbOverhang 99
+  """
+}
+
+process STAR_pass1_post_genome_gen {
+
 myDir2 = file('/home/jbrenton/nextflow_test/output/STAR/align')
 myDir2.mkdir()
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
-
-storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
-echo true
 
   input:
   tuple val(sampleID), path(reads)
@@ -150,24 +150,23 @@ echo true
   echo ${reads[0]}
   echo ${reads[1]}
 
-  STAR --runThreadN 15 \
-  --genomeDir $genome_dir \
-  --readFilesIn  ${reads[0]}, ${reads[1]} \
-  --readFilesCommand zcat \
-  --outFileNamePrefix ${sampleID}_mapped.BAM_ \
-  --outReadsUnmapped Fastx \
-  --outSAMtype BAM SortedByCoordinate \
-  --outFilterType BySJout \
-  --outFilterMultimapNmax 1 \
-  --outFilterMismatchNmax 999 \
-  --outFilterMismatchNoverReadLmax 0.04 \
-  --alignIntronMin 20 \
-  --alignIntronMax 1000000 \
-  --alignMatesGapMax 1000000 \
-  --alignSJoverhangMin 8 \
-  --alignSJDBoverhangMin 3
-
-  """
+  STAR --runThreadN 25 \
+--genomeDir $genome_dir \
+--readFilesIn  ${reads[0]}, ${reads[1]} \
+--readFilesCommand zcat \
+--outFileNamePrefix ${sampleID}_mapped.BAM_ \
+--outReadsUnmapped Fastx \
+--outSAMtype BAM SortedByCoordinate \
+--outFilterType BySJout \
+--outFilterMultimapNmax 1 \
+--outFilterMismatchNmax 999 \
+--outFilterMismatchNoverReadLmax 0.04 \
+--alignIntronMin 20 \
+--alignIntronMax 1000000 \
+--alignMatesGapMax 1000000 \
+--alignSJoverhangMin 8 \
+--alignSJDBoverhangMin 3
+"""
 }
 
 
@@ -184,6 +183,7 @@ myDir2.mkdir()
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
 
+storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
 echo true
 
   input:
@@ -200,7 +200,7 @@ echo true
   echo ${reads[0]}
   echo ${reads[1]}
 
-  STAR --runThreadN 15 \
+  STAR --runThreadN 25 \
   --genomeDir /home/jbrenton/nextflow_test/output/STAR/genome_dir \
   --readFilesIn  ${reads[0]}, ${reads[1]} \
   --readFilesCommand zcat \
@@ -216,13 +216,14 @@ echo true
   --alignMatesGapMax 1000000 \
   --alignSJoverhangMin 8 \
   --alignSJDBoverhangMin 3
-
   """
 }
 
 process STAR_merge {
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
+
+// storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
 
 echo true
 
@@ -244,7 +245,7 @@ process STAR_pass2 {
 
 publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overwrite: true
 
-// storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
+storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
     echo true
 
     input:
@@ -279,35 +280,33 @@ publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overw
   --alignSJDBoverhangMin 3 \
   --sjdbFileChrStartEnd $merged_tab \
   --limitSjdbInsertNsj \$limits
-
   """
 }
 
 workflow {
   data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/files/*R{1,3}*.fastq.gz')
-//   data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*trimmed.fastq.gz')
+// data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fastq.gz')
 // data2.view { "value: $it" }
      fastp(data)
 	fastqc(fastp.out.reads)
-	x=fastqc.out.html.collect().flatten().first()
-           multiqc(x, fastqc.out.fqc_files)
+           multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
 
-//	fastqc(data)
-//	x=fastqc.out.html.collect().flatten().first()
-//	multiqc(x, fastqc.out.fqc_files)
-//	multiqc('/home/jbrenton/nextflow_test/output/')
+//  		STAR_genome_gen() 
 
+// y=STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect()
+//   		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.stdout_genome_gen.collect(), STAR_genome_gen.out.gdir_val)
 
-		STAR_genome_gen() 
-		y=STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first()
-  		STAR_pass1_post_genome_gen(fastp.out.reads, y, STAR_genome_gen.out.gdir_val)
-			z=STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect()
-			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, z)
+//	STAR_pass1_post_genome_gen(data, y, STAR_genome_gen.out.gdir_val)
+//  STAR_pass1_post_genome_gen(data, STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect(), STAR_genome_gen.out.gdir_val)
+
+//			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
 
 // data=Channel.fromPath('/home/jbrenton/nextflow_test/output/STAR/align/*.tab')
 // data.view()
 // sj_loc='/home/jbrenton/nextflow_test/output/STAR/align'
 // STAR_merge(sj_loc, data.collect())
+
+
 
 //        STAR_1(fastp.out.reads)
 //	  data.view()
