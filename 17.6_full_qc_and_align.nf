@@ -108,9 +108,9 @@ myDir2 = file('/home/jbrenton/nextflow_test/output/STAR/genome_dir')
 myDir2.mkdir()
 
     output:
-    path("*.tab"), emit: stdout_genome_gen
-    val(gdir_val), emit: gdir_val
-    path("*"), emit: full_stdout_genome_gen	
+//    path("*.tab"), emit: stdout_genome_gen
+    val("${gdir_val}"), emit: gdir_val
+//    path("*"), emit: full_stdout_genome_gen	
 
     script:
     gdir_val=file('/home/jbrenton/nextflow_test/output/STAR/genome_dir')
@@ -120,7 +120,7 @@ cp /data/references/ensembl/gtf_gff3/v97/Homo_sapiens.GRCh38.97.gtf /home/jbrent
 
 STAR --runThreadN 25 \
 --runMode genomeGenerate \
---genomeDir . \
+--genomeDir $gdir_val \
 --genomeFastaFiles /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa \
 --sjdbGTFfile /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.gtf \
 --sjdbOverhang 99
@@ -136,7 +136,7 @@ publishDir '/home/jbrenton/nextflow_test/output/STAR/align', mode: 'copy', overw
 
   input:
   tuple val(sampleID), path(reads)
-  path(gg_stdout)
+//  path(gg_stdout)
   val(genome_dir)
 
   output:
@@ -294,12 +294,13 @@ workflow {
 //  		STAR_genome_gen() 
 
 // y=STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect()
-//   		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.stdout_genome_gen.collect(), STAR_genome_gen.out.gdir_val)
+   		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
 
 //	STAR_pass1_post_genome_gen(data, y, STAR_genome_gen.out.gdir_val)
 //  STAR_pass1_post_genome_gen(data, STAR_genome_gen.out.stdout_genome_gen.collect().flatten().first().collect(), STAR_genome_gen.out.gdir_val)
 
-//			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
+// need to collect below as after first instance passes the sj_loc would go ahead before all are done
+			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
 
 // data=Channel.fromPath('/home/jbrenton/nextflow_test/output/STAR/align/*.tab')
 // data.view()
@@ -316,6 +317,6 @@ workflow {
 //	  STAR_1.out.sj_loc.view{"sj loc: $it"}
 //          STAR_merge(STAR_1.out.sj_loc, x)
 	
-// 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
+ 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
       }
 
