@@ -1,5 +1,21 @@
 nextflow.enable.dsl=2
 
+process decoy_gen {
+
+
+script:
+"""
+wget ftp://ftp.ensembl.org/pub/release-97/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
+wget ftp://ftp.ensembl.org/pub/release-97/fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz
+
+gunzip Homo_sapiens.GRCh38.cdna.all.fa.gz
+gunzip Homo_sapiens.GRCh38.ncrna.fa.gz
+
+cat Homo_sapiens.GRCh38.97.cdna.all.fa Homo_sapiens.GRCh38.97.ncrna.fa > Homo_sapiens.GRCh38.97.cdna.all.ncrna.fa
+"""
+
+}
+
 process salmon_index_gen {
  echo true
 
