@@ -2,18 +2,34 @@ nextflow.enable.dsl=2
 
 process decoy_gen {
 
+publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
+
+cache = 'lenient' // (Best in HPC and shared file systems) Cache keys are created indexing input files path and size attributes
+
+output:
+path("gentrome.fa"), emit: gentrome
+path("decoys.txt"), emit: decoys
+path("*.bak"), emit: bak
 
 script:
 """
-wget ftp://ftp.ensembl.org/pub/release-97/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
-wget ftp://ftp.ensembl.org/pub/release-97/fasta/homo_sapiens/ncrna/Homo_sapiens.GRCh38.ncrna.fa.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.pc_transcripts.fa.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.lncRNA_transcripts.fa.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/GRCh38.p13.genome.fa.gz
 
-gunzip Homo_sapiens.GRCh38.cdna.all.fa.gz
-gunzip Homo_sapiens.GRCh38.ncrna.fa.gz
+gunzip gencode.v38.pc_transcripts.fa.gz
+gunzip gencode.v38.lncRNA_transcripts.fa.gz
+gunzip GRCh38.p13.genome.fa.gz
 
-cat Homo_sapiens.GRCh38.97.cdna.all.fa Homo_sapiens.GRCh38.97.ncrna.fa > Homo_sapiens.GRCh38.97.cdna.all.ncrna.fa
+cat gencode.v38.pc_transcripts.fa gencode.v38.lncRNA_transcripts.fa GRCh38.p13.genome.fa > gentrome.fa
+
+grep "^>" GRCh38.p13.genome.fa | cut -d " " -f 1 > decoys.txt
+sed -i.bak -e 's/>//g' decoys.txt
 """
 
+/*
+ * salmon index -t gentrome.fa.gz -d decoys.txt -p 12 -i salmon_index --gencode
+ */
 }
 
 process salmon_index_gen {
@@ -30,17 +46,19 @@ publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 
 // println myDir2
 
+	input:
+	path(gentrome)
+	path(decoys)
+
 	output:
-	path("*index"), emit: index_files
-	val("$transcript_index_loc"), emit: s_index
+	stdout emit: index_files
+	val(transcript_index_loc), emit: s_index
 	
 	script:
-	transcript_file=file("${workflow.projectDir}/*transcripts.fa.gz")
-	transcript_index_loc="/home/jbrenton/nextflow_test/output/Salmon/salmon_transcripts_index"
+	transcript_index_loc="/home/jbrenton/nextflow_test/output/Salmon/salmon_index"
 	"""
-	echo "${transcript_file[0]}"
 	echo $transcript_index_loc
-	salmon index -t ${transcript_file[0]} -i salmon_transcripts_index -k 31
+	salmon index -t $gentrome -i salmon_index -k 31 -d $decoys -p 20
 	"""
 }
 
@@ -54,11 +72,14 @@ publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 	tuple val(meta), path(reads)
 
 	output:
-	tuple val(meta), path("$meta"), emit: quant_dirs
+	path("$meta"), emit: quant_dirs
 
 	 script:
    	 """
-	salmon quant -i $s_index -l ISR -1 ${reads[0]} -2 ${reads[1]} --useVBOpt --numBootstraps 30 --seqBias --gcBias --posBias -o $meta --validateMappings --rangeFactorizationBins 4 --threads 30
+	echo $meta
+	echo $s_index
+
+salmon quant -i $s_index -l ISR -1 ${reads[0]} -2 ${reads[1]} --useVBOpt --numBootstraps 30 --seqBias --gcBias --posBias -o $meta --validateMappings --rangeFactorizationBins 4 --threads 30
 	"""
 }
 
@@ -70,9 +91,13 @@ data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fa
 // println "x is ${x}"
 // y=Channel.value("${x}/output")
 // y.view()
-	salmon_index_gen()
+	decoy_gen()
+	salmon_index_gen(decoy_gen.out.gentrome, decoy_gen.out.decoys)
 //	salmon_index_gen.out.index_files.view { println "index output: $it" }
 	salmon_index_gen.out.s_index.view {"Received: $it"}
+
+//	s_index="/home/jbrenton/nextflow_test/output/Salmon/salmon_index"
+//	salmon(s_index, data)
 	salmon(salmon_index_gen.out.s_index, data)
 // salmon(salmon_index_gen.out.s_index, fastp.out.reads)
    }

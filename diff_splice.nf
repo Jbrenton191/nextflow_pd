@@ -26,6 +26,8 @@ Rscript /home/jbrenton/RNAseqProcessing/analysis/leafcutter_ds_multi_pairwise.R 
 }
 
 workflow{
+// WHERE UP TO (7.6.21): had problem with recognition of prefix in next stage of group file and leafcutter analysis, NM prefix messed things up, and making group file R script!
+
 ex_file='/home/jbrenton/nextflow_test/output/leafcutter/Homo_sapiens.GRCh38.97_LC_exon_file.txt.gz'
 leafcutter_multi(ex_file)
 }

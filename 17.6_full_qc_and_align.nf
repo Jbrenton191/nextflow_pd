@@ -204,7 +204,7 @@ echo true
   --genomeDir /home/jbrenton/nextflow_test/output/STAR/genome_dir \
   --readFilesIn  ${reads[0]}, ${reads[1]} \
   --readFilesCommand zcat \
-  --outFileNamePrefix ${sampleID}_mapped.BAM_ \
+  --outFileNamePrefix ${sampleID}_ \
   --outReadsUnmapped Fastx \
   --outSAMtype BAM SortedByCoordinate \
   --outFilterType BySJout \
@@ -266,7 +266,7 @@ storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
   --genomeDir /home/jbrenton/nextflow_test/output/STAR/genome_dir \
   --readFilesIn  ${reads[0]}, ${reads[1]} \
   --readFilesCommand zcat \
-  --outFileNamePrefix ${sampleID}_mapped.BAM_ \
+  --outFileNamePrefix ${sampleID}_ \
   --outReadsUnmapped Fastx \
   --outSAMtype BAM SortedByCoordinate \
   --outFilterType BySJout \
