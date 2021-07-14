@@ -1,0 +1,86 @@
+Jul-12 19:40:29.693 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf_pipe_pt1.nf
+Jul-12 19:40:29.773 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.1
+Jul-12 19:40:29.793 [main] INFO  nextflow.cli.CmdRun - Launching `nf_pipe_pt1.nf` [wise_leakey] - revision: 2048d4ec10
+Jul-12 19:40:29.845 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
+Jul-12 19:40:29.846 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-12 19:40:29.848 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Jul-12 19:40:29.853 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-12 19:40:29.854 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-12 19:40:29.857 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jul-12 19:40:29.865 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-12 19:40:29.905 [main] DEBUG nextflow.Session - Session uuid: 485f5ccc-037a-4573-8b88-8834437f296c
+Jul-12 19:40:29.905 [main] DEBUG nextflow.Session - Run name: wise_leakey
+Jul-12 19:40:29.907 [main] DEBUG nextflow.Session - Executor pool size: 256
+Jul-12 19:40:29.936 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.1 build 5556
+  Created: 14-05-2021 15:20 UTC (16:20 BST)
+  System: Linux 5.4.0-74-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 811398@drihpc1 [128.40.163.130]
+  CPUs: 256 - Mem: 1007.5 GB (7.5 GB) - Swap: 8 GB (8 GB)
+Jul-12 19:40:29.957 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/work [nfs]
+Jul-12 19:40:29.957 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/bin
+Jul-12 19:40:29.966 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-12 19:40:29.976 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-12 19:40:30.272 [main] DEBUG nextflow.Session - Session start invoked
+Jul-12 19:40:31.223 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-12 19:40:31.264 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: STAR_merge, STAR_genome_gen, STAR_1, fastqc, genome_download, get_packages, STAR_pass1_post_genome_gen, STAR_pass2, multiqc, fastp
+Jul-12 19:40:31.314 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-12 19:40:31.314 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-12 19:40:31.318 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-12 19:40:31.324 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=1007.5 GB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Jul-12 19:40:31.424 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-12 19:40:31.424 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-12 19:40:31.430 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+Jul-12 19:40:31.431 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > genome_download
+Jul-12 19:40:31.431 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STAR_genome_gen
+Jul-12 19:40:31.432 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jul-12 19:40:31.432 [main] DEBUG nextflow.Session - Session await
+Jul-12 19:40:31.540 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-12 19:40:31.544 [Task submitter] INFO  nextflow.Session - [56/357dcd] Submitted process > genome_download
+Jul-12 19:45:31.526 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38]
+Jul-12 19:50:31.609 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38]
+Jul-12 19:54:31.732 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: genome_download; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38]
+Jul-12 19:54:31.757 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=768; maxQueueSize=2304; keepAlive=1m
+Jul-12 19:54:31.769 [Actor Thread 4] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38/GRCh38.p13.genome.fa -- Cause: java.nio.file.NoSuchFileException: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38/GRCh38.p13.genome.fa
+Jul-12 19:54:31.769 [Actor Thread 4] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38/gencode.v38.chr_patch_hapl_scaff.annotation.gtf -- Cause: java.nio.file.NoSuchFileException: /media/data/Jon/nextflow_pd/work/56/357dcd014082b6e669f84cbdec4a38/gencode.v38.chr_patch_hapl_scaff.annotation.gtf
+Jul-12 19:54:31.778 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-12 19:54:31.778 [Task submitter] INFO  nextflow.Session - [a7/519531] Submitted process > STAR_genome_gen
+Jul-12 19:54:31.809 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: STAR_genome_gen; status: COMPLETED; exit: 104; error: -; workDir: /media/data/Jon/nextflow_pd/work/a7/51953153765c4574f6d98bc93ce81f]
+Jul-12 19:54:31.956 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'STAR_genome_gen'
+
+Caused by:
+  Process `STAR_genome_gen` terminated with an error exit status (104)
+
+Command executed:
+
+  STAR --runThreadN 25 --runMode genomeGenerate --genomeDir /media/data/Jon/nextflow_pd/output/STAR/genome_dir --genomeFastaFiles GRCh38.p13.genome.fa --sjdbGTFfile gencode.v38.chr_patch_hapl_scaff.annotation.gtf --sjdbOverhang 99
+
+Command exit status:
+  104
+
+Command output:
+  	STAR --runThreadN 25 --runMode genomeGenerate --genomeDir /media/data/Jon/nextflow_pd/output/STAR/genome_dir --genomeFastaFiles GRCh38.p13.genome.fa --sjdbGTFfile gencode.v38.chr_patch_hapl_scaff.annotation.gtf --sjdbOverhang 99
+  	STAR version: 2.7.9a   compiled: 2021-05-04T09:43:56-0400 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+  Jul 12 19:54:31 ..... started STAR run
+  Jul 12 19:54:31 ... starting to generate Genome files
+
+Command error:
+  
+  EXITING because of INPUT ERROR: could not open genomeFastaFile: GRCh38.p13.genome.fa
+  
+  Jul 12 19:54:31 ...... FATAL ERROR, exiting
+
+Work dir:
+  /media/data/Jon/nextflow_pd/work/a7/51953153765c4574f6d98bc93ce81f
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Jul-12 19:54:31.962 [main] DEBUG nextflow.Session - Session await > all process finished
+Jul-12 19:54:31.963 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `STAR_genome_gen` terminated with an error exit status (104)
+Jul-12 19:54:31.975 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-12 19:54:31.983 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=14m; failedDuration=2ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jul-12 19:54:32.170 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jul-12 19:54:32.179 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

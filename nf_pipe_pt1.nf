@@ -1,16 +1,37 @@
 nextflow.enable.dsl=2
 
-myDir = file('${baseDir}/output')
+myDir = file("${baseDir}/output")
 myDir.mkdir()
 
-workDir = '${baseDir}'
+workDir = "${baseDir}"
+
+cache = 'lenient'
+
+process get_packages {
+cache = 'lenient'
+
+	publishDir "${baseDir}", mode: 'copy', overwrite: true
+
+	output:
+	stdout
+
+	script:
+	"""
+	Rscript $baseDir/Rpackage_download.R
+	git clone https://github.com/RHReynolds/RNAseqProcessing.git
+	"""
+// also assumes you have git in command line!
+// add in (also move yml file into folder): conda env create -f nextflow_env.yml -n nf_env
+}
 
 process fastp {
-  myDir2 = file('${baseDir}/output/fastp')
+  myDir2 = file("${baseDir}/output/fastp")
   myDir2.mkdir()
 
+cache = 'lenient'
+
     echo true
-    publishDir '${baseDir}/output/fastp', mode: 'copy', overwrite: true
+    publishDir "${baseDir}/output/fastp", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
@@ -55,10 +76,12 @@ process fastp {
 
 process fastqc {
 
-myDir2 = file('${baseDir}/output/fastqc')
+cache = 'lenient'
+
+myDir2 = file("${baseDir}/output/fastqc")
 myDir2.mkdir()
 
-publishDir '${baseDir}/output/fastqc', mode: 'copy', overwrite: true
+publishDir "${baseDir}/output/fastqc", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
@@ -69,7 +92,7 @@ publishDir '${baseDir}/output/fastqc', mode: 'copy', overwrite: true
     val("${fqc_files}"), emit: fqc_files
 
     script:
-    fqc_files='${baseDir}/output'
+    fqc_files="${baseDir}/output"
     """
     fastqc $reads -t 20
     """
@@ -77,10 +100,12 @@ publishDir '${baseDir}/output/fastqc', mode: 'copy', overwrite: true
 
 process multiqc {
 
-myDir3 = file('${baseDir}/output/multiqc')
+cache = 'lenient'
+
+myDir3 = file("${baseDir}/output/multiqc")
 myDir3.mkdir()
 
-publishDir '${baseDir}/output/multiqc', mode: 'copy', overwrite: true
+publishDir "${baseDir}/output/multiqc", mode: 'copy', overwrite: true
 
     input:
     path(htmls)
@@ -95,40 +120,69 @@ publishDir '${baseDir}/output/multiqc', mode: 'copy', overwrite: true
       """
 }
 
+process genome_download {
+
+cache = 'lenient'
+
+myDir3 = file("${baseDir}/output/reference_downloads")
+myDir3.mkdir()
+
+publishDir "${baseDir}/output/reference_downloads", mode: 'move', overwrite: true
+
+	output:
+	path("*.fa"), emit: fasta
+	path("*.gtf"), emit: gtf	
+	
+	script:
+	"""
+	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.chr_patch_hapl_scaff.annotation.gtf.gz
+	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/GRCh38.p13.genome.fa.gz
+
+	gunzip GRCh38.p13.genome.fa.gz
+	gunzip gencode.v38.chr_patch_hapl_scaff.annotation.gtf.gz
+	"""
+}
 process STAR_genome_gen {
 
-myDir = file('${baseDir}/output/STAR')
+cache = 'lenient'
+
+myDir = file("${baseDir}/output/STAR")
 myDir.mkdir()
 
-myDir2 = file('${baseDir}/output/STAR/genome_dir')
+myDir2 = file("${baseDir}/output/STAR/genome_dir")
 myDir2.mkdir()
 
-publishDir '${baseDir}/output/STAR/genome_dir', mode: 'copy', overwrite: true
+publishDir "${baseDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
 
+    input:
+    path(fasta)
+    path(gtf)
+    
     output:
     val("${gdir_val}"), emit: gdir_val
 
     script:
-    gdir_val=file('${baseDir}/output/STAR/genome_dir')
+    gdir_val=file("${baseDir}/output/STAR/genome_dir")
+    ref_dir="${baseDir}/output/reference_downloads"
     """
-cp /data/references/fasta/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa /home/jbrenton/nextflow_test/output/STAR/genome_dir
-cp /data/references/ensembl/gtf_gff3/v97/Homo_sapiens.GRCh38.97.gtf /home/jbrenton/nextflow_test/output/STAR/genome_dir
 
 STAR --runThreadN 25 \
 --runMode genomeGenerate \
 --genomeDir $gdir_val \
---genomeFastaFiles /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.dna.primary_assembly.fa \
---sjdbGTFfile /home/jbrenton/nextflow_test/output/STAR/genome_dir/Homo_sapiens.GRCh38.97.gtf \
+--genomeFastaFiles $ref_dir/$fasta \
+--sjdbGTFfile $ref_dir/$gtf \
 --sjdbOverhang 99
   """
 }
 
 process STAR_pass1_post_genome_gen {
 
-myDir2 = file('${baseDir}/output/STAR/align')
+cache = 'lenient'
+
+myDir2 = file("${baseDir}/output/STAR/align")
 myDir2.mkdir()
 
-publishDir '${baseDir}/output/STAR/align', mode: 'copy', overwrite: true
+publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 
   input:
   tuple val(sampleID), path(reads)
@@ -139,7 +193,7 @@ publishDir '${baseDir}/output/STAR/align', mode: 'copy', overwrite: true
   val(sj_loc), emit: sj_loc
 
   script:
-  sj_loc='${baseDir}/output/STAR/align'
+  sj_loc="${baseDir}/output/STAR/align"
   """
   echo ${sampleID}
   echo ${reads[0]}
@@ -167,29 +221,31 @@ publishDir '${baseDir}/output/STAR/align', mode: 'copy', overwrite: true
 
 process STAR_1 {
 
-myDir = file('${baseDir}/output/STAR')
+cache = 'lenient'
+
+myDir = file("${baseDir}/output/STAR")
 myDir.mkdir()
 
-myDir2 = file('${baseDir}/output/STAR/genome_dir')
+myDir2 = file("${baseDir}/output/STAR/genome_dir")
 myDir2.mkdir()
 
-myDir2 = file('${baseDir}/output/STAR/align')
+myDir2 = file("${baseDir}/output/STAR/align")
 myDir2.mkdir()
 
-publishDir '${baseDir}/output/STAR/align', mode: 'copy', overwrite: true
+publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 
-storeDir '${baseDir}/output/STAR/align'
+storeDir "${baseDir}/output/STAR/align"
 echo true
 
   input:
   tuple val(sampleID), path(reads)
 
   output:
-  path('*SJ.out.tab'), emit: sj_tabs
+  path("*SJ.out.tab"), emit: sj_tabs
   val(sj_loc), emit: sj_loc
 
   script:
-  sj_loc='${baseDir}/output/STAR/align'
+  sj_loc="${baseDir}/output/STAR/align"
   """
   echo ${sampleID}
   echo ${reads[0]}
@@ -216,9 +272,11 @@ echo true
 
 process STAR_merge {
 
-publishDir '${baseDir}/output/STAR/align', mode: 'copy', overwrite: true
+cache = 'lenient'
 
-// storeDir '/home/jbrenton/nextflow_test/output/STAR/align'
+publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+
+// storeDir "/home/jbrenton/nextflow_test/output/STAR/align"
 
 echo true
 
@@ -227,7 +285,7 @@ echo true
     path(sj_tabs)
 
     output:
-    path('*SJ.out.tab'), emit: merged_tab
+    path("*SJ.out.tab"), emit: merged_tab
 
     script:
     """
@@ -238,9 +296,11 @@ echo true
 
 process STAR_pass2 {
 
-publishDir '${baseDir}/output/STAR/align', mode: 'copy', overwrite: true
+cache = 'lenient'
 
-storeDir '${baseDir}/output/STAR/align'
+publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+
+storeDir "${baseDir}/output/STAR/align"
     echo true
 
     input:
@@ -248,7 +308,7 @@ storeDir '${baseDir}/output/STAR/align'
     path(merged_tab)
 
     output:
-    tuple val(sampleID), path('*SJ.out.tab'), emit: sj_tabs2
+    tuple val(sampleID), path("*SJ.out.tab"), emit: sj_tabs2
     stdout emit: all_out
 
    script:
@@ -279,19 +339,19 @@ storeDir '${baseDir}/output/STAR/align'
 }
 
 workflow {
-  data=Channel.fromFilePairs('${baseDir}/../files/*R{1,3}*.fastq.gz')
-  data.view { "value: $it" }
-//     fastp(data)
-//	fastqc(fastp.out.reads)
-//           multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
+   get_packages()
+   data=Channel.fromFilePairs("${baseDir}/../Regina_file_deposit/*R{1,3}*.fastq.gz")
+	fastp(data)
+	fastqc(fastp.out.reads)
+             multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
 
-//		STAR_genome_gen() 
+		genome_download()
+		STAR_genome_gen(genome_download.out.fasta, genome_download.out.gtf) 
 
-// 		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
+ 		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
 
 // need to collect below as after first instance passes the sj_loc would go ahead before all are done
-//			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
+			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
 
-// 				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
+				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
 }
-

@@ -1,0 +1,69 @@
+Jul-12 19:59:53.058 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf_pipe_pt1.nf
+Jul-12 19:59:53.139 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.1
+Jul-12 19:59:53.160 [main] INFO  nextflow.cli.CmdRun - Launching `nf_pipe_pt1.nf` [sick_hopper] - revision: 613d4f7d34
+Jul-12 19:59:53.213 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
+Jul-12 19:59:53.214 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-12 19:59:53.216 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Jul-12 19:59:53.222 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-12 19:59:53.222 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-12 19:59:53.225 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jul-12 19:59:53.234 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-12 19:59:53.274 [main] DEBUG nextflow.Session - Session uuid: a2f30f8a-c15a-4ae1-b935-679790431b9a
+Jul-12 19:59:53.274 [main] DEBUG nextflow.Session - Run name: sick_hopper
+Jul-12 19:59:53.275 [main] DEBUG nextflow.Session - Executor pool size: 256
+Jul-12 19:59:53.305 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.1 build 5556
+  Created: 14-05-2021 15:20 UTC (16:20 BST)
+  System: Linux 5.4.0-74-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 811804@drihpc1 [128.40.163.130]
+  CPUs: 256 - Mem: 1007.5 GB (8.6 GB) - Swap: 8 GB (8 GB)
+Jul-12 19:59:53.327 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/work [nfs]
+Jul-12 19:59:53.327 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/bin
+Jul-12 19:59:53.336 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-12 19:59:53.345 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-12 19:59:53.639 [main] DEBUG nextflow.Session - Session start invoked
+Jul-12 19:59:54.575 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-12 19:59:54.617 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: STAR_merge, STAR_genome_gen, STAR_1, fastqc, genome_download, get_packages, STAR_pass1_post_genome_gen, STAR_pass2, multiqc, fastp
+Jul-12 19:59:54.666 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-12 19:59:54.666 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-12 19:59:54.670 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-12 19:59:54.675 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=1007.5 GB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Jul-12 19:59:54.774 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jul-12 19:59:54.774 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-12 19:59:54.780 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+Jul-12 19:59:54.780 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > genome_download
+Jul-12 19:59:54.781 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STAR_genome_gen
+Jul-12 19:59:54.781 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jul-12 19:59:54.781 [main] DEBUG nextflow.Session - Session await
+Jul-12 19:59:54.891 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-12 19:59:54.895 [Task submitter] INFO  nextflow.Session - [93/9bc929] Submitted process > genome_download
+Jul-12 20:04:54.877 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096]
+Jul-12 20:09:54.958 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096]
+Jul-12 20:11:39.727 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: genome_download; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096]
+Jul-12 20:11:39.753 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=768; maxQueueSize=2304; keepAlive=1m
+Jul-12 20:11:39.765 [Actor Thread 4] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096/GRCh38.p13.genome.fa -- Cause: java.nio.file.NoSuchFileException: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096/GRCh38.p13.genome.fa
+Jul-12 20:11:39.766 [Actor Thread 4] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096/gencode.v38.chr_patch_hapl_scaff.annotation.gtf -- Cause: java.nio.file.NoSuchFileException: /media/data/Jon/nextflow_pd/work/93/9bc929043df1a8b75fcf091fc5f096/gencode.v38.chr_patch_hapl_scaff.annotation.gtf
+Jul-12 20:11:39.773 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-12 20:11:39.774 [Task submitter] INFO  nextflow.Session - [5d/50eba8] Submitted process > STAR_genome_gen
+Jul-12 20:14:55.042 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: STAR_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:19:55.116 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: STAR_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:24:55.192 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: STAR_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:29:55.268 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: STAR_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:34:55.341 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: STAR_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:39:55.417 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: STAR_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:44:46.723 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: STAR_genome_gen; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/work/5d/50eba808723903ce11ff693cc6161d]
+Jul-12 20:44:46.729 [main] DEBUG nextflow.Session - Session await > all process finished
+Jul-12 20:44:46.729 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-12 20:44:46.736 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=44m 52s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jul-12 20:44:46.893 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jul-12 20:44:46.914 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
