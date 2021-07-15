@@ -166,7 +166,7 @@ publishDir "${baseDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
     ref_dir="${baseDir}/output/reference_downloads"
     """
 
-STAR --runThreadN 25 \
+STAR --runThreadN 20 \
 --runMode genomeGenerate \
 --genomeDir $gdir_val \
 --genomeFastaFiles $ref_dir/$fasta \
@@ -199,7 +199,7 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
   echo ${reads[0]}
   echo ${reads[1]}
 
-  STAR --runThreadN 25 \
+  STAR --runThreadN 20 \
 --genomeDir $genome_dir \
 --readFilesIn  ${reads[0]}, ${reads[1]} \
 --readFilesCommand zcat \
@@ -251,7 +251,7 @@ echo true
   echo ${reads[0]}
   echo ${reads[1]}
 
-  STAR --runThreadN 25 \
+  STAR --runThreadN 20 \
   --genomeDir ${baseDir}/output/genome_dir \
   --readFilesIn  ${reads[0]}, ${reads[1]} \
   --readFilesCommand zcat \
@@ -317,7 +317,7 @@ storeDir "${baseDir}/output/STAR/align"
 
   echo \$limits
 
-  STAR --runThreadN 15 \
+  STAR --runThreadN 20 \
   --genomeDir ${baseDir}/output/STAR/genome_dir \
   --readFilesIn  ${reads[0]}, ${reads[1]} \
   --readFilesCommand zcat \
@@ -346,12 +346,12 @@ workflow {
              multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
 
 		genome_download()
-//		STAR_genome_gen(genome_download.out.fasta, genome_download.out.gtf) 
+		STAR_genome_gen(genome_download.out.fasta, genome_download.out.gtf) 
 
- //		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
+		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
 
 // need to collect below as after first instance passes the sj_loc would go ahead before all are done
-//			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
+			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
 
-//				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
+				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
 }
