@@ -69,7 +69,7 @@ cache = 'lenient'
     --html ${sampleID}_fastp.html \
     --json ${sampleID}_fastp.json \
     --report_title '${sampleID}' \
-    --thread 16
+    --thread 20
     """
 
 }
@@ -289,7 +289,7 @@ echo true
 
     script:
     """
-    Rscript ${baseDir}/RNAseqProcessing/alignment/STAR_splice_junction_merge.R $sj_loc -o .
+    Rscript ${baseDir}/STAR_splice_junction_merge.R $sj_loc -o .
     """
 
 }
@@ -346,12 +346,12 @@ workflow {
              multiqc(fastqc.out.html.collect().flatten().unique().first().collect(), fastqc.out.fqc_files)
 
 		genome_download()
-		STAR_genome_gen(genome_download.out.fasta, genome_download.out.gtf) 
+//		STAR_genome_gen(genome_download.out.fasta, genome_download.out.gtf) 
 
- 		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
+ //		STAR_pass1_post_genome_gen(fastp.out.reads, STAR_genome_gen.out.gdir_val)
 
 // need to collect below as after first instance passes the sj_loc would go ahead before all are done
-			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
+//			STAR_merge(STAR_pass1_post_genome_gen.out.sj_loc, STAR_pass1_post_genome_gen.out.sj_tabs.collect().flatten().unique().first().collect())
 
-				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
+//				STAR_pass2(fastp.out.reads, STAR_merge.out.merged_tab)
 }
