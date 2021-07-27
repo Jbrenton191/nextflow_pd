@@ -1,5 +1,8 @@
 nextflow.enable.dsl=2
 
+myDir2 = file("${baseDir}/output/Salmon")
+myDir2.mkdirs()
+
 process decoy_gen {
 
 publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
@@ -35,27 +38,20 @@ sed -i.bak -e 's/>//g' decoys.txt
 process salmon_index_gen {
  echo true
 
-myDir2 = file("${workflow.projectDir}/output/Salmon")
-myDir2.mkdirs()
+cache = 'lenient' // (Best in HPC and shared file systems) Cache keys are created indexing input files path and size attributes
 
 publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
-
-// storeDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
-
-// publishDir "/home/jbrenton/nextflow_test/output/Salmon", mode: 'copy'
-
-// println myDir2
 
 	input:
 	path(gentrome)
 	path(decoys)
 
 	output:
-	stdout emit: index_files
+	path("salmon_index"), emit: whole_index
 	val(transcript_index_loc), emit: s_index
 	
 	script:
-	transcript_index_loc="/home/jbrenton/nextflow_test/output/Salmon/salmon_index"
+	transcript_index_loc="${baseDir}/output/Salmon/salmon_index"
 	"""
 	echo $transcript_index_loc
 	salmon index -t $gentrome -i salmon_index -k 31 -d $decoys -p 20
@@ -64,10 +60,13 @@ publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 
 process salmon {
 
+cache = 'lenient' // (Best in HPC and shared file systems) Cache keys are created indexing input files path and size attributes
+
 publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 // storeDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 
 	input:
+	path(whole_index)
 	val(s_index)
 	tuple val(meta), path(reads)
 
@@ -79,25 +78,19 @@ publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 	echo $meta
 	echo $s_index
 
-salmon quant -i $s_index -l ISR -1 ${reads[0]} -2 ${reads[1]} --useVBOpt --numBootstraps 30 --seqBias --gcBias --posBias -o $meta --validateMappings --rangeFactorizationBins 4 --threads 30
+salmon quant -i $whole_index -l ISR -1 ${reads[0]} -2 ${reads[1]} --useVBOpt --numBootstraps 30 --seqBias --gcBias --posBias -o $meta --validateMappings --rangeFactorizationBins 4 --threads 30
 	"""
+// change $s_index to $whole_index
 }
 
 
 
+
 workflow {
-data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fastq.gz')
-// x=System.getProperty("user.dir")
-// println "x is ${x}"
-// y=Channel.value("${x}/output")
-// y.view()
+data=Channel.fromFilePairs("${baseDir}/output/fastp/*{1,2}*.fastq.gz")
+
 	decoy_gen()
 	salmon_index_gen(decoy_gen.out.gentrome, decoy_gen.out.decoys)
-//	salmon_index_gen.out.index_files.view { println "index output: $it" }
-	salmon_index_gen.out.s_index.view {"Received: $it"}
 
-//	s_index="/home/jbrenton/nextflow_test/output/Salmon/salmon_index"
-//	salmon(s_index, data)
-	salmon(salmon_index_gen.out.s_index, data)
-// salmon(salmon_index_gen.out.s_index, fastp.out.reads)
-   }
+        salmon(salmon_index_gen.out.whole_index.collect(), salmon_index_gen.out.s_index.collect(), data)
+}
