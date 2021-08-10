@@ -189,8 +189,8 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
   val(genome_dir)
 
   output:
-  path('*SJ.out.tab'), emit: sj_tabs
-  val(sj_loc), emit: sj_loc
+	val(sj_loc), emit: sj_loc
+	tuple val(sampleID), path('*SJ.out.tab'), emit: sj_tabs
 
   script:
   sj_loc="${baseDir}/output/STAR/align"
@@ -240,9 +240,9 @@ echo true
   input:
   tuple val(sampleID), path(reads)
 
-  output:
-  path("*SJ.out.tab"), emit: sj_tabs
-  val(sj_loc), emit: sj_loc
+	output:
+	val(sj_loc), emit: sj_loc
+        tuple val(sampleID), path('*SJ.out.tab'), emit: sj_tabs
 
   script:
   sj_loc="${baseDir}/output/STAR/align"
@@ -308,8 +308,18 @@ storeDir "${baseDir}/output/STAR/align"
     path(merged_tab)
 
     output:
-    tuple val(sampleID), path("*SJ.out.tab"), emit: sj_tabs2
-    stdout emit: all_out
+	tuple val(sampleID), path("*SJ.out.tab"), emit: sj_tabs2
+	val(sj_loc), emit: sj_loc
+        tuple val(meta), path('*.out.bam'), emit: bam
+
+        tuple val(sampleID), path('*sortedByCoord.out.bam'), optional:true, emit: bam_sorted
+        tuple val(sampleID), path('*toTranscriptome.out.bam'), optional:true, emit: bam_transcript
+        tuple val(sampleID), path('*Aligned.unsort.out.bam'), optional:true, emit: bam_unsorted
+
+        tuple val(meta), path('*Log.final.out'), emit: log_final
+        tuple val(meta), path('*Log.out'), emit: log_out
+        tuple val(meta), path('*Log.progress.out'), emit: log_progress
+        path  '*.version.txt', emit: version
 
    script:
       """

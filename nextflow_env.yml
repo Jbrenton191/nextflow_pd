@@ -11,4 +11,5 @@ dependencies:
   - fastqc
   - star
   - salmon
-  - rseqc  
+  - rseqc
+  - samtools  

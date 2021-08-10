@@ -108,6 +108,10 @@ workflow {
   //  data = '/home/jbrenton/nextflow_test/files'
  //   data.view()
 
+data2=Channel.fromFilePairs('/home/jbrenton/nextflow_test/output/fastp/*{1,2}*.fastq.gz')
+data2.view { "value: $it" }
+
+/*
     data=Channel.fromFilePairs('/home/jbrenton/nextflow_test/files/*R{1,3}*.fastq.gz')
     data.view { "value: $it" }
 
@@ -121,5 +125,6 @@ workflow {
 
 //	x=channel.fromPath('/home/jbrenton/nextflow_test/output')
 //	multiqc()
+*/
       }
 
