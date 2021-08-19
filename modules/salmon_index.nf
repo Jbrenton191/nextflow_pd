@@ -18,6 +18,6 @@ publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
 	transcript_index_loc="${baseDir}/output/Salmon/salmon_index"
 	"""
 	echo $transcript_index_loc
-	salmon index -t $gentrome -i salmon_index -k 31 -d $decoys --gencode
+	salmon index -t $gentrome -i salmon_index -k 31 -d $decoys --gencode -p 20
 	"""
 }

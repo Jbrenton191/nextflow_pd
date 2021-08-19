@@ -8,7 +8,7 @@ myDir3.mkdir()
 publishDir "${baseDir}/output/multiqc", mode: 'copy', overwrite: true
 
     input:
-    path(files)
+    tuple val(sampleID), path(files)
     val(file_dir)
 
     output:

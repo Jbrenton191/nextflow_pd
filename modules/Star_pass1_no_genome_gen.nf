@@ -17,9 +17,10 @@ echo true
   input:
   tuple val(sampleID), path(reads)
 
-	output:
-	val(sj_loc), emit: sj_loc
-        tuple val(sampleID), path('*SJ.out.tab'), emit: sj_tabs
+  output:
+  val(sj_loc), emit: sj_loc
+  tuple val(sampleID), path('*SJ.out.tab'), emit: sj_tabs
+  tuple val(sampleID), path('*Log.final.out'), emit: log_final
 
   script:
   sj_loc="${baseDir}/output/STAR/align"
@@ -28,7 +29,8 @@ echo true
   echo ${reads[0]}
   echo ${reads[1]}
 
-  STAR --genomeDir ${baseDir}/output/genome_dir \
+    STAR --runThreadN 25 \ 
+  --genomeDir ${baseDir}/output/genome_dir \
   --readFilesIn  ${reads[0]}, ${reads[1]} \
   --readFilesCommand zcat \
   --outFileNamePrefix ${sampleID}_ \

@@ -9,7 +9,7 @@ publishDir "${baseDir}/output/multiqc", mode: 'copy', overwrite: true
 
     input:
     path(salmon_files)
-    path(star_files)
+    tuple val(sampleID), path(star_files)
     val(file_dir)
 
     output:

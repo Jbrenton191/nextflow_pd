@@ -11,7 +11,8 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 
   output:
 	val(sj_loc), emit: sj_loc
-	tuple val(sampleID), path('*SJ.out.tab'), emit: sj_tabs
+	path('*SJ.out.tab'), emit: sj_tabs
+        tuple val(sampleID), path('*Log.final.out'), emit: log_final
 
   script:
   sj_loc="${baseDir}/output/STAR/align"
@@ -20,7 +21,8 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
   echo ${reads[0]}
   echo ${reads[1]}
 
-  STAR --genomeDir $genome_dir \
+  STAR --runThreadN 25 \
+--genomeDir $genome_dir \
 --readFilesIn  ${reads[0]}, ${reads[1]} \
 --readFilesCommand zcat \
 --outFileNamePrefix ${sampleID}_mapped.BAM_ \

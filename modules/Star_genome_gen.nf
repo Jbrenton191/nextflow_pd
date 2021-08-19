@@ -19,8 +19,8 @@ publishDir "${baseDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
     gdir_val=file("${baseDir}/output/STAR/genome_dir")
     ref_dir="${baseDir}/output/reference_downloads"
     """
-
-STAR --runMode genomeGenerate \
+STAR --runThreadN 25 \
+--runMode genomeGenerate \
 --genomeDir $gdir_val \
 --genomeFastaFiles $ref_dir/$fasta \
 --sjdbGTFfile $ref_dir/$gtf \

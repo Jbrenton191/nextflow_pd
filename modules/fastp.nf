@@ -8,7 +8,7 @@ process fastp {
     tuple val(sampleID), path(reads)
 
     output:
-    tuple val("${sampleID}"), path("*trimmed.fastq.gz"), emit: reads
+    tuple val("${sampleID}"), path("*.fastq.gz"), emit: reads
     tuple val("${sampleID}"), path("*.html"), emit: html
     tuple val("${sampleID}"), path("*.zip") , emit: zip optional true
     tuple val("${sampleID}"), path("*.json") , emit: json optional true
@@ -24,9 +24,9 @@ process fastp {
     echo '${reads[1]}'
 
     fastp --in1 ${reads[0]} \
-    --out1 ${sampleID}_1_trimmed.fastq.gz \
+    --out1 ${sampleID}_trimmed_1.fastq.gz \
     --in2 ${reads[1]} \
-    --out2 ${sampleID}_2_trimmed.fastq.gz \
+    --out2 ${sampleID}_trimmed_2.fastq.gz \
     --detect_adapter_for_pe \
     --qualified_quality_phred 15 \
     --unqualified_percent_limit 40 \
@@ -40,7 +40,7 @@ process fastp {
     --html ${sampleID}_fastp.html \
     --json ${sampleID}_fastp.json \
     --report_title '${sampleID}' \
-    --thread 20
+    --thread 25
     """
 
 }
