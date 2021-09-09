@@ -12,7 +12,6 @@ include { fastp } from './modules/fastp'
 include { fastqc } from './modules/fastqc'
 include { Star_genome_gen as star_genome_gen } from './modules/Star_genome_gen'
 include { STAR_pass1_post_genome_gen as star_1 } from './modules/STAR_pass1_post_genome_gen'
-include { multiqc_1st_pass as multiqc_1 } from './modules/multiqc_1st_pass'
 include { Star_merge as star_merge } from './modules/Star_merge'
 include { STAR_pass2 as star_2 } from './modules/STAR_pass2'
 
@@ -32,7 +31,6 @@ genome_download()
 fastqc(fastp.out.reads)
 star_genome_gen(genome_download.out.fasta, genome_download.out.gtf)
 star_1(fastp.out.reads, star_genome_gen.out.gdir_val)
-multiqc_1(star_1.out.log_final.collect(), star_1.out.sj_loc)
 star_merge(star_1.out.sj_loc, star_1.out.sj_tabs.collect().flatten().unique().first().collect())
 star_2(fastp.out.reads, star_merge.out.merged_tab)
 

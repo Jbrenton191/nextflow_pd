@@ -9,7 +9,7 @@ echo true
     path(sj_tabs)
 
     output:
-    path("*SJ.out.tab"), emit: merged_tab
+    path("merged_junctions.SJ.out.tab"), emit: merged_tab
 
     script:
     """

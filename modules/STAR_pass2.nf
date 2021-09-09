@@ -2,8 +2,6 @@ process STAR_pass2 {
 
 publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 
-storeDir "${baseDir}/output/STAR/align"
-
     input:
     tuple val(sampleID), path(reads)
     path(merged_tab)
