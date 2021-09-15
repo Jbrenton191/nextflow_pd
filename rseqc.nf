@@ -9,22 +9,24 @@ echo true
 publishDir "${projectDir}/output/Samtools_Rseqc", mode: 'copy', overwrite: true
 
 input:
-path(data)
+path(bed_model)
+path(bams)
+val(bam_dir)
 
 output:
 path("*")
-// val("$name")
 
 script:
 """
-name=`echo "$data" | sed 's/_mapped.*//g'`
-echo "\$name"
-samtools sort -m 1000000000 $data -o ./\${name}_Aligned.sortedBysamtools.out.bam
-
-samtools index ./\${name}_Aligned.sortedBysamtools.out.bam
+geneBody_coverage.py -r $bed_model -i $data -o all_files_
 """
+// geneBody_coverage.py -r ./output/Samtools_Rseqc/Homo_sapiens.GRCh38.97.bed -i ./output/Samtools_Rseqc/ -o all_files_
+
 }
+
 workflow {
-data = channel.fromPath("${projectDir}/output/STAR/align/*.bam")
-get_name(data)
+data = channel.fromPath("${projectDir}/output/Samtools_Rseqc/*.bai")
+bed_model=channel.fromPath("${projectDir}/output/Samtools_Rseqc/Homo_sapiens.GRCh38.97.bed")
+bam_dir=data.first().parent
+get_name(bed_model, data, bam_dir)
 }

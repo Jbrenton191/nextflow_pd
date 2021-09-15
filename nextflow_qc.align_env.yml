@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - conda-forge::r-base
+  - nextflow
+  - fastp
+  - multiqc
+  - fastqc
+  - star
+  - salmon
+  - rseqc
