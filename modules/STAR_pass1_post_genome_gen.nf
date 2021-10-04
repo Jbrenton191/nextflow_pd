@@ -1,7 +1,7 @@
 process STAR_pass1_post_genome_gen {
 
-myDir2 = file("${baseDir}/output/STAR/align")
-myDir2.mkdir()
+myDir2 = file("${baseDir}/output/STAR/align/pre_merge")
+myDir2.mkdirs()
 
 publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 
@@ -15,7 +15,7 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
         tuple val(sampleID), path('*Log.final.out'), emit: log_final
 
   script:
-  sj_loc="${baseDir}/output/STAR/align"
+  sj_loc="${baseDir}/output/STAR/align/pre_merge"
   """
   echo ${sampleID}
   echo ${reads[0]}

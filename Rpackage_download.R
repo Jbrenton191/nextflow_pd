@@ -10,3 +10,9 @@ if (!require(devtools)) install.packages("devtools", repos='https://www.stats.br
 
 library(devtools)
 install_github("RHReynolds/RNAseqProcessing")
+
+if (!requireNamespace("Biostrings", quietly = TRUE)) BiocManager::install("Biostrings")
+
+if (!requireNamespace("tximport", quietly = TRUE)) BiocManager::install("tximport")
+
+if (!requireNamespace("DESeq2", quietly = TRUE)) BiocManager::install("DESeq2")

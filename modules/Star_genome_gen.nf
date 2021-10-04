@@ -17,13 +17,13 @@ publishDir "${baseDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
 
     script:
     gdir_val=file("${baseDir}/output/STAR/genome_dir")
-    ref_dir="${baseDir}/output/reference_downloads"
+//    ref_dir="${baseDir}/output/reference_downloads"
     """
 STAR --runThreadN 25 \
 --runMode genomeGenerate \
 --genomeDir $gdir_val \
---genomeFastaFiles $ref_dir/$fasta \
---sjdbGTFfile $ref_dir/$gtf \
+--genomeFastaFiles $fasta \
+--sjdbGTFfile $gtf \
 --sjdbOverhang 99
   """
 }

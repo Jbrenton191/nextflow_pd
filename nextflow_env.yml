@@ -12,4 +12,5 @@ dependencies:
   - star
   - salmon
   - rseqc
-  - samtools  
+  - samtools
+  - megadepth   

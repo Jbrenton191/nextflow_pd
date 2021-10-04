@@ -1,0 +1,98 @@
+library(tidyverse)
+library(optparse)
+library(Biostrings)
+library(DESeq2)
+library(tximport)
+
+# Also need to add the deseq parts
+
+# To do/plan:
+# 1. Need a csv file for metadata
+# 2. Need a grouping/cofactors text file to match and extract group names and other metadata
+#    order of this text file needs to be sample name, groups, then all other cofactors or covariates
+# 3. use this to grep names of sample and assign groups and other cofactors a tibble/dataframe with
+#    the name of either salmon folders or leafcutter ready files perind_num etc in the dataframe too
+# 4. Then can use this new dataframe to perform DESeq (equation can be extracted from 
+#     colnames and mixed with + symbols) or leafcutter analyses
+# 5. Any new cofactors can be added to text file names and dataframe and tibble
+
+# Potential problems:
+# 1. Can this work with non-categorical/numerical variables such as cell type normalisation coming from Scaden
+# 2. Will the equation idea/concatentating of colnames work for DESeq and Leafcutter?
+
+
+arguments <- parse_args(OptionParser(), positional_arguments = 3)
+
+
+base_dir<-"/home/jbrenton/nextflow_pd"
+
+setwd(str_c(base_dir, "output/Salmon/", sep = "/"))
+dir<-getwd()
+# files<-list.files(dir, recursive = TRUE)
+files<-list.dirs(dir, recursive = F)
+sample_name<-"salmon_index"
+
+# Find folders that aren't the index - This will cause process to fail 
+# if there are other folders or directories in the output/Salmon folder
+files<-files[-grep(sample_name, files)]
+# files<-files[grep("quant.sf", files)]
+# filenames<-sub("^.*/(.*)$", "\\1", files)
+
+# names(files)<-filenames
+all(file.exists(files))
+
+x<-read.table(file = str_c(base_dir, "metadata_cols_selected.txt", sep = "/"), header = T, 
+              sep = " ")
+samples<-x[,1]
+
+y<-sapply(samples, files, FUN = grep)
+
+samp_names<-unique(names(unlist(y)))
+order<-unique(unlist(y))
+
+metadata<-unique(x[which(x[,1] %in% samp_names),])
+
+metadata$order<-order
+
+eqn_names<-names(metadata[2:(length(names(metadata))-1)])
+deseq_equation<-str_c("~", str_c(eqn_names, collapse  = " + "), sep = " ")
+
+########
+
+
+  # which(!is.na(str_match(string = files[i], pattern = meta_samps_present$CaseNo)))
+samples<-file.path(files, "quant.sf")
+samples<-samples[metadata$order]
+names(samples)<-metadata[,1]
+
+
+gene_map_path<-file.path(base_dir, "output/Salmon/gencode_txid_to_geneid.txt")
+gencode_txid_to_geneid<-read.delim(file =gene_map_path, sep=" ")
+
+colnames(gencode_txid_to_geneid)<-c("tx_id", "gene_id","gene_name")
+gencode_txid_to_geneid$tx_id<-sub("\\..+", "", gencode_txid_to_geneid$tx_id)
+gencode_txid_to_geneid$gene_id<-sub("\\..+", "", gencode_txid_to_geneid$gene_id)
+
+txi.salmon <- tximport(samples, type = "salmon", 
+                            tx2gene = gencode_txid_to_geneid, ignoreTxVersion=TRUE)
+
+
+# From old RNAseq stuff  ------------------------------------------------------------------------------
+
+
+# sampleMetadata <- data.frame(
+#    samples = names(samples), metadata[,2] )
+
+ dds <- DESeqDataSetFromTximport(txi.salmon,
+                                      colData = metadata,
+                                      design = formula(deseq_equation))
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+
+dds <- DESeq(dds)
+res_dds <- results(dds)
+res_dds$gene <- row.names(res_dds)
+resOrdered <- res_dds[order(res_dds$pvalue),]
+resOrdered$gene <- row.names(resOrdered)
+resOrdered <- as.data.frame(resOrdered)
+

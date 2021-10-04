@@ -34,7 +34,7 @@ star_1(fastp.out.reads, star_genome_gen.out.gdir_val)
 star_merge(star_1.out.sj_loc, star_1.out.sj_tabs.collect().flatten().unique().first().collect())
 star_2(fastp.out.reads, star_merge.out.merged_tab)
 
-decoy_gen()
+decoy_gen(genome_download.out.fasta, genome_download.out.transcripts)
 salmon_index(decoy_gen.out.gentrome, decoy_gen.out.decoys)
 salmon_quantification(salmon_index.out.whole_index.collect(), fastp.out.reads)
 
