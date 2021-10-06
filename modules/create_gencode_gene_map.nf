@@ -7,14 +7,14 @@ myDir3.mkdir()
 
 publishDir "${baseDir}/output/Salmon", mode: 'move', overwrite: true
 
+    input:
+    path(transcript_ref)
+    
     output:
     path("*.txt"), emit: gene_map
 
     script:
     """
-    Rscript ${baseDir}/create_gencode_gene_map.R ${baseDir}/output/reference_downloads/gencode.v38.pc_transcripts.fa
+    Rscript ${baseDir}/create_gencode_gene_map.R $transcript_ref
     """
-}
-workflow{
-gencode_genemap()
 }

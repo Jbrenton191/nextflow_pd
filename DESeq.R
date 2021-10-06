@@ -23,40 +23,52 @@ library(tximport)
 
 arguments <- parse_args(OptionParser(), positional_arguments = 3)
 
-
-base_dir<-"/home/jbrenton/nextflow_pd"
-
-setwd(str_c(base_dir, "output/Salmon/", sep = "/"))
-dir<-getwd()
+salmon_dir_path<-arguments$args[1]
+metadata_cols_path<-arguments$args[2]
+gene_map_path<-arguments$args[3]
+  
+  
+# base_dir<-"/home/jbrenton/nextflow_pd"
+# setwd(str_c(base_dir, "output/Salmon", sep = "/"))
+# setwd(salmon_dir_path)
+# dir<-getwd()
 # files<-list.files(dir, recursive = TRUE)
-files<-list.dirs(dir, recursive = F)
-sample_name<-"salmon_index"
+files<-list.dirs(salmon_dir_path, recursive = F)
+no_take_index<-"salmon_index"
 
 # Find folders that aren't the index - This will cause process to fail 
 # if there are other folders or directories in the output/Salmon folder
-files<-files[-grep(sample_name, files)]
+files<-files[-grep(no_take_index, files)]
 # files<-files[grep("quant.sf", files)]
 # filenames<-sub("^.*/(.*)$", "\\1", files)
 
 # names(files)<-filenames
 all(file.exists(files))
 
-x<-read.table(file = str_c(base_dir, "metadata_cols_selected.txt", sep = "/"), header = T, 
-              sep = " ")
-samples<-x[,1]
+# metadata_cols<-read.table(file = str_c(base_dir, "metadata_cols_selected.txt", sep = "/"), header = T, 
+#               sep = " ")
+
+metadata_cols<-read.table(file = metadata_cols_path, header = T, sep = " ")
+
+samples<-metadata_cols[,1]
 
 y<-sapply(samples, files, FUN = grep)
 
 samp_names<-unique(names(unlist(y)))
 order<-unique(unlist(y))
 
-metadata<-unique(x[which(x[,1] %in% samp_names),])
+metadata<-unique(metadata_cols[which(metadata_cols[,1] %in% samp_names),])
 
 metadata$order<-order
+# These are in the order of the original metatdata csv file not the quant files 
+# in the output folder
+write_csv(x = metadata, col_names = T,
+          file = "samples_groups_and_metadata_in_DESeq_comparisons.csv")
 
 eqn_names<-names(metadata[2:(length(names(metadata))-1)])
 deseq_equation<-str_c("~", str_c(eqn_names, collapse  = " + "), sep = " ")
 
+print(paste0("This is the equation used: ", deseq_equation))
 ########
 
 
@@ -66,15 +78,15 @@ samples<-samples[metadata$order]
 names(samples)<-metadata[,1]
 
 
-gene_map_path<-file.path(base_dir, "output/Salmon/gencode_txid_to_geneid.txt")
-gencode_txid_to_geneid<-read.delim(file =gene_map_path, sep=" ")
+# gene_map_path<-file.path(base_dir, "output/Salmon/gencode_txid_to_geneid.txt")
+gencode_txid_to_geneid<-read.delim(file= gene_map_path, sep=" ")
 
 colnames(gencode_txid_to_geneid)<-c("tx_id", "gene_id","gene_name")
 gencode_txid_to_geneid$tx_id<-sub("\\..+", "", gencode_txid_to_geneid$tx_id)
 gencode_txid_to_geneid$gene_id<-sub("\\..+", "", gencode_txid_to_geneid$gene_id)
 
 txi.salmon <- tximport(samples, type = "salmon", 
-                            tx2gene = gencode_txid_to_geneid, ignoreTxVersion=TRUE)
+                     tx2gene = gencode_txid_to_geneid, ignoreTxVersion=TRUE)
 
 
 # From old RNAseq stuff  ------------------------------------------------------------------------------
@@ -92,7 +104,15 @@ dds <- dds[keep,]
 dds <- DESeq(dds)
 res_dds <- results(dds)
 res_dds$gene <- row.names(res_dds)
-resOrdered <- res_dds[order(res_dds$pvalue),]
+resOrdered <- res_dds[order(res_dds$padj),]
 resOrdered$gene <- row.names(resOrdered)
 resOrdered <- as.data.frame(resOrdered)
+
+
+sigGenesOrdered <- subset(resOrdered, padj < 0.05 & 
+                                 abs(log2FoldChange) > 1)
+
+
+write_csv(x = sigGenesOrdered, col_names = T, 
+          file = "significant_genes_padj_0.05_and_log2FoldChange_abs1.csv")
 
