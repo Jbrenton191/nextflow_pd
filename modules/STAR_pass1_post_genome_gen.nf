@@ -3,7 +3,7 @@ process STAR_pass1_post_genome_gen {
 myDir2 = file("${baseDir}/output/STAR/align/pre_merge")
 myDir2.mkdirs()
 
-publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+publishDir "${baseDir}/output/STAR/align/pre_merge", mode: 'copy', overwrite: true
 
   input:
   tuple val(sampleID), path(reads)

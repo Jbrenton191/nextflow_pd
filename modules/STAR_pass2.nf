@@ -7,7 +7,8 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
     path(merged_tab)
 
     output:
-	tuple val(sampleID), path("*SJ.out.tab"), emit: sj_tabs2
+  	path("*SJ.out.tab"), emit: sj_tabs2
+  	val(sj_loc), emit: sj_loc
         tuple val(sampleID), path('*.out.bam'), emit: bam
 
         tuple val(sampleID), path('*sortedByCoord.out.bam'), optional:true, emit: bam_sorted
@@ -19,6 +20,7 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
         tuple val(sampleID), path('*Log.progress.out'), emit: log_progress
 
 script:
+sj_loc="${projectDir}/output/STAR/align"
 """
 limits=`sh ${baseDir}/sj_length.sh $merged_tab`
 

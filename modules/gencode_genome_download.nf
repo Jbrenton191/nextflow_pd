@@ -19,8 +19,8 @@ publishDir "${baseDir}/output/reference_downloads", mode: 'copy', overwrite: tru
 	gunzip GRCh38.primary_assembly.genome.fa.gz
 	gunzip gencode.v38.chr_patch_hapl_scaff.annotation.gtf.gz
 
-wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.transcripts.fa.gz
+	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.transcripts.fa.gz
 
-gunzip gencode.v38.transcripts.fa.gz
+	gunzip gencode.v38.transcripts.fa.gz
 	"""
 }

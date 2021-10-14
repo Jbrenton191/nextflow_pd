@@ -1,0 +1,7 @@
+1. Check if leafcutter works with libv8
+2. Check if need to add stringi through conda
+3. Add rseqc to pipeline and see if that breaks anything
+4. Add to config file so don't have to use wrapper
+5. Have an outdir in the config file so this can be adjusted each time - ie can run multiple things in the same folder without getting confused
+6. Change ensembl side of pipeline so works
+7. Test genebody coverage with bigwigs instead of bams to see any change in speed

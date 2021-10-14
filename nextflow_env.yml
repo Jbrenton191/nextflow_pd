@@ -13,4 +13,6 @@ dependencies:
   - salmon
   - rseqc
   - samtools
-  - megadepth   
+  - megadepth
+  - regtools
+  - libv8   
