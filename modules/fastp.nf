@@ -6,6 +6,7 @@ process fastp {
 
     input:
     tuple val(sampleID), path(reads)
+    val(R_packs_finished)
 
     output:
     tuple val("${sampleID}"), path("*.fastq.gz"), emit: reads

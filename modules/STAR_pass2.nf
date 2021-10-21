@@ -9,7 +9,7 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
     output:
   	path("*SJ.out.tab"), emit: sj_tabs2
   	val(sj_loc), emit: sj_loc
-        tuple val(sampleID), path('*.out.bam'), emit: bam
+        path('*BAM_Aligned.sortedByCoord.out.bam'), emit: bams
 
         tuple val(sampleID), path('*sortedByCoord.out.bam'), optional:true, emit: bam_sorted
         tuple val(sampleID), path('*toTranscriptome.out.bam'), optional:true, emit: bam_transcript

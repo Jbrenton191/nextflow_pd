@@ -11,4 +11,4 @@ _time=$(date +"%H:%M:%S")
 timing="${_date}-${_time}"
 
 ## Run nextflow in background with dated timeline and report ##
-nextflow run $nf_pipeline -bg -with-timeline ${nf_pipeline}_timeline_${timing}.html -with-report ${nf_pipeline}_report_${timing}.html 
+nextflow run $nf_pipeline -bg -with-timeline ${nf_pipeline}_timeline_${timing}.html -with-report ${nf_pipeline}_report_${timing}.html -with-trace ${nf_pipeline}_trace_${timing}.txt -with-dag ${nf_pipeline}_dag_${timing}.png

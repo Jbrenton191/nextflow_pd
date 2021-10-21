@@ -4,7 +4,6 @@ channels:
   - r
 dependencies:
   - conda-forge::r-base
-  - r-essentials
   - nextflow
   - fastp
   - multiqc
@@ -13,6 +12,5 @@ dependencies:
   - salmon
   - rseqc
   - samtools
-  - megadepth
   - regtools
   - libv8   

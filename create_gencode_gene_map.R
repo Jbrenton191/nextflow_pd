@@ -32,4 +32,4 @@ colnames(extracted_gencode)<-c("Transcript_ID", "Gene_Name", "Description")
 
 extracted_gencode<-as.data.frame(extracted_gencode)
 
-write.table(x=extracted_gencode, file="gencode_txid_to_geneid.txt", sep = " ", col.names = T)
+write.table(x=extracted_gencode, file="gencode_txid_to_geneid.txt", sep = " ", col.names = T, row.names = F)

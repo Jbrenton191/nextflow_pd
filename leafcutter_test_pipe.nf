@@ -38,16 +38,19 @@ gdir="${baseDir}/output/STAR/genome_dir"
 // star_1(fastp.out.reads, star_genome_gen.out.gdir_val)
 star_1(fastp_reads, gdir)
 star_merge(star_1.out.sj_loc, star_1.out.sj_tabs.collect())
+*/
 // star_2(fastp.out.reads, star_merge.out.merged_tab)
-star_2(fastp_reads, star_merge.out.merged_tab)
+// fastp_reads=Channel.fromFilePairs("${baseDir}/output/fastp/*trimmed_{1,2}.fastq.gz")
+// star_2(fastp_reads, star_merge.out.merged_tab)
+// gdir="${baseDir}/output/STAR/genome_dir"
 
 // sj_loc="${projectDir}/output/STAR/align"
 // convert_juncs(star_2.out.sj_loc, star_2.out.sj_tabs2.collect())
-*/
+
 sj_loc="${projectDir}/output/STAR/align"
 sj_tabs2=Channel.fromPath("${projectDir}/output/STAR/align/*SJ.out.tab")
 // convert_juncs(sj_loc, sj_tabs2.collect())
-convert_juncs(sj_loc)
+convert_juncs(sj_loc, sj_tabs2.collect().first())
 // junc_list=Channel.fromPath
 
 // convert_juncs.out.junc_files.collect().flatten().unique().first().collect().view()

@@ -7,7 +7,7 @@ myDir.mkdirs()
 
     input:
     val(sj_loc)
-//    path(sj_tabs)
+    path(sj_tabs)
 
     output:
     path("*.txt"), emit: junc_list

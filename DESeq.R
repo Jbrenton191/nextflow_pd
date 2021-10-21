@@ -60,6 +60,13 @@ order<-unique(unlist(y))
 metadata<-unique(metadata_cols[which(metadata_cols[,1] %in% samp_names),])
 
 metadata$order<-order
+samples_with_NAs<-metadata[rowSums(is.na(metadata)) > 0, ]
+cat("These samples contain NAs in their  metadata columns (they will be removed - update them or ): ", samples_with_NAs[,1])
+write_csv(x = samples_with_NAs, col_names = T,
+          file = "samples_removed_from_DESeq_comparisons_because_of_NAs.csv")
+
+metadata<-metadata[!rowSums(is.na(metadata)) > 0, ]
+# metadata<-na.omit(metadata)
 # These are in the order of the original metatdata csv file not the quant files 
 # in the output folder
 write_csv(x = metadata, col_names = T,

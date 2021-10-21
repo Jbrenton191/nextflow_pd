@@ -10,7 +10,8 @@ publishDir "${projectDir}/output/metadata_and_groupfiles", mode: 'copy', overwri
     input:
     val(meta_csv)
     val(meta_key)
-
+    val(pack_done_val)
+	
     output:
     path("*.txt"), emit: metadata_selected_cols
 

@@ -6,7 +6,7 @@ publishDir "${projectDir}/output/leafcutter", mode: 'copy', overwrite: true
 
         input:
         path(junc_list)
-//      path(junc_files)
+//       path(junc_files)
         
         output:
       	path("*perind.counts.gz"), emit: counts_1

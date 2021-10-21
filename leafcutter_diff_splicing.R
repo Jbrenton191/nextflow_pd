@@ -17,6 +17,8 @@ arguments$opt$output_prefix <- ""
 arguments$opt$max_cluster_size <- "Inf"
 arguments$opt$min_samples_per_intron  <- "5"
 arguments$opt$min_samples_per_group  <- "3"
+arguments$opt$min_samples_per_intron  <- "3"
+arguments$opt$min_samples_per_group  <- "3"
 arguments$opt$min_coverage <- "20"
 arguments$opt$timeout <- "30"
 
