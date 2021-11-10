@@ -1,6 +1,6 @@
 nextflow.enable.dsl=2
 
-   params.data="${baseDir}/../Regina_file_deposit/*R{1,3}*.fastq.gz"
+   params.data="${baseDir}/../Regina_raw_fastqs/*R{1,3}*.fastq.gz"
    params.salmon_dir = "${projectDir}/output/Salmon/"
    params.metadata_csv= "${projectDir}/20201229_MasterFile_SampleInfo.csv"
    params.metadata_key= "${projectDir}/key_for_metadata.txt"
@@ -37,8 +37,8 @@ include { create_groupfiles } from './modules/create_groupfiles_for_leafcutter'
 include { leafcutter } from './modules/leafcutter'
 
 workflow {
-get_packages()
 data=Channel.fromFilePairs("${params.data}")
+get_packages()
 output_dir=Channel.value("${baseDir}/output")
 fastp(data, get_packages.out.pack_done_val)
 genome_download()

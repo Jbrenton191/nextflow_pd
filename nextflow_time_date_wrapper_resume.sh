@@ -5,7 +5,7 @@
 nf_pipeline=$1
 
 ## Get current date ##
-_date=$(date +"%m_%d_%Y")
+_date=$(date +"%d_%m_%Y")
 _time=$(date +"%H:%M:%S")
 ## Appending a current date from a $_now to a filename stored in $_file ##
 timing="${_date}-${_time}"

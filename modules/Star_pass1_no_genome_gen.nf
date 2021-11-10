@@ -34,7 +34,7 @@ echo true
   --outFilterMultimapNmax 1 \
   --outFilterMismatchNmax 999 \
   --outFilterMismatchNoverReadLmax 0.04 \
-  --alignIntronMin 20 \
+  --alignIntronMin 25 \
   --alignIntronMax 1000000 \
   --alignMatesGapMax 1000000 \
   --alignSJoverhangMin 8 \
