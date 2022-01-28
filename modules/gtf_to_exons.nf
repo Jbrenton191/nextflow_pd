@@ -14,7 +14,7 @@ publishDir "${projectDir}/output/leafcutter", mode: 'copy', overwrite: true
         script:
         """
         gzip -f $gtf
-        Rscript ${projectDir}/gtf_to_exons.R \
+        Rscript ${projectDir}/../R_scripts/gtf_to_exons.R \
         ${gtf}.gz \
         ${gtf.simpleName}_LC_exon_file.txt.gz
         """

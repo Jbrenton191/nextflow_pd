@@ -1,0 +1,416 @@
+Dec-02 15:13:36.880 [main] DEBUG nextflow.cli.Launcher - $> nextflow run pipe_2.0.nf -bg -with-timeline 'pipe_2.0.nf_timeline_02_12_2021-15:13:35.html' -with-report 'pipe_2.0.nf_report_02_12_2021-15:13:35.html' -with-trace 'pipe_2.0.nf_trace_02_12_2021-15:13:35.txt' -with-dag 'pipe_2.0.nf_dag_02_12_2021-15:13:35.png'
+Dec-02 15:13:36.956 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.0
+Dec-02 15:13:36.977 [main] INFO  nextflow.cli.CmdRun - Launching `pipe_2.0.nf` [hungry_swanson] - revision: 8da9cb073c
+Dec-02 15:13:36.989 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Dec-02 15:13:36.990 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Dec-02 15:13:37.006 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-02 15:13:37.497 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
+Dec-02 15:13:37.498 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-02 15:13:37.499 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Dec-02 15:13:37.506 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-02 15:13:37.507 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-02 15:13:37.509 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-02 15:13:37.517 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-02 15:13:37.556 [main] DEBUG nextflow.Session - Session uuid: e1fc0312-d227-4445-9735-10f445b68e9a
+Dec-02 15:13:37.556 [main] DEBUG nextflow.Session - Run name: hungry_swanson
+Dec-02 15:13:37.556 [main] DEBUG nextflow.Session - Executor pool size: 256
+Dec-02 15:13:37.577 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.0 build 5552
+  Created: 02-05-2021 16:22 UTC (17:22 BST)
+  System: Linux 5.4.0-74-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 3009959@drihpc1 [128.40.163.130]
+  CPUs: 256 - Mem: 1007.5 GB (13.6 GB) - Swap: 8 GB (7.8 GB)
+Dec-02 15:13:37.598 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work [nfs]
+Dec-02 15:13:37.599 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/bin
+Dec-02 15:13:37.608 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-02 15:13:37.618 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-02 15:13:37.936 [main] DEBUG nextflow.Session - Session start invoked
+Dec-02 15:13:37.940 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/pipe_2.0.nf_trace_02_12_2021-15:13:35.txt
+Dec-02 15:13:38.227 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-02 15:13:39.619 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DESeq, gtf_to_exons, select_metadata_cols, cluster_juncs, fastqc2, rseqc_junction_annotation, rseqc_RNA_fragment_size, rseqc_read_GC, salmon_quantification, rseqc_mismatch_profile, gencode_genemap, gtf_to_bed, get_packages, star_genome_gen, create_groupfiles, leafcutter, fastp, rseqc_inner_distance, STAR_2pass_indv, star, genome_download, salmon_index_gen, decoy_gen, salmon, rseqc, Star_genome_gen, create_gene_map, rseqc_clipping_profile, sam_sort_index, rseqc_read_distribution, fastqc, convert_juncs, multiqc_post_star_salmon, salmon_index, rseqc_bam_stat, rseqc_read_duplication
+Dec-02 15:13:39.745 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.746 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.750 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-02 15:13:39.754 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=1007.5 GB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Dec-02 15:13:39.813 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.813 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.822 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.823 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.828 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.828 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.833 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.833 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.839 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.839 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.846 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.847 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.853 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.853 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.857 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.857 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.863 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.863 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.867 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.867 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.871 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.871 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.879 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.879 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.883 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.883 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.892 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.892 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.896 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.896 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.901 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 15:13:39.901 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 15:13:39.904 [main] DEBUG nextflow.Session - Ignite dataflow network (19)
+Dec-02 15:13:39.909 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/../../ASAP_bulk_fastqs/Run2/; pattern: *R{1,2}*.fastq.gz; options: [:]
+Dec-02 15:13:39.909 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc
+Dec-02 15:13:39.910 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_packages
+Dec-02 15:13:39.910 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastp
+Dec-02 15:13:39.911 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > genome_download
+Dec-02 15:13:39.912 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc2
+Dec-02 15:13:39.913 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star_genome_gen
+Dec-02 15:13:39.914 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star
+Dec-02 15:13:39.914 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gtf_to_bed
+Dec-02 15:13:39.915 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > sam_sort_index
+Dec-02 15:13:39.915 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > rseqc_read_distribution
+Dec-02 15:13:39.915 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > decoy_gen
+Dec-02 15:13:39.916 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > salmon_index
+Dec-02 15:13:39.917 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > salmon_quantification
+Dec-02 15:13:39.918 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > create_gene_map
+Dec-02 15:13:39.919 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > convert_juncs
+Dec-02 15:13:39.920 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cluster_juncs
+Dec-02 15:13:39.922 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gtf_to_exons
+Dec-02 15:13:39.922 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-02 15:13:39.922 [main] DEBUG nextflow.Session - Session await
+Dec-02 15:13:40.033 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 15:13:40.038 [Task submitter] INFO  nextflow.Session - [8a/9f6981] Submitted process > genome_download
+Dec-02 15:13:40.057 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 15:13:40.058 [Task submitter] INFO  nextflow.Session - [b3/352d09] Submitted process > get_packages
+Dec-02 15:13:40.075 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 15:13:40.075 [Task submitter] INFO  nextflow.Session - [ba/40c256] Submitted process > fastqc (2)
+Dec-02 15:13:52.779 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: get_packages; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/b3/352d09d706bbec51f46b540f045db2]
+Dec-02 15:13:52.792 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 15:13:52.792 [Task submitter] INFO  nextflow.Session - [81/2e413e] Submitted process > fastqc (1)
+Dec-02 15:18:39.863 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 15:18:40.834 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 15:23:39.945 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 15:23:40.862 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 15:28:40.023 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 15:28:40.887 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 15:33:40.105 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 15:33:40.910 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 15:38:40.180 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 15:38:40.933 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 15:43:40.257 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: genome_download; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 15:43:40.956 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 15:45:37.396 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: genome_download; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/9f6981154e77f784533b8967fcdf61]
+Dec-02 15:45:37.413 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 15:45:37.415 [Task submitter] INFO  nextflow.Session - [65/ef5301] Submitted process > fastqc (3)
+Dec-02 15:45:37.417 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=768; maxQueueSize=2304; keepAlive=1m
+Dec-02 15:48:40.308 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+~> TaskHandler[id: 5; name: fastqc (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+Dec-02 15:48:41.441 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 10 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+Dec-02 15:53:40.386 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+~> TaskHandler[id: 5; name: fastqc (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+Dec-02 15:53:41.471 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 10 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+Dec-02 15:58:40.463 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 4; name: fastqc (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+~> TaskHandler[id: 3; name: fastqc (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+~> TaskHandler[id: 5; name: fastqc (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+Dec-02 15:58:41.502 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 10 -- tasks to be submitted are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+Dec-02 15:58:59.567 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: fastqc (2); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ba/40c2564f6c61555902f70c2e942260]
+Dec-02 15:58:59.573 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 15:58:59.573 [Task submitter] INFO  nextflow.Session - [53/60b601] Submitted process > fastqc (4)
+Dec-02 16:00:43.224 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: fastqc (1); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/2e413e44442ae50050e48a94934a10]
+Dec-02 16:00:43.228 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 16:00:43.229 [Task submitter] INFO  nextflow.Session - [2e/eb5d7b] Submitted process > fastp (3)
+Dec-02 16:03:40.531 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+Dec-02 16:03:42.250 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+Dec-02 16:08:40.612 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: fastqc (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 9; name: fastp (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+Dec-02 16:08:42.280 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 8 -- tasks to be submitted are shown below
+~> TaskHandler[id: 8; name: fastp (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+Dec-02 16:09:19.025 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: fastqc (3); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/65/ef53012a5aff00394b34e412ea7f42]
+Dec-02 16:09:19.029 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 16:09:19.030 [Task submitter] INFO  nextflow.Session - [4f/20c93c] Submitted process > fastp (2)
+Dec-02 16:10:27.296 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: fastp (3); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/eb5d7b461298001a8e951cdafc492c]
+Dec-02 16:10:27.303 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 16:10:27.303 [Task submitter] INFO  nextflow.Session - [5c/32a424] Submitted process > fastp (1)
+Dec-02 16:10:27.368 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-02 16:13:40.710 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 8; name: fastp (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+~> TaskHandler[id: 7; name: fastp (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+Dec-02 16:13:42.322 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 10; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+~> TaskHandler[id: 16; name: fastqc2 (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/f5/0d84f2597b5435a82fd6391daef2e5]
+Dec-02 16:18:30.821 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: fastp (2); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4f/20c93cc044d75766039d7e5eca37d1]
+Dec-02 16:18:30.827 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-02 16:18:30.828 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 16:18:30.829 [Task submitter] INFO  nextflow.Session - [20/f1ed65] Submitted process > fastp (4)
+Dec-02 16:18:40.729 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/53/60b601a8c58a3fb5fa260c46ee662d]
+~> TaskHandler[id: 7; name: fastp (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+~> TaskHandler[id: 10; name: fastp (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/20/f1ed651be5f335d1bf2d5997c90b8f]
+Dec-02 16:18:42.833 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 7 -- tasks to be submitted are shown below
+~> TaskHandler[id: 13; name: create_gene_map; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+~> TaskHandler[id: 11; name: gtf_to_bed; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/6a/fcfec9bf442d9935bf7044075dec34]
+~> TaskHandler[id: 14; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/a1/da7f55ab6564653a35a652f0c1dcf6]
+~> TaskHandler[id: 12; name: gtf_to_exons; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ff/4afadd632d27f023430d0c3997b8d9]
+~> TaskHandler[id: 15; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ae/790e204f0fe08fd574aff3d184e029]
+~> TaskHandler[id: 16; name: fastqc2 (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/f5/0d84f2597b5435a82fd6391daef2e5]
+~> TaskHandler[id: 17; name: fastqc2 (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/f5e573e67c1c77d122892c1059482e]
+Dec-02 16:19:48.279 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: fastp (1); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5c/32a424c3c5fe85fa7dcc7ac000a657]
+Dec-02 16:19:48.285 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 16:19:48.285 [Task submitter] INFO  nextflow.Session - [56/188e35] Submitted process > create_gene_map
+Dec-02 16:19:48.286 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-02 16:20:50.863 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: create_gene_map; status: COMPLETED; exit: 1; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0]
+Dec-02 16:20:50.871 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-02 16:20:50.871 [Task submitter] INFO  nextflow.Session - [6a/fcfec9] Submitted process > gtf_to_bed
+Dec-02 16:20:51.254 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'create_gene_map'
+
+Caused by:
+  Process `create_gene_map` terminated with an error exit status (1)
+
+Command executed:
+
+  Rscript /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/../R_scripts/create_gencode_gene_map.R gencode.v38.transcripts.fa
+
+Command exit status:
+  1
+
+Command output:
+  ####### reading transcriptome FASTA
+
+Command error:
+  
+  Loading required package: S4Vectors
+  Loading required package: stats4
+  
+  Attaching package: ‘S4Vectors’
+  
+  The following objects are masked from ‘package:dplyr’:
+  
+      first, rename
+  
+  The following object is masked from ‘package:tidyr’:
+  
+      expand
+  
+  The following objects are masked from ‘package:base’:
+  
+      expand.grid, I, unname
+  
+  Loading required package: IRanges
+  
+  Attaching package: ‘IRanges’
+  
+  The following objects are masked from ‘package:dplyr’:
+  
+      collapse, desc, slice
+  
+  The following object is masked from ‘package:purrr’:
+  
+      reduce
+  
+  Loading required package: XVector
+  
+  Attaching package: ‘XVector’
+  
+  The following object is masked from ‘package:purrr’:
+  
+      compact
+  
+  Loading required package: GenomeInfoDb
+  
+  Attaching package: ‘Biostrings’
+  
+  The following object is masked from ‘package:base’:
+  
+      strsplit
+  
+  Error in dimnames(x) <- dn : 
+    length of 'dimnames' [2] not equal to array extent
+  Calls: colnames<- -> colnames<-
+  Execution halted
+
+Work dir:
+  /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/56/188e354d1b280b5a99bd5f24a890f0
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Dec-02 16:20:51.260 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `create_gene_map` terminated with an error exit status (1)
+Dec-02 16:20:51.277 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] fastqc2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] star
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: genome_dir
+  port 2: (cntrl) -     ; channel: $
+
+[process] sam_sort_index
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: data
+  port 1: (cntrl) -     ; channel: $
+
+[process] rseqc_read_distribution
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: bams
+  port 1: (queue) OPEN  ; channel: bed_model
+  port 2: (cntrl) -     ; channel: $
+
+[process] salmon_index
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: gentrome
+  port 1: (value) OPEN  ; channel: decoys
+  port 2: (cntrl) -     ; channel: $
+
+[process] salmon_quantification
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: whole_index
+  port 1: (queue) OPEN  ; channel: -
+  port 2: (cntrl) -     ; channel: $
+
+[process] convert_juncs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: sj_loc
+  port 1: (value) OPEN  ; channel: sj_tabs
+  port 2: (cntrl) -     ; channel: $
+
+[process] cluster_juncs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: junc_list
+  port 1: (cntrl) -     ; channel: $
+
+Dec-02 16:20:51.284 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-02 16:20:51.285 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-02 16:20:51.293 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (3)
+Dec-02 16:20:51.309 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=8; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=6; submittedCount=1; runningCount=-1; retriesCount=0; abortedCount=3; succeedDuration=5d 21h 26s; failedDuration=49m 59s; cachedDuration=0ms;loadCpus=-48; loadMemory=0; peakRunning=3; peakCpus=144; peakMemory=768 GB; ]
+Dec-02 16:20:51.309 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Dec-02 16:20:51.311 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Dec-02 16:20:51.375 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":4.41,"min":4.41,"q1":4.41,"q2":4.41,"q3":4.41,"max":4.41,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"process":"get_packages","mem":{"mean":861511680,"min":861511680,"q1":861511680,"q2":861511680,"q3":861511680,"max":861511680,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"memUsage":{"mean":0.31,"min":0.31,"q1":0.31,"q2":0.31,"q3":0.31,"max":0.31,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"timeUsage":null,"vmem":{"mean":27857072128,"min":27857072128,"q1":27857072128,"q2":27857072128,"q3":27857072128,"max":27857072128,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"reads":{"mean":71379945,"min":71379945,"q1":71379945,"q2":71379945,"q3":71379945,"max":71379945,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"cpu":{"mean":211.8,"min":211.8,"q1":211.8,"q2":211.8,"q3":211.8,"max":211.8,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"time":{"mean":12654,"min":12654,"q1":12654,"q2":12654,"q3":12654,"max":12654,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"writes":{"mean":4505,"min":4505,"q1":4505,"q2":4505,"q3":4505,"max":4505,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"}},{"cpuUsage":{"mean":0.03,"min":0.03,"q1":0.03,"q2":0.03,"q3":0.03,"max":0.03,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"process":"genome_download","mem":{"mean":8478720,"min":8478720,"q1":8478720,"q2":8478720,"q3":8478720,"max":8478720,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"memUsage":null,"timeUsage":null,"vmem":{"mean":20017152,"min":20017152,"q1":20017152,"q2":20017152,"q3":20017152,"max":20017152,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"reads":{"mean":1944102572,"min":1944102572,"q1":1944102572,"q2":1944102572,"q3":1944102572,"max":1944102572,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"cpu":{"mean":1.5,"min":1.5,"q1":1.5,"q2":1.5,"q3":1.5,"max":1.5,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"time":{"mean":1916121,"min":1916121,"q1":1916121,"q2":1916121,"q3":1916121,"max":1916121,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"writes":{"mean":6117408435,"min":6117408435,"q1":6117408435,"q2":6117408435,"q3":6117408435,"max":6117408435,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"}},{"cpuUsage":{"mean":1.64,"min":1.18,"q1":1.2,"q2":1.23,"q3":1.88,"max":2.53,"minLabel":"fastqc (2)","maxLabel":"fastqc (3)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (1)"},"process":"fastqc","mem":{"mean":3818643456,"min":3762008064,"q1":3769106432,"q2":3776204800,"q3":3846961152,"max":3917717504,"minLabel":"fastqc (3)","maxLabel":"fastqc (1)","q1Label":"fastqc (3)","q2Label":"fastqc (2)","q3Label":"fastqc (2)"},"memUsage":{"mean":1.39,"min":1.37,"q1":1.37,"q2":1.37,"q3":1.4,"max":1.43,"minLabel":"fastqc (3)","maxLabel":"fastqc (1)","q1Label":"fastqc (3)","q2Label":"fastqc (2)","q3Label":"fastqc (2)"},"timeUsage":null,"vmem":{"mean":8998136490.67,"min":8858849280,"q1":8897376256,"q2":8935903232,"q3":9067780096,"max":9199656960,"minLabel":"fastqc (2)","maxLabel":"fastqc (3)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (1)"},"reads":{"mean":20733723652,"min":19051265444,"q1":20197819602.5,"q2":21344373761,"q3":21574952756,"max":21805531751,"minLabel":"fastqc (2)","maxLabel":"fastqc (3)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (1)"},"cpu":{"mean":78.9,"min":56.6,"q1":57.75,"q2":58.9,"q3":90.05,"max":121.2,"minLabel":"fastqc (2)","maxLabel":"fastqc (3)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (1)"},"time":{"mean":2317084.67,"min":1421506,"q1":2070465,"q2":2719424,"q3":2764874,"max":2810324,"minLabel":"fastqc (3)","maxLabel":"fastqc (1)","q1Label":"fastqc (3)","q2Label":"fastqc (2)","q3Label":"fastqc (2)"},"writes":{"mean":4885795,"min":4751191,"q1":4761311.5,"q2":4771432,"q3":4953097,"max":5134762,"minLabel":"fastqc (2)","maxLabel":"fastqc (1)","q1Label":"fastqc (2)","q2Label":"fastqc (3)","q3Label":"fastqc (3)"}},{"cpuUsage":{"mean":20.77,"min":19.54,"q1":20.34,"q2":21.14,"q3":21.39,"max":21.63,"minLabel":"fastp (2)","maxLabel":"fastp (1)","q1Label":"fastp (2)","q2Label":"fastp (3)","q3Label":"fastp (3)"},"process":"fastp","mem":{"mean":13127806976,"min":11902615552,"q1":12587567104,"q2":13272518656,"q3":13740402688,"max":14208286720,"minLabel":"fastp (1)","maxLabel":"fastp (3)","q1Label":"fastp (1)","q2Label":"fastp (2)","q3Label":"fastp (2)"},"memUsage":{"mean":4.78,"min":4.33,"q1":4.58,"q2":4.83,"q3":5,"max":5.17,"minLabel":"fastp (1)","maxLabel":"fastp (3)","q1Label":"fastp (1)","q2Label":"fastp (2)","q3Label":"fastp (2)"},"timeUsage":null,"vmem":{"mean":14141378560,"min":12852535296,"q1":13677924352,"q2":14503313408,"q3":14785800192,"max":15068286976,"minLabel":"fastp (1)","maxLabel":"fastp (3)","q1Label":"fastp (1)","q2Label":"fastp (2)","q3Label":"fastp (2)"},"reads":{"mean":20788218960,"min":19105839557,"q1":20252308899.5,"q2":21398778242,"q3":21629408661.5,"max":21860039081,"minLabel":"fastp (2)","maxLabel":"fastp (3)","q1Label":"fastp (2)","q2Label":"fastp (1)","q3Label":"fastp (1)"},"cpu":{"mean":997,"min":937.8,"q1":976.3,"q2":1014.8,"q3":1026.6,"max":1038.4,"minLabel":"fastp (2)","maxLabel":"fastp (1)","q1Label":"fastp (2)","q2Label":"fastp (3)","q3Label":"fastp (3)"},"time":{"mean":565170.67,"min":551056,"q1":555763,"q2":560470,"q3":572228,"max":583986,"minLabel":"fastp (2)","maxLabel":"fastp (3)","q1Label":"fastp (2)","q2Label":"fastp (1)","q3Label":"fastp (1)"},"writes":{"mean":13069179754,"min":12228483045,"q1":12693171247,"q2":13157859449,"q3":13489528108.5,"max":13821196768,"minLabel":"fastp (2)","maxLabel":"fastp (3)","q1Label":"fastp (2)","q2Label":"fastp (1)","q3Label":"fastp (1)"}},{"cpuUsage":null,"process":"create_gene_map","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":62483,"min":62483,"q1":62483,"q2":62483,"q3":62483,"max":62483,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"writes":null},{"cpuUsage":null,"process":"gtf_to_bed","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+Dec-02 16:20:52.483 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Dec-02 16:20:52.767 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-02 16:20:52.877 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

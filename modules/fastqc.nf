@@ -1,9 +1,9 @@
 process fastqc {
 
-myDir2 = file("${baseDir}/output/fastqc")
+myDir2 = file("${projectDir}/output/fastqc")
 myDir2.mkdir()
 
-publishDir "${baseDir}/output/fastqc", mode: 'copy', overwrite: true
+publishDir "${projectDir}/output/fastqc", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
@@ -14,7 +14,7 @@ publishDir "${baseDir}/output/fastqc", mode: 'copy', overwrite: true
     val("${fqc_files}"), emit: fqc_files
 
     script:
-    fqc_files="${baseDir}/output"
+    fqc_files="${projectDir}/output"
     """
     fastqc $reads -t 20
     """

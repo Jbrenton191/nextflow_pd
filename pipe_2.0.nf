@@ -1,8 +1,8 @@
 nextflow.enable.dsl=2
 
-   params.data="${baseDir}/../Regina_raw_fastqs/*R{1,3}*.fastq.gz"
+   params.data="${baseDir}/../ASAP_bulk_fastqs/*R{1,2}*.fastq.gz"
    params.salmon_dir = "${projectDir}/output/Salmon/"
-   params.metadata_csv= "${projectDir}/20201229_MasterFile_SampleInfo.csv"
+   params.metadata_csv= "${projectDir}/ASAP_samples_master_spreadsheet_25.8.21.csv"
    params.metadata_key= "${projectDir}/key_for_metadata.txt"
 
    output_dir = "${baseDir}/output"

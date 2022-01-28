@@ -1,6 +1,6 @@
 process Star_merge {
 
-publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+publishDir "${projectDir}/output/STAR/align", mode: 'copy', overwrite: true
 
 echo true
 
@@ -13,7 +13,7 @@ echo true
 
     script:
     """
-    Rscript ${baseDir}/STAR_splice_junction_merge.R $sj_loc -o .
+    Rscript ${projectDir}/../R_scripts/STAR_splice_junction_merge.R $sj_loc -o .
     """
 
 }

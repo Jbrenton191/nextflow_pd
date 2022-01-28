@@ -1,0 +1,478 @@
+Dec-03 13:05:12.815 [main] DEBUG nextflow.cli.Launcher - $> nextflow run pipe_2.0.nf -resume -bg -with-timeline 'pipe_2.0.nf_timeline_03_12_2021-13:05:11.html' -with-report 'pipe_2.0.nf_report_03_12_2021-13:05:11.html' -with-trace 'pipe_2.0.nf_trace_03_12_2021-13:05:11.txt' -with-dag 'pipe_2.0.nf_dag_03_12_2021-13:05:11.png'
+Dec-03 13:05:13.098 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.0
+Dec-03 13:05:13.118 [main] INFO  nextflow.cli.CmdRun - Launching `pipe_2.0.nf` [hungry_magritte] - revision: 8da9cb073c
+Dec-03 13:05:13.131 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Dec-03 13:05:13.132 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Dec-03 13:05:13.149 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-03 13:05:13.629 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
+Dec-03 13:05:13.629 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-03 13:05:13.631 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Dec-03 13:05:13.637 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-03 13:05:13.638 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-03 13:05:13.640 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-03 13:05:13.647 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-03 13:05:13.684 [main] DEBUG nextflow.Session - Session uuid: e1fc0312-d227-4445-9735-10f445b68e9a
+Dec-03 13:05:13.684 [main] DEBUG nextflow.Session - Run name: hungry_magritte
+Dec-03 13:05:13.685 [main] DEBUG nextflow.Session - Executor pool size: 256
+Dec-03 13:05:13.708 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.0 build 5552
+  Created: 02-05-2021 16:22 UTC (17:22 BST)
+  System: Linux 5.4.0-74-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 3105874@drihpc1 [128.40.163.130]
+  CPUs: 256 - Mem: 1007.5 GB (17 GB) - Swap: 8 GB (7.8 GB)
+Dec-03 13:05:14.149 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work [nfs]
+Dec-03 13:05:14.150 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/bin
+Dec-03 13:05:14.160 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-03 13:05:14.169 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-03 13:05:15.123 [main] DEBUG nextflow.Session - Session start invoked
+Dec-03 13:05:15.126 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/pipe_2.0.nf_trace_03_12_2021-13:05:11.txt
+Dec-03 13:05:15.395 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-03 13:05:17.056 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DESeq, gtf_to_exons, select_metadata_cols, cluster_juncs, fastqc2, rseqc_junction_annotation, rseqc_RNA_fragment_size, rseqc_read_GC, salmon_quantification, rseqc_mismatch_profile, gencode_genemap, gtf_to_bed, get_packages, star_genome_gen, create_groupfiles, leafcutter, fastp, rseqc_inner_distance, star, STAR_2pass_indv, genome_download, salmon_index_gen, decoy_gen, salmon, rseqc, Star_genome_gen, create_gene_map, rseqc_clipping_profile, sam_sort_index, rseqc_read_distribution, fastqc, convert_juncs, multiqc_post_star_salmon, salmon_index, rseqc_bam_stat, rseqc_read_duplication
+Dec-03 13:05:17.174 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.174 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.178 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-03 13:05:17.182 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=1007.5 GB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Dec-03 13:05:17.241 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.241 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.250 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.250 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.255 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.255 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.259 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.259 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.264 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.264 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.271 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.271 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.277 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.277 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.280 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.281 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.285 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.285 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.289 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.289 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.292 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.292 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.300 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.300 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.303 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.303 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.311 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.311 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.314 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.314 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.319 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-03 13:05:17.319 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-03 13:05:17.321 [main] DEBUG nextflow.Session - Ignite dataflow network (19)
+Dec-03 13:05:17.326 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/../../ASAP_bulk_fastqs/Run2/; pattern: *R{1,2}*.fastq.gz; options: [:]
+Dec-03 13:05:17.326 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc
+Dec-03 13:05:17.327 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_packages
+Dec-03 13:05:17.327 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastp
+Dec-03 13:05:17.328 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > genome_download
+Dec-03 13:05:17.328 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc2
+Dec-03 13:05:17.329 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star_genome_gen
+Dec-03 13:05:17.330 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star
+Dec-03 13:05:17.330 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gtf_to_bed
+Dec-03 13:05:17.331 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > sam_sort_index
+Dec-03 13:05:17.332 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > rseqc_read_distribution
+Dec-03 13:05:17.332 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > decoy_gen
+Dec-03 13:05:17.333 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > salmon_index
+Dec-03 13:05:17.333 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > salmon_quantification
+Dec-03 13:05:17.334 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > create_gene_map
+Dec-03 13:05:17.334 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > convert_juncs
+Dec-03 13:05:17.337 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cluster_juncs
+Dec-03 13:05:17.337 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gtf_to_exons
+Dec-03 13:05:17.337 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-03 13:05:17.338 [main] DEBUG nextflow.Session - Session await
+Dec-03 13:05:17.493 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [b3/352d09] Cached process > get_packages
+Dec-03 13:05:17.499 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:05:17.501 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [8a/9f6981] Cached process > genome_download
+Dec-03 13:05:17.502 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [81/2e413e] Cached process > fastqc (1)
+Dec-03 13:05:17.503 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [ba/40c256] Cached process > fastqc (2)
+Dec-03 13:05:17.503 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [65/ef5301] Cached process > fastqc (3)
+Dec-03 13:05:17.504 [Task submitter] INFO  nextflow.Session - [69/006d9e] Submitted process > fastqc (4)
+Dec-03 13:05:17.547 [Actor Thread 7] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=768; maxQueueSize=2304; keepAlive=1m
+Dec-03 13:05:17.555 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:05:17.555 [Task submitter] INFO  nextflow.Session - [47/97deed] Submitted process > gtf_to_bed
+Dec-03 13:05:17.566 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:05:17.567 [Task submitter] INFO  nextflow.Session - [41/bb1712] Submitted process > gtf_to_exons
+Dec-03 13:05:17.596 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [4f/20c93c] Cached process > fastp (2)
+Dec-03 13:05:17.596 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [5c/32a424] Cached process > fastp (1)
+Dec-03 13:05:17.596 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [2e/eb5d7b] Cached process > fastp (3)
+Dec-03 13:05:17.660 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-03 13:05:17.662 [Actor Thread 13] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-03 13:05:17.665 [Actor Thread 16] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-03 13:09:56.387 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: gtf_to_bed; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/47/97deed02ae420d13348797d650912c]
+Dec-03 13:09:56.394 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:09:56.394 [Task submitter] INFO  nextflow.Session - [e2/b05c3b] Submitted process > create_gene_map
+Dec-03 13:10:17.298 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/006d9eae49445598cac752bfb4924b]
+~> TaskHandler[id: 9; name: gtf_to_exons; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/41/bb171224594df0e7a30aad3a7c3811]
+~> TaskHandler[id: 14; name: create_gene_map; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/e2/b05c3b1e65cb8b569a63022cd0f18b]
+Dec-03 13:10:18.399 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 13; name: star_genome_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+~> TaskHandler[id: 15; name: decoy_gen; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/23/595a89d5d0418cb0700362b3aac001]
+~> TaskHandler[id: 12; name: fastp (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/57/737be9d4fe3f8a2436d92406ad2d79]
+~> TaskHandler[id: 16; name: fastqc2 (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/c2d238f4de9028e0115bee5346b18c]
+~> TaskHandler[id: 17; name: fastqc2 (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4d/e8bc1671c8cf00a09758a14300676b]
+~> TaskHandler[id: 18; name: fastqc2 (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+Dec-03 13:10:37.535 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: create_gene_map; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/e2/b05c3b1e65cb8b569a63022cd0f18b]
+Dec-03 13:10:37.539 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:10:37.540 [Task submitter] INFO  nextflow.Session - [4b/7e887a] Submitted process > star_genome_gen
+Dec-03 13:10:54.175 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: gtf_to_exons; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/41/bb171224594df0e7a30aad3a7c3811]
+Dec-03 13:10:54.390 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:10:54.391 [Task submitter] INFO  nextflow.Session - [23/595a89] Submitted process > decoy_gen
+Dec-03 13:11:07.930 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: decoy_gen; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/23/595a89d5d0418cb0700362b3aac001]
+Dec-03 13:11:07.934 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:11:07.935 [Task submitter] INFO  nextflow.Session - [57/737be9] Submitted process > fastp (4)
+Dec-03 13:15:17.393 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/006d9eae49445598cac752bfb4924b]
+~> TaskHandler[id: 13; name: star_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+~> TaskHandler[id: 12; name: fastp (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/57/737be9d4fe3f8a2436d92406ad2d79]
+Dec-03 13:15:18.960 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 4 -- tasks to be submitted are shown below
+~> TaskHandler[id: 16; name: fastqc2 (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/c2d238f4de9028e0115bee5346b18c]
+~> TaskHandler[id: 17; name: fastqc2 (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4d/e8bc1671c8cf00a09758a14300676b]
+~> TaskHandler[id: 18; name: fastqc2 (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+~> TaskHandler[id: 19; name: salmon_index; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+Dec-03 13:20:17.472 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: fastqc (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/006d9eae49445598cac752bfb4924b]
+~> TaskHandler[id: 13; name: star_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+~> TaskHandler[id: 12; name: fastp (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/57/737be9d4fe3f8a2436d92406ad2d79]
+Dec-03 13:20:19.008 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 4 -- tasks to be submitted are shown below
+~> TaskHandler[id: 16; name: fastqc2 (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/c2d238f4de9028e0115bee5346b18c]
+~> TaskHandler[id: 17; name: fastqc2 (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4d/e8bc1671c8cf00a09758a14300676b]
+~> TaskHandler[id: 18; name: fastqc2 (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+~> TaskHandler[id: 19; name: salmon_index; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+Dec-03 13:22:13.488 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: fastp (4); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/57/737be9d4fe3f8a2436d92406ad2d79]
+Dec-03 13:22:13.493 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process fastp > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Dec-03 13:22:13.608 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:22:13.608 [Task submitter] INFO  nextflow.Session - [69/c2d238] Submitted process > fastqc2 (1)
+Dec-03 13:22:46.550 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: fastqc (4); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/006d9eae49445598cac752bfb4924b]
+Dec-03 13:22:46.554 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:22:46.555 [Task submitter] INFO  nextflow.Session - [4d/e8bc16] Submitted process > fastqc2 (2)
+Dec-03 13:25:17.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 13; name: star_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+~> TaskHandler[id: 16; name: fastqc2 (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/c2d238f4de9028e0115bee5346b18c]
+~> TaskHandler[id: 17; name: fastqc2 (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4d/e8bc1671c8cf00a09758a14300676b]
+Dec-03 13:25:19.574 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 18; name: fastqc2 (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+~> TaskHandler[id: 19; name: salmon_index; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 20; name: fastqc2 (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+Dec-03 13:30:17.613 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 13; name: star_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+~> TaskHandler[id: 16; name: fastqc2 (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/c2d238f4de9028e0115bee5346b18c]
+~> TaskHandler[id: 17; name: fastqc2 (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4d/e8bc1671c8cf00a09758a14300676b]
+Dec-03 13:30:19.598 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 18; name: fastqc2 (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+~> TaskHandler[id: 19; name: salmon_index; status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 20; name: fastqc2 (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+Dec-03 13:33:03.385 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: fastqc2 (1); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/69/c2d238f4de9028e0115bee5346b18c]
+Dec-03 13:33:03.390 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:33:03.390 [Task submitter] INFO  nextflow.Session - [62/0e7b3e] Submitted process > fastqc2 (3)
+Dec-03 13:34:49.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: fastqc2 (2); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4d/e8bc1671c8cf00a09758a14300676b]
+Dec-03 13:34:49.968 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:34:49.969 [Task submitter] INFO  nextflow.Session - [76/6d7311] Submitted process > salmon_index
+Dec-03 13:35:17.679 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 13; name: star_genome_gen; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+~> TaskHandler[id: 18; name: fastqc2 (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+~> TaskHandler[id: 19; name: salmon_index; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+Dec-03 13:35:19.972 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 20; name: fastqc2 (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+Dec-03 13:36:57.871 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: star_genome_gen; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/4b/7e887a086f8a6377e988802a86cc35]
+Dec-03 13:36:57.876 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:36:57.876 [Task submitter] INFO  nextflow.Session - [3f/643ad5] Submitted process > fastqc2 (4)
+Dec-03 13:40:17.689 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 18; name: fastqc2 (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+~> TaskHandler[id: 19; name: salmon_index; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 20; name: fastqc2 (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+Dec-03 13:40:20.906 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 4 -- tasks to be submitted are shown below
+~> TaskHandler[id: 21; name: star (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+Dec-03 13:44:51.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: fastqc2 (3); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/62/0e7b3e14117804211bc4ce3f796781]
+Dec-03 13:44:51.460 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:44:51.460 [Task submitter] INFO  nextflow.Session - [5a/c8d553] Submitted process > star (1)
+Dec-03 13:45:17.772 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 19; name: salmon_index; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 20; name: fastqc2 (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+Dec-03 13:45:21.465 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 23; name: star (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+Dec-03 13:50:17.847 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 19; name: salmon_index; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 20; name: fastqc2 (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+Dec-03 13:50:21.499 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 23; name: star (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+Dec-03 13:50:22.101 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: fastqc2 (4); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/3f/643ad5983834cee7b569117c19375d]
+Dec-03 13:50:22.124 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 13:50:22.125 [Task submitter] INFO  nextflow.Session - [66/ac055d] Submitted process > star (3)
+Dec-03 13:55:17.890 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 19; name: salmon_index; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+Dec-03 13:55:22.156 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 22; name: star (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+Dec-03 14:00:17.905 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 19; name: salmon_index; status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+Dec-03 14:00:22.182 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 22; name: star (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+Dec-03 14:01:19.709 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: salmon_index; status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/76/6d73111d4ef3916ef75cc9beddc3d6]
+Dec-03 14:01:19.714 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 14:01:19.715 [Task submitter] INFO  nextflow.Session - [80/bf24ba] Submitted process > star (2)
+Dec-03 14:05:17.977 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:05:22.753 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 14:10:18.002 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:10:22.792 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 14:15:18.034 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:15:22.833 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 14:20:18.081 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:20:22.870 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 14:25:18.115 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:25:22.909 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 14:30:18.209 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 21; name: star (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+~> TaskHandler[id: 23; name: star (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:30:22.944 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 24; name: star (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 14:30:25.091 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: star (1); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/5a/c8d55382df442f65e981a16407a542]
+Dec-03 14:30:25.096 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 14:30:25.097 [Task submitter] INFO  nextflow.Session - [64/8408c6] Submitted process > star (4)
+Dec-03 14:30:25.431 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process star > Skipping output binding because one or more optional files are missing: fileoutparam<4:1>
+Dec-03 14:30:25.432 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process star > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Dec-03 14:34:07.945 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: star (3); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/66/ac055d4a41f4000fae4cb860ac13e5]
+Dec-03 14:34:07.950 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 14:34:07.951 [Task submitter] INFO  nextflow.Session - [8a/2ae6d4] Submitted process > salmon_quantification (1)
+Dec-03 14:34:09.545 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process star > Skipping output binding because one or more optional files are missing: fileoutparam<4:1>
+Dec-03 14:34:09.545 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process star > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Dec-03 14:35:18.298 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+Dec-03 14:35:22.961 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 14:40:18.383 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 25; name: salmon_quantification (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+Dec-03 14:40:22.994 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 14:45:07.917 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: salmon_quantification (1); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/8a/2ae6d40798fab9f5926982cbe9f004]
+Dec-03 14:45:07.923 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 14:45:07.924 [Task submitter] INFO  nextflow.Session - [2e/a39057] Submitted process > salmon_quantification (4)
+Dec-03 14:45:18.424 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+Dec-03 14:45:23.926 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 4 -- tasks to be submitted are shown below
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 14:50:18.436 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 22; name: star (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+Dec-03 14:50:23.970 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 4 -- tasks to be submitted are shown below
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 14:53:35.437 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: star (2); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/80/bf24bac61666adf8f9329161dc82a8]
+Dec-03 14:53:35.441 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 14:53:35.442 [Task submitter] INFO  nextflow.Session - [81/ad4ba3] Submitted process > salmon_quantification (2)
+Dec-03 14:53:35.448 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process star > Skipping output binding because one or more optional files are missing: fileoutparam<4:1>
+Dec-03 14:53:35.448 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process star > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Dec-03 14:55:18.450 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 28; name: salmon_quantification (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+Dec-03 14:55:24.455 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 4 -- tasks to be submitted are shown below
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+~> TaskHandler[id: 31; name: sam_sort_index (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/59/85f5b626273ce34fbc6ab43098619b]
+Dec-03 14:56:37.841 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: salmon_quantification (4); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/2e/a390578eb90f9e3dd2800012f00faf]
+Dec-03 14:56:37.846 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 14:56:37.847 [Task submitter] INFO  nextflow.Session - [16/41a352] Submitted process > salmon_quantification (3)
+Dec-03 15:00:18.514 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 26; name: salmon_quantification (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 15:00:24.880 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+~> TaskHandler[id: 31; name: sam_sort_index (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/59/85f5b626273ce34fbc6ab43098619b]
+Dec-03 15:02:51.913 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: salmon_quantification (2); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/81/ad4ba394607841d75df604b1ba48c9]
+Dec-03 15:02:51.918 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 15:02:51.918 [Task submitter] INFO  nextflow.Session - [60/962845] Submitted process > sam_sort_index (1)
+Dec-03 15:05:18.547 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 27; name: salmon_quantification (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+Dec-03 15:05:24.931 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+~> TaskHandler[id: 31; name: sam_sort_index (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/59/85f5b626273ce34fbc6ab43098619b]
+Dec-03 15:07:34.511 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: salmon_quantification (3); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/16/41a35261c9c664041d872381e40194]
+Dec-03 15:07:34.517 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 15:07:34.517 [Task submitter] INFO  nextflow.Session - [10/f437fe] Submitted process > sam_sort_index (2)
+Dec-03 15:10:18.606 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 15:10:25.536 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: sam_sort_index (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/59/85f5b626273ce34fbc6ab43098619b]
+Dec-03 15:15:18.681 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 29; name: sam_sort_index (1); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 15:15:25.562 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: sam_sort_index (3); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/59/85f5b626273ce34fbc6ab43098619b]
+Dec-03 15:17:39.742 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: sam_sort_index (1); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/60/962845ea6ba004d1b49285b0c10121]
+Dec-03 15:17:39.746 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 15:17:39.747 [Task submitter] INFO  nextflow.Session - [59/85f5b6] Submitted process > sam_sort_index (3)
+Dec-03 15:17:39.761 [Actor Thread 47] INFO  nextflow.conda.CondaCache - Creating Conda env: python=2.7 rseqc [cache /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/conda/env-a8c180c1d041ea171256a3c157100c08]
+Dec-03 15:20:18.734 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 3 -- submitted tasks are shown below
+~> TaskHandler[id: 24; name: star (4); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/64/8408c675f767c1036bfcaac5cb0a1d]
+~> TaskHandler[id: 30; name: sam_sort_index (2); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+~> TaskHandler[id: 31; name: sam_sort_index (3); status: RUNNING; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/59/85f5b626273ce34fbc6ab43098619b]
+Dec-03 15:22:50.729 [Actor Thread 47] DEBUG nextflow.conda.CondaCache - Conda create complete env=python=2.7 rseqc path=/media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/conda/env-a8c180c1d041ea171256a3c157100c08
+Dec-03 15:22:50.734 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 32; name: rseqc_read_distribution (1); status: NEW; exit: -; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ac/d99bf18b9fa2afb55c4957c75433d5]
+Dec-03 15:24:09.421 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: sam_sort_index (2); status: COMPLETED; exit: 0; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/10/f437fe538225acb127d94965c3412b]
+Dec-03 15:24:09.426 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 15:24:09.426 [Task submitter] INFO  nextflow.Session - [ac/d99bf1] Submitted process > rseqc_read_distribution (1)
+Dec-03 15:24:28.940 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: rseqc_read_distribution (1); status: COMPLETED; exit: 1; error: -; workDir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ac/d99bf18b9fa2afb55c4957c75433d5]
+Dec-03 15:24:28.945 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-03 15:24:28.945 [Task submitter] INFO  nextflow.Session - [2a/48cf9b] Submitted process > rseqc_read_distribution (2)
+Dec-03 15:24:28.962 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'rseqc_read_distribution (1)'
+
+Caused by:
+  Process `rseqc_read_distribution (1)` terminated with an error exit status (1)
+
+Command executed:
+
+  read_distribution.py -i gencode.v38.chr_patch_hapl_scaff.annotation.bed -r BX0252_044_S42_Aligned.sortedBysamtools.out.bam > gencode_read_distribution.txt
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  processing BX0252_044_S42_Aligned.sortedBysamtools.out.bam ...Traceback (most recent call last):
+    File "/media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/conda/env-a8c180c1d041ea171256a3c157100c08/bin/read_distribution.py", line 303, in <module>
+      main()
+    File "/media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/conda/env-a8c180c1d041ea171256a3c157100c08/bin/read_distribution.py", line 192, in main
+      intergenic_down1kb_base,intergenic_down5kb_base,intergenic_down10kb_base) = process_gene_model(options.ref_gene_model)
+    File "/media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/conda/env-a8c180c1d041ea171256a3c157100c08/bin/read_distribution.py", line 76, in process_gene_model
+      utr_3 = obj.getUTR(utr=3)
+    File "/media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/conda/env-a8c180c1d041ea171256a3c157100c08/lib/python2.7/site-packages/qcmodule/BED.py", line 431, in getUTR
+      txStart=int(fields[1])
+  ValueError: invalid literal for int() with base 10: '\xb5Y}\x8c]E\x15\x9f\xedv\xdbn+\x1fE'
+
+Work dir:
+  /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work/ac/d99bf18b9fa2afb55c4957c75433d5
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Dec-03 15:24:28.965 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `rseqc_read_distribution (1)` terminated with an error exit status (1)
+Dec-03 15:24:28.977 [Task monitor] DEBUG nextflow.Session - The following nodes are still active:
+[process] sam_sort_index
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: data
+  port 1: (cntrl) -     ; channel: $
+
+[process] rseqc_read_distribution
+  status=ACTIVE
+  port 0: (value) bound ; channel: bams
+  port 1: (queue) OPEN  ; channel: bed_model
+  port 2: (cntrl) -     ; channel: $
+
+[process] convert_juncs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: sj_loc
+  port 1: (value) OPEN  ; channel: sj_tabs
+  port 2: (cntrl) -     ; channel: $
+
+[process] cluster_juncs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: junc_list
+  port 1: (cntrl) -     ; channel: $
+
+Dec-03 15:24:28.982 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-03 15:24:28.984 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-03 15:24:28.992 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (3)
+Dec-03 15:24:29.115 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=21; failedCount=1; ignoredCount=0; cachedCount=8; pendingCount=0; submittedCount=1; runningCount=-1; retriesCount=0; abortedCount=3; succeedDuration=11d 20h 54m 54s; failedDuration=15m 32s; cachedDuration=5d 21h 26s;loadCpus=-48; loadMemory=0; peakRunning=3; peakCpus=144; peakMemory=768 GB; ]
+Dec-03 15:24:29.115 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Dec-03 15:24:29.117 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Dec-03 15:24:29.186 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":4.41,"min":4.41,"q1":4.41,"q2":4.41,"q3":4.41,"max":4.41,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"process":"get_packages","mem":{"mean":861511680,"min":861511680,"q1":861511680,"q2":861511680,"q3":861511680,"max":861511680,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"memUsage":{"mean":0.31,"min":0.31,"q1":0.31,"q2":0.31,"q3":0.31,"max":0.31,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"timeUsage":null,"vmem":{"mean":27857072128,"min":27857072128,"q1":27857072128,"q2":27857072128,"q3":27857072128,"max":27857072128,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"reads":{"mean":71379945,"min":71379945,"q1":71379945,"q2":71379945,"q3":71379945,"max":71379945,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"cpu":{"mean":211.8,"min":211.8,"q1":211.8,"q2":211.8,"q3":211.8,"max":211.8,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"time":{"mean":12654,"min":12654,"q1":12654,"q2":12654,"q3":12654,"max":12654,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"},"writes":{"mean":4505,"min":4505,"q1":4505,"q2":4505,"q3":4505,"max":4505,"minLabel":"get_packages","maxLabel":"get_packages","q1Label":"get_packages","q2Label":"get_packages","q3Label":"get_packages"}},{"cpuUsage":{"mean":2.26,"min":1.18,"q1":1.22,"q2":1.88,"q3":2.92,"max":4.11,"minLabel":"fastqc (2)","maxLabel":"fastqc (4)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (3)"},"process":"fastqc","mem":{"mean":3802337280,"min":3753418752,"q1":3759860736,"q2":3769106432,"q3":3811582976,"max":3917717504,"minLabel":"fastqc (4)","maxLabel":"fastqc (1)","q1Label":"fastqc (4)","q2Label":"fastqc (3)","q3Label":"fastqc (2)"},"memUsage":{"mean":1.38,"min":1.37,"q1":1.37,"q2":1.37,"q3":1.39,"max":1.43,"minLabel":"fastqc (4)","maxLabel":"fastqc (1)","q1Label":"fastqc (4)","q2Label":"fastqc (3)","q3Label":"fastqc (2)"},"timeUsage":null,"vmem":{"mean":8929295360,"min":8722771968,"q1":8824829952,"q2":8897376256,"q3":9001841664,"max":9199656960,"minLabel":"fastqc (4)","maxLabel":"fastqc (3)","q1Label":"fastqc (4)","q2Label":"fastqc (2)","q3Label":"fastqc (1)"},"reads":{"mean":21676024909.25,"min":19051265444,"q1":20771096681.75,"q2":21574952756,"q3":22479880983.5,"max":24502928681,"minLabel":"fastqc (2)","maxLabel":"fastqc (4)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (3)"},"cpu":{"mean":108.45,"min":56.6,"q1":58.33,"q2":90.05,"q3":140.18,"max":197.1,"minLabel":"fastqc (2)","maxLabel":"fastqc (4)","q1Label":"fastqc (2)","q2Label":"fastqc (1)","q3Label":"fastqc (3)"},"time":{"mean":1999998.5,"min":1048740,"q1":1328314.5,"q2":2070465,"q3":2742149,"max":2810324,"minLabel":"fastqc (4)","maxLabel":"fastqc (1)","q1Label":"fastqc (4)","q2Label":"fastqc (3)","q3Label":"fastqc (2)"},"writes":{"mean":4853687.5,"min":4751191,"q1":4755821.5,"q2":4764398.5,"q3":4862264.5,"max":5134762,"minLabel":"fastqc (2)","maxLabel":"fastqc (1)","q1Label":"fastqc (2)","q2Label":"fastqc (4)","q3Label":"fastqc (3)"}},{"cpuUsage":{"mean":0.03,"min":0.03,"q1":0.03,"q2":0.03,"q3":0.03,"max":0.03,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"process":"genome_download","mem":{"mean":8478720,"min":8478720,"q1":8478720,"q2":8478720,"q3":8478720,"max":8478720,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"memUsage":null,"timeUsage":null,"vmem":{"mean":20017152,"min":20017152,"q1":20017152,"q2":20017152,"q3":20017152,"max":20017152,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"reads":{"mean":1944102572,"min":1944102572,"q1":1944102572,"q2":1944102572,"q3":1944102572,"max":1944102572,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"cpu":{"mean":1.5,"min":1.5,"q1":1.5,"q2":1.5,"q3":1.5,"max":1.5,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"time":{"mean":1916121,"min":1916121,"q1":1916121,"q2":1916121,"q3":1916121,"max":1916121,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"},"writes":{"mean":6117408435,"min":6117408435,"q1":6117408435,"q2":6117408435,"q3":6117408435,"max":6117408435,"minLabel":"genome_download","maxLabel":"genome_download","q1Label":"genome_download","q2Label":"genome_download","q3Label":"genome_download"}},{"cpuUsage":{"mean":20.93,"min":19.54,"q1":20.74,"q2":21.28,"q3":21.47,"max":21.63,"minLabel":"fastp (2)","maxLabel":"fastp (1)","q1Label":"fastp (2)","q2Label":"fastp (3)","q3Label":"fastp (4)"},"process":"fastp","mem":{"mean":13522155520,"min":11902615552,"q1":12930042880,"q2":13740402688,"q3":14332515328,"max":14705201152,"minLabel":"fastp (1)","maxLabel":"fastp (4)","q1Label":"fastp (1)","q2Label":"fastp (2)","q3Label":"fastp (3)"},"memUsage":{"mean":4.92,"min":4.33,"q1":4.7,"q2":5,"q3":5.21,"max":5.35,"minLabel":"fastp (1)","maxLabel":"fastp (4)","q1Label":"fastp (1)","q2Label":"fastp (2)","q3Label":"fastp (3)"},"timeUsage":null,"vmem":{"mean":14376048640,"min":12852535296,"q1":14090618880,"q2":14785800192,"q3":15071229952,"max":15080058880,"minLabel":"fastp (1)","maxLabel":"fastp (4)","q1Label":"fastp (1)","q2Label":"fastp (2)","q3Label":"fastp (3)"},"reads":{"mean":21730566027.25,"min":19105839557,"q1":20825543570.75,"q2":21629408661.5,"q3":22534431118,"max":24557607229,"minLabel":"fastp (2)","maxLabel":"fastp (4)","q1Label":"fastp (2)","q2Label":"fastp (1)","q3Label":"fastp (3)"},"cpu":{"mean":1004.7,"min":937.8,"q1":995.55,"q2":1021.3,"q3":1030.45,"max":1038.4,"minLabel":"fastp (2)","maxLabel":"fastp (1)","q1Label":"fastp (2)","q2Label":"fastp (3)","q3Label":"fastp (4)"},"time":{"mean":590234.5,"min":551056,"q1":558116.5,"q2":572228,"q3":604346,"max":665426,"minLabel":"fastp (2)","maxLabel":"fastp (4)","q1Label":"fastp (2)","q2Label":"fastp (1)","q3Label":"fastp (3)"},"writes":{"mean":13597220656.25,"min":12228483045,"q1":12925515348,"q2":13489528108.5,"q3":14161233416.75,"max":15181343363,"minLabel":"fastp (2)","maxLabel":"fastp (4)","q1Label":"fastp (2)","q2Label":"fastp (1)","q3Label":"fastp (3)"}},{"cpuUsage":{"mean":0.22,"min":0.22,"q1":0.22,"q2":0.22,"q3":0.22,"max":0.22,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"process":"gtf_to_bed","mem":{"mean":3796434944,"min":3796434944,"q1":3796434944,"q2":3796434944,"q3":3796434944,"max":3796434944,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"memUsage":{"mean":1.38,"min":1.38,"q1":1.38,"q2":1.38,"q3":1.38,"max":1.38,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"timeUsage":null,"vmem":{"mean":3805958144,"min":3805958144,"q1":3805958144,"q2":3805958144,"q3":3805958144,"max":3805958144,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"reads":{"mean":1564230582,"min":1564230582,"q1":1564230582,"q2":1564230582,"q3":1564230582,"max":1564230582,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"cpu":{"mean":10.6,"min":10.6,"q1":10.6,"q2":10.6,"q3":10.6,"max":10.6,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"time":{"mean":278276,"min":278276,"q1":278276,"q2":278276,"q3":278276,"max":278276,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"},"writes":{"mean":32355963,"min":32355963,"q1":32355963,"q2":32355963,"q3":32355963,"max":32355963,"minLabel":"gtf_to_bed","maxLabel":"gtf_to_bed","q1Label":"gtf_to_bed","q2Label":"gtf_to_bed","q3Label":"gtf_to_bed"}},{"cpuUsage":{"mean":2.65,"min":2.65,"q1":2.65,"q2":2.65,"q3":2.65,"max":2.65,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"process":"create_gene_map","mem":{"mean":951181312,"min":951181312,"q1":951181312,"q2":951181312,"q3":951181312,"max":951181312,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"memUsage":{"mean":0.35,"min":0.35,"q1":0.35,"q2":0.35,"q3":0.35,"max":0.35,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"timeUsage":null,"vmem":{"mean":19293949952,"min":19293949952,"q1":19293949952,"q2":19293949952,"q3":19293949952,"max":19293949952,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"reads":{"mean":885672643,"min":885672643,"q1":885672643,"q2":885672643,"q3":885672643,"max":885672643,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"cpu":{"mean":127.2,"min":127.2,"q1":127.2,"q2":127.2,"q3":127.2,"max":127.2,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"time":{"mean":39627,"min":39627,"q1":39627,"q2":39627,"q3":39627,"max":39627,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"},"writes":{"mean":16013179,"min":16013179,"q1":16013179,"q2":16013179,"q3":16013179,"max":16013179,"minLabel":"create_gene_map","maxLabel":"create_gene_map","q1Label":"create_gene_map","q2Label":"create_gene_map","q3Label":"create_gene_map"}},{"cpuUsage":{"mean":0.56,"min":0.56,"q1":0.56,"q2":0.56,"q3":0.56,"max":0.56,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"process":"gtf_to_exons","mem":{"mean":2868961280,"min":2868961280,"q1":2868961280,"q2":2868961280,"q3":2868961280,"max":2868961280,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"memUsage":{"mean":1.04,"min":1.04,"q1":1.04,"q2":1.04,"q3":1.04,"max":1.04,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"timeUsage":null,"vmem":{"mean":29820141568,"min":29820141568,"q1":29820141568,"q2":29820141568,"q3":29820141568,"max":29820141568,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"reads":{"mean":1626939796,"min":1626939796,"q1":1626939796,"q2":1626939796,"q3":1626939796,"max":1626939796,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"cpu":{"mean":26.7,"min":26.7,"q1":26.7,"q2":26.7,"q3":26.7,"max":26.7,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"time":{"mean":336063,"min":336063,"q1":336063,"q2":336063,"q3":336063,"max":336063,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"},"writes":{"mean":1622423311,"min":1622423311,"q1":1622423311,"q2":1622423311,"q3":1622423311,"max":1622423311,"minLabel":"gtf_to_exons","maxLabel":"gtf_to_exons","q1Label":"gtf_to_exons","q2Label":"gtf_to_exons","q3Label":"gtf_to_exons"}},{"cpuUsage":{"mean":0.59,"min":0.59,"q1":0.59,"q2":0.59,"q3":0.59,"max":0.59,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"},"process":"decoy_gen","mem":{"mean":6041600,"min":6041600,"q1":6041600,"q2":6041600,"q3":6041600,"max":6041600,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"},"memUsage":null,"timeUsage":null,"vmem":{"mean":13742080,"min":13742080,"q1":13742080,"q2":13742080,"q3":13742080,"max":13742080,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"},"reads":{"mean":6732302193,"min":6732302193,"q1":6732302193,"q2":6732302193,"q3":6732302193,"max":6732302193,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"},"cpu":{"mean":28.1,"min":28.1,"q1":28.1,"q2":28.1,"q3":28.1,"max":28.1,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"},"time":{"mean":13042,"min":13042,"q1":13042,"q2":13042,"q3":13042,"max":13042,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"},"writes":{"mean":3580710252,"min":3580710252,"q1":3580710252,"q2":3580710252,"q3":3580710252,"max":3580710252,"minLabel":"decoy_gen","maxLabel":"decoy_gen","q1Label":"decoy_gen","q2Label":"decoy_gen","q3Label":"decoy_gen"}},{"cpuUsage":{"mean":4.19,"min":4.16,"q1":4.18,"q2":4.19,"q3":4.2,"max":4.22,"minLabel":"fastqc2 (1)","maxLabel":"fastqc2 (2)","q1Label":"fastqc2 (1)","q2Label":"fastqc2 (4)","q3Label":"fastqc2 (3)"},"process":"fastqc2","mem":{"mean":3839127552,"min":3815804928,"q1":3820311552,"q2":3830689792,"q3":3849505792,"max":3879325696,"minLabel":"fastqc2 (4)","maxLabel":"fastqc2 (2)","q1Label":"fastqc2 (4)","q2Label":"fastqc2 (3)","q3Label":"fastqc2 (1)"},"memUsage":{"mean":1.4,"min":1.39,"q1":1.39,"q2":1.39,"q3":1.4,"max":1.41,"minLabel":"fastqc2 (4)","maxLabel":"fastqc2 (2)","q1Label":"fastqc2 (4)","q2Label":"fastqc2 (3)","q3Label":"fastqc2 (1)"},"timeUsage":null,"vmem":{"mean":8730309632,"min":8717279232,"q1":8717279232,"q2":8720025600,"q3":8733056000,"max":8763908096,"minLabel":"fastqc2 (1)","maxLabel":"fastqc2 (2)","q1Label":"fastqc2 (1)","q2Label":"fastqc2 (3)","q3Label":"fastqc2 (4)"},"reads":{"mean":13568450414.75,"min":12201606541,"q1":12898910358.25,"q2":13461520970.5,"q3":14131061027,"max":15149153177,"minLabel":"fastqc2 (1)","maxLabel":"fastqc2 (4)","q1Label":"fastqc2 (1)","q2Label":"fastqc2 (2)","q3Label":"fastqc2 (3)"},"cpu":{"mean":201.13,"min":199.7,"q1":200.53,"q2":201.1,"q3":201.7,"max":202.6,"minLabel":"fastqc2 (1)","maxLabel":"fastqc2 (2)","q1Label":"fastqc2 (1)","q2Label":"fastqc2 (4)","q3Label":"fastqc2 (3)"},"time":{"mean":720809.25,"min":648014,"q1":692986.25,"q2":715538.5,"q3":743361.5,"max":804146,"minLabel":"fastqc2 (1)","maxLabel":"fastqc2 (4)","q1Label":"fastqc2 (1)","q2Label":"fastqc2 (3)","q3Label":"fastqc2 (2)"},"writes":{"mean":4707325.75,"min":4696715,"q1":4705798.25,"q2":4709501,"q3":4711028.5,"max":4713586,"minLabel":"fastqc2 (1)","maxLabel":"fastqc2 (4)","q1Label":"fastqc2 (1)","q2Label":"fastqc2 (3)","q3Label":"fastqc2 (2)"}},{"cpuUsage":{"mean":22.58,"min":22.58,"q1":22.58,"q2":22.58,"q3":22.58,"max":22.58,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"process":"star_genome_gen","mem":{"mean":37820755968,"min":37820755968,"q1":37820755968,"q2":37820755968,"q3":37820755968,"max":37820755968,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"memUsage":{"mean":13.76,"min":13.76,"q1":13.76,"q2":13.76,"q3":13.76,"max":13.76,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"timeUsage":null,"vmem":{"mean":41851826176,"min":41851826176,"q1":41851826176,"q2":41851826176,"q3":41851826176,"max":41851826176,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"reads":{"mean":56607628051,"min":56607628051,"q1":56607628051,"q2":56607628051,"q3":56607628051,"max":56607628051,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"cpu":{"mean":1083.7,"min":1083.7,"q1":1083.7,"q2":1083.7,"q3":1083.7,"max":1083.7,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"time":{"mean":1580251,"min":1580251,"q1":1580251,"q2":1580251,"q3":1580251,"max":1580251,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"},"writes":{"mean":77121495179,"min":77121495179,"q1":77121495179,"q2":77121495179,"q3":77121495179,"max":77121495179,"minLabel":"star_genome_gen","maxLabel":"star_genome_gen","q1Label":"star_genome_gen","q2Label":"star_genome_gen","q3Label":"star_genome_gen"}},{"cpuUsage":{"mean":18.54,"min":18.54,"q1":18.54,"q2":18.54,"q3":18.54,"max":18.54,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"process":"salmon_index","mem":{"mean":20191879168,"min":20191879168,"q1":20191879168,"q2":20191879168,"q3":20191879168,"max":20191879168,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"memUsage":{"mean":7.35,"min":7.35,"q1":7.35,"q2":7.35,"q3":7.35,"max":7.35,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"timeUsage":null,"vmem":{"mean":38094323712,"min":38094323712,"q1":38094323712,"q2":38094323712,"q3":38094323712,"max":38094323712,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"reads":{"mean":64510259200,"min":64510259200,"q1":64510259200,"q2":64510259200,"q3":64510259200,"max":64510259200,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"cpu":{"mean":889.9,"min":889.9,"q1":889.9,"q2":889.9,"q3":889.9,"max":889.9,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"time":{"mean":1589129,"min":1589129,"q1":1589129,"q2":1589129,"q3":1589129,"max":1589129,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"},"writes":{"mean":36491824490,"min":36491824490,"q1":36491824490,"q2":36491824490,"q3":36491824490,"max":36491824490,"minLabel":"salmon_index","maxLabel":"salmon_index","q1Label":"salmon_index","q2Label":"salmon_index","q3Label":"salmon_index"}},{"cpuUsage":{"mean":45.42,"min":45.04,"q1":45.15,"q2":45.26,"q3":45.61,"max":45.95,"minLabel":"star (3)","maxLabel":"star (2)","q1Label":"star (3)","q2Label":"star (1)","q3Label":"star (1)"},"process":"star","mem":{"mean":39234371584,"min":39182819328,"q1":39201738752,"q2":39220658176,"q3":39260147712,"max":39299637248,"minLabel":"star (1)","maxLabel":"star (3)","q1Label":"star (1)","q2Label":"star (2)","q3Label":"star (2)"},"memUsage":{"mean":14.27,"min":14.25,"q1":14.26,"q2":14.27,"q3":14.28,"max":14.3,"minLabel":"star (1)","maxLabel":"star (3)","q1Label":"star (1)","q2Label":"star (2)","q3Label":"star (2)"},"timeUsage":null,"vmem":{"mean":42816674474.67,"min":42794618880,"q1":42799802368,"q2":42804985856,"q3":42827702272,"max":42850418688,"minLabel":"star (3)","maxLabel":"star (2)","q1Label":"star (3)","q2Label":"star (1)","q3Label":"star (1)"},"reads":{"mean":255471810730.33,"min":236889570842,"q1":250680343257,"q2":264471115672,"q3":264762930674.5,"max":265054745677,"minLabel":"star (1)","maxLabel":"star (2)","q1Label":"star (1)","q2Label":"star (3)","q3Label":"star (3)"},"cpu":{"mean":2180.13,"min":2162.1,"q1":2167.35,"q2":2172.6,"q3":2189.15,"max":2205.7,"minLabel":"star (3)","maxLabel":"star (2)","q1Label":"star (3)","q2Label":"star (1)","q3Label":"star (1)"},"time":{"mean":2831627.67,"min":2625715,"q1":2679630,"q2":2733545,"q3":2934584,"max":3135623,"minLabel":"star (3)","maxLabel":"star (2)","q1Label":"star (3)","q2Label":"star (1)","q3Label":"star (1)"},"writes":{"mean":97500404489.67,"min":89657267518,"q1":95111905733.5,"q2":100566543949,"q3":101421972975.5,"max":102277402002,"minLabel":"star (1)","maxLabel":"star (3)","q1Label":"star (1)","q2Label":"star (2)","q3Label":"star (2)"}},{"cpuUsage":{"mean":47.25,"min":46.27,"q1":46.99,"q2":47.45,"q3":47.71,"max":47.84,"minLabel":"salmon_quantification (2)","maxLabel":"salmon_quantification (4)","q1Label":"salmon_quantification (2)","q2Label":"salmon_quantification (1)","q3Label":"salmon_quantification (3)"},"process":"salmon_quantification","mem":{"mean":22248563712,"min":22205624320,"q1":22226172928,"q2":22248038400,"q3":22270429184,"max":22292553728,"minLabel":"salmon_quantification (3)","maxLabel":"salmon_quantification (1)","q1Label":"salmon_quantification (3)","q2Label":"salmon_quantification (2)","q3Label":"salmon_quantification (4)"},"memUsage":{"mean":8.09,"min":8.08,"q1":8.09,"q2":8.09,"q3":8.1,"max":8.11,"minLabel":"salmon_quantification (3)","maxLabel":"salmon_quantification (1)","q1Label":"salmon_quantification (3)","q2Label":"salmon_quantification (2)","q3Label":"salmon_quantification (4)"},"timeUsage":null,"vmem":{"mean":27975248896,"min":27857018880,"q1":27916004352,"q2":27983376384,"q3":28042620928,"max":28077223936,"minLabel":"salmon_quantification (3)","maxLabel":"salmon_quantification (4)","q1Label":"salmon_quantification (3)","q2Label":"salmon_quantification (2)","q3Label":"salmon_quantification (1)"},"reads":{"mean":31372553510.75,"min":30005713096,"q1":30703013728.75,"q2":31265624107,"q3":31935163889,"max":32953252733,"minLabel":"salmon_quantification (1)","maxLabel":"salmon_quantification (4)","q1Label":"salmon_quantification (1)","q2Label":"salmon_quantification (2)","q3Label":"salmon_quantification (3)"},"cpu":{"mean":2267.98,"min":2220.8,"q1":2255.53,"q2":2277.45,"q3":2289.9,"max":2296.2,"minLabel":"salmon_quantification (2)","maxLabel":"salmon_quantification (4)","q1Label":"salmon_quantification (2)","q2Label":"salmon_quantification (1)","q3Label":"salmon_quantification (3)"},"time":{"mean":639351.25,"min":555964,"q1":631273.75,"q2":657926,"q3":666003.5,"max":685589,"minLabel":"salmon_quantification (2)","maxLabel":"salmon_quantification (4)","q1Label":"salmon_quantification (2)","q2Label":"salmon_quantification (3)","q3Label":"salmon_quantification (1)"},"writes":{"mean":20317079.5,"min":19954962,"q1":20227250.25,"q2":20374682.5,"q3":20464511.75,"max":20563991,"minLabel":"salmon_quantification (2)","maxLabel":"salmon_quantification (3)","q1Label":"salmon_quantification (2)","q2Label":"salmon_quantification (1)","q3Label":"salmon_quantification (4)"}},{"cpuUsage":{"mean":2.03,"min":2.03,"q1":2.03,"q2":2.03,"q3":2.04,"max":2.04,"minLabel":"sam_sort_index (2)","maxLabel":"sam_sort_index (1)","q1Label":"sam_sort_index (2)","q2Label":"sam_sort_index (2)","q3Label":"sam_sort_index (2)"},"process":"sam_sort_index","mem":{"mean":1157830656,"min":1157611520,"q1":1157721088,"q2":1157830656,"q3":1157940224,"max":1158049792,"minLabel":"sam_sort_index (2)","maxLabel":"sam_sort_index (1)","q1Label":"sam_sort_index (2)","q2Label":"sam_sort_index (2)","q3Label":"sam_sort_index (2)"},"memUsage":{"mean":0.42,"min":0.42,"q1":0.42,"q2":0.42,"q3":0.42,"max":0.42,"minLabel":"sam_sort_index (2)","maxLabel":"sam_sort_index (1)","q1Label":"sam_sort_index (2)","q2Label":"sam_sort_index (2)","q3Label":"sam_sort_index (2)"},"timeUsage":null,"vmem":{"mean":1265553408,"min":1265487872,"q1":1265520640,"q2":1265553408,"q3":1265586176,"max":1265618944,"minLabel":"sam_sort_index (2)","maxLabel":"sam_sort_index (1)","q1Label":"sam_sort_index (2)","q2Label":"sam_sort_index (2)","q3Label":"sam_sort_index (2)"},"reads":{"mean":22884088311,"min":21690352460,"q1":22287220385.5,"q2":22884088311,"q3":23480956236.5,"max":24077824162,"minLabel":"sam_sort_index (1)","maxLabel":"sam_sort_index (2)","q1Label":"sam_sort_index (1)","q2Label":"sam_sort_index (1)","q3Label":"sam_sort_index (1)"},"cpu":{"mean":97.65,"min":97.4,"q1":97.53,"q2":97.65,"q3":97.78,"max":97.9,"minLabel":"sam_sort_index (2)","maxLabel":"sam_sort_index (1)","q1Label":"sam_sort_index (2)","q2Label":"sam_sort_index (2)","q3Label":"sam_sort_index (2)"},"time":{"mean":941270,"min":887723,"q1":914496.5,"q2":941270,"q3":968043.5,"max":994817,"minLabel":"sam_sort_index (1)","maxLabel":"sam_sort_index (2)","q1Label":"sam_sort_index (1)","q2Label":"sam_sort_index (1)","q3Label":"sam_sort_index (1)"},"writes":{"mean":14809735594.5,"min":14032540345,"q1":14421137969.75,"q2":14809735594.5,"q3":15198333219.25,"max":15586930844,"minLabel":"sam_sort_index (1)","maxLabel":"sam_sort_index (2)","q1Label":"sam_sort_index (1)","q2Label":"sam_sort_index (1)","q3Label":"sam_sort_index (1)"}},{"cpuUsage":null,"process":"rseqc_read_distribution","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":{"mean":19417,"min":19417,"q1":19417,"q2":19417,"q3":19417,"max":19417,"minLabel":"rseqc_read_distribution (1)","maxLabel":"rseqc_read_distribution (1)","q1Label":"rseqc_read_distribution (1)","q2Label":"rseqc_read_distribution (1)","q3Label":"rseqc_read_distribution (1)"},"writes":null}]
+Dec-03 15:24:29.743 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Dec-03 15:24:30.070 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-03 15:24:30.079 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

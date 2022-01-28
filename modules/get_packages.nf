@@ -1,6 +1,6 @@
 process get_packages {
 	
-	publishDir "${baseDir}", mode: 'copy', overwrite: true
+	publishDir "${projectDir}", mode: 'copy', overwrite: true
 
 	output:
 //	path("*")
@@ -9,7 +9,7 @@ process get_packages {
 	script:
 	fin_val="Package download didn't fail"
 	"""
-	Rscript $baseDir/Rpackage_download.R
+	Rscript $projectDir/../R_scripts/Rpackage_download.R
 	"""
 
 // git clone https://github.com/RHReynolds/RNAseqProcessing.git

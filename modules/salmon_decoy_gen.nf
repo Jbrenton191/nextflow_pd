@@ -2,12 +2,12 @@ process decoy_gen {
 
 nextflow.enable.dsl=2
 
-myDir2 = file("${baseDir}/output/Salmon")
+myDir2 = file("${projectDir}/output/Salmon")
 myDir2.mkdirs()
 
-publishDir "${baseDir}/output/Salmon", mode: 'copy', overwrite: true
+publishDir "${projectDir}/output/Salmon", mode: 'copy', overwrite: true
 
-cache = 'lenient' // (Best in HPC and shared file systems) Cache keys are created indexing input files path and size attributes
+// cache = 'lenient' // (Best in HPC and shared file systems) Cache keys are created indexing input files path and size attributes
 
 input:
 path(fasta)

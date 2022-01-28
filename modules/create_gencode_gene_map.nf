@@ -2,10 +2,10 @@ nextflow.enable.dsl=2
 process gencode_genemap {
 
 
-myDir3 = file("${baseDir}/output/Salmon")
+myDir3 = file("${projectDir}/output/Salmon")
 myDir3.mkdir()
 
-publishDir "${baseDir}/output/Salmon", mode: 'move', overwrite: true
+publishDir "${projectDir}/output/Salmon", mode: 'move', overwrite: true
 
     input:
     path(transcript_ref)
@@ -15,6 +15,6 @@ publishDir "${baseDir}/output/Salmon", mode: 'move', overwrite: true
 
     script:
     """
-    Rscript ${baseDir}/create_gencode_gene_map.R $transcript_ref
+    Rscript ${projectDir}/../R_scripts/create_gencode_gene_map.R $transcript_ref
     """
 }

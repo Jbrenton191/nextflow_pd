@@ -1,8 +1,8 @@
 process fastp {
-  myDir2 = file("${baseDir}/output/fastp")
+  myDir2 = file("${projectDir}/output/fastp")
   myDir2.mkdir()
 
-    publishDir "${baseDir}/output/fastp", mode: 'copy', overwrite: true
+    publishDir "${projectDir}/output/fastp", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
@@ -16,7 +16,7 @@ process fastp {
 
     script:
     """
-    echo 'base dir is ${baseDir}'
+    echo 'base dir is ${projectDir}'
     echo 'working dir is ${workflow.projectDir}'
     echo 'launch dir is ${workflow.launchDir}'
     echo '$reads'
@@ -41,7 +41,6 @@ process fastp {
     --html ${sampleID}_fastp.html \
     --json ${sampleID}_fastp.json \
     --report_title '${sampleID}' \
-    --thread 25
+    --thread 16
     """
-
 }

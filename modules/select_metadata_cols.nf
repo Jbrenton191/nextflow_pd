@@ -17,6 +17,6 @@ publishDir "${projectDir}/output/metadata_and_groupfiles", mode: 'copy', overwri
 
     script:
     """
-    Rscript ${baseDir}/select_metadata_cols.R $meta_csv $meta_key 
+    Rscript ${projectDir}/../Rscripts/select_metadata_cols.R $meta_csv $meta_key 
     """
 }

@@ -9,15 +9,15 @@ publishDir "${baseDir}/output/reference_downloads", mode: 'copy', overwrite: tru
 	output:
 	path("*primary_assembly*.fa"), emit: fasta
 	path("*.gtf"), emit: gtf
-	path("*v38.transcripts.fa"), emit: transcripts
+	path("*.transcripts.fa"), emit: transcripts
 
 	script:
 	"""
-	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.chr_patch_hapl_scaff.annotation.gtf.gz
+	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.annotation.gtf.gz
 	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/GRCh38.primary_assembly.genome.fa.gz
 
 	gunzip GRCh38.primary_assembly.genome.fa.gz
-	gunzip gencode.v38.chr_patch_hapl_scaff.annotation.gtf.gz
+	gunzip gencode.v38.annotation.gtf.gz
 
 	wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.transcripts.fa.gz
 

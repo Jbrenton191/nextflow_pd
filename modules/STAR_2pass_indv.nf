@@ -4,7 +4,8 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
-
+    val(genome_dir)
+	
     output:
   	path("*SJ.out.tab"), emit: sj_tabs2
   	val(sj_loc), emit: sj_loc
@@ -22,7 +23,7 @@ script:
 sj_loc="${projectDir}/output/STAR/align"
 """
 STAR --runThreadN 25 \
---genomeDir ${baseDir}/output/STAR/genome_dir \
+--genomeDir $genome_dir \
 --readFilesIn  ${reads[0]}, ${reads[1]} \
 --readFilesCommand zcat \
 --outFileNamePrefix ${sampleID}_mapped_post_merge.BAM_ \

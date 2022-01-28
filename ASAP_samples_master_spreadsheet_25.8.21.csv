@@ -1,0 +1,385 @@
+bxp_id,sample_id,individ_id,brain_region,Well,eRIN,28S/18S (Area),Yield (µg),Group,RIN,Cause of death,Batch,plate_box,Sample_Number,In_trial_run,updated_sample_id,updated_individ_id
+BX0252_001,P27/11_MFG,P27/11,MFG,A1,4.0999999999999996,0.3,15.21,"short, with dementia",4.6,Of neurodegenerative disease_Bronchopneumonia,1,1,1,Yes,P27_11_MFG,P27_11
+BX0252_002,P27/11_MTG,P27/11,MTG,B1,3.1,0.3,9.9,"short, with dementia",4.6,Of neurodegenerative disease_Bronchopneumonia,1,1,2,Yes,P27_11_MTG,P27_11
+BX0252_003,P27/11_IPL,P27/11,IPL,C1,3.2,NA,9.7200000000000006,"short, with dementia",4.6,Of neurodegenerative disease_Bronchopneumonia,1,1,3,Yes,P27_11_IPL,P27_11
+BX0252_004,P27/11_ACG,P27/11,ACG,D1,3.9,0.2,7.9289999999999994,"short, with dementia",4.6,Of neurodegenerative disease_Bronchopneumonia,1,1,4,Yes,P27_11_ACG,P27_11
+BX0252_005,P8/18_MFG,P8/18,MFG,E1,4.3,0.3,7.9560000000000013,"long, no dementia",4.4,0,1,1,5,No,P8_18_MFG,P8_18
+BX0252_006,P8/18_MTG,P8/18,MTG,F1,3.4,0.3,10.35,"long, no dementia",4.4,0,1,1,6,No,P8_18_MTG,P8_18
+BX0252_007,P8/18_IPL,P8/18,IPL,G1,3.8,0.3,9.5399999999999991,"long, no dementia",4.4,0,1,1,7,No,P8_18_IPL,P8_18
+BX0252_008,P8/18_ACG,P8/18,ACG,H1,4.4000000000000004,0.3,9.09,"long, no dementia",4.4,0,1,1,8,No,P8_18_ACG,P8_18
+BX0252_009,P41/09_MFG,P41/09,MFG,A2,4.9000000000000004,0.4,8.4870000000000001,control,5.3,heart failure,1,1,9,Yes,P41_09_MFG,P41_09
+BX0252_010,P41/09_MTG,P41/09,MTG,B2,4.2,0.4,10.08,control,5.3,heart failure,1,1,10,Yes,P41_09_MTG,P41_09
+BX0252_011,P41/09_IPL,P41/09,IPL,C2,4.0999999999999996,0.3,11.7,control,5.3,heart failure,1,1,11,Yes,P41_09_IPL,P41_09
+BX0252_012,P41/09_ACG,P41/09,ACG,D2,4.7,0.2,9.4499999999999993,control,5.3,heart failure,1,1,12,Yes,P41_09_ACG,P41_09
+BX0252_013,P26/11_MFG,P26/11,MFG,E2,5.0999999999999996,0.4,9.4499999999999993,control,5.7,pulmonary embolism,1,1,13,Yes,P26_11_MFG,P26_11
+BX0252_014,P26/11_MTG,P26/11,MTG,F2,4.2,0.4,12.69,control,5.7,pulmonary embolism,1,1,14,Yes,P26_11_MTG,P26_11
+BX0252_015,P26/11_IPL,P26/11,IPL,G2,4.5,0.4,19.89,control,5.7,pulmonary embolism,1,1,15,Yes,P26_11_IPL,P26_11
+BX0252_016,P26/11_ACG,P26/11,ACG,H2,5,0.6,13.41,control,5.7,pulmonary embolism,1,1,16,Yes,P26_11_ACG,P26_11
+BX0252_017,P95/10_MFG,P95/10,MFG,A3,6.1,0.5,9.36,"short, no dementia",4.4,Metastatic adenocarcinoma,2,1,17,No,P95_10_MFG,P95_10
+BX0252_018,P95/10_MTG,P95/10,MTG,B3,5.5,0.4,13.95,"short, no dementia",4.4,Metastatic adenocarcinoma,2,1,18,No,P95_10_MTG,P95_10
+BX0252_019,P95/10_IPL,P95/10,IPL,C3,5,0.5,17.100000000000001,"short, no dementia",4.4,Metastatic adenocarcinoma,2,1,19,No,P95_10_IPL,P95_10
+BX0252_020,P95/10_ACG,P95/10,ACG,D3,4.7,0.3,12.15,"short, no dementia",4.4,Metastatic adenocarcinoma,2,1,20,No,P95_10_ACG,P95_10
+BX0252_021,P78/11_MFG,P78/11,MFG,E3,4,0.3,10.08,"long, no dementia",3.9,0,2,1,21,No,P78_11_MFG,P78_11
+BX0252_022,P78/11_MTG,P78/11,MTG,F3,4.0999999999999996,0.3,12.33,"long, no dementia",3.9,0,2,1,22,No,P78_11_MTG,P78_11
+BX0252_023,P78/11_IPL,P78/11,IPL,G3,2.9,NA,22.86,"long, no dementia",3.9,0,2,1,23,No,P78_11_IPL,P78_11
+BX0252_024,P78/11_ACG,P78/11,ACG,H3,3.5,0.3,10.08,"long, no dementia",3.9,0,2,1,24,No,P78_11_ACG,P78_11
+BX0252_025,P12/11_MFG,P12/11,MFG,A4,4.4000000000000004,0.3,14.31,"long, with dementia",4.3,0,2,1,25,No,P12_11_MFG,P12_11
+BX0252_026,P12/11_MTG,P12/11,MTG,B4,3.9,0.3,13.32,"long, with dementia",4.3,0,2,1,26,No,P12_11_MTG,P12_11
+BX0252_027,P12/11_IPL,P12/11,IPL,C4,5.2,0.3,15.03,"long, with dementia",4.3,0,2,1,27,No,P12_11_IPL,P12_11
+BX0252_028,P12/11_ACG,P12/11,ACG,D4,3.9,0.2,13.95,"long, with dementia",4.3,0,2,1,28,No,P12_11_ACG,P12_11
+BX0252_029,P28/15_MFG,P28/15,MFG,E4,3,0.4,12.24,"long, with dementia",4.6,0,2,1,29,No,P28_15_MFG,P28_15
+BX0252_030,P28/15_MTG,P28/15,MTG,F4,3.6,0.4,10.17,"long, with dementia",4.6,0,2,1,30,No,P28_15_MTG,P28_15
+BX0252_031,P28/15_IPL,P28/15,IPL,G4,2.1,NA,15.12,"long, with dementia",4.6,0,2,1,31,No,P28_15_IPL,P28_15
+BX0252_032,P28/15_ACG,P28/15,ACG,H4,3,0.3,14.13,"long, with dementia",4.6,0,2,1,32,No,P28_15_ACG,P28_15
+BX0252_033,P40/00_MFG,P40/00,MFG,A5,4.5,0.3,14.49,"short, no dementia",4.9,Bronchopneumonia,3,1,33,No,P40_00_MFG,P40_00
+BX0252_034,P40/00_MTG,P40/00,MTG,B5,3.2,0.4,16.559999999999999,"short, no dementia",4.9,Bronchopneumonia,3,1,34,No,P40_00_MTG,P40_00
+BX0252_035,P40/00_IPL,P40/00,IPL,C5,3.8,0.3,18.45,"short, no dementia",4.9,Bronchopneumonia,3,1,35,No,P40_00_IPL,P40_00
+BX0252_036,P40/00_ACG,P40/00,ACG,D5,3,0.2,12.51,"short, no dementia",4.9,Bronchopneumonia,3,1,36,No,P40_00_ACG,P40_00
+BX0252_037,P30/14_MFG,P30/14,MFG,E5,5.4,0.5,9.09,"short, with dementia",6.3,Of neurodegenerative disease_Urinary tract infection,3,1,37,Yes,P30_14_MFG,P30_14
+BX0252_038,P30/14_MTG,P30/14,MTG,F5,4.8,0.4,13.95,"short, with dementia",6.3,Of neurodegenerative disease_Urinary tract infection,3,1,38,Yes,P30_14_MTG,P30_14
+BX0252_039,P30/14_IPL,P30/14,IPL,G5,3.7,0.2,20.79,"short, with dementia",6.3,Of neurodegenerative disease_Urinary tract infection,3,1,39,Yes,P30_14_IPL,P30_14
+BX0252_040,P30/14_ACG,P30/14,ACG,H5,5.3,0.4,14.58,"short, with dementia",6.3,Of neurodegenerative disease_Urinary tract infection,3,1,40,Yes,P30_14_ACG,P30_14
+BX0252_041,P32/09_MFG,P32/09,MFG,B6,5.5,0.3,14.13,control,5.4,multiorgan failure,3,1,41,Yes,P32_09_MFG,P32_09
+BX0252_042,P32/09_MTG,P32/09,MTG,A6,4,0.3,16.739999999999998,control,5.4,multiorgan failure,3,1,42,Yes,P32_09_MTG,P32_09
+BX0252_043,P32/09_IPL,P32/09,IPL,C6,4.2,0.3,19.350000000000001,control,5.4,multiorgan failure,3,1,43,Yes,P32_09_IPL,P32_09
+BX0252_044,P32/09_ACG,P32/09,ACG,D6,4.5999999999999996,0.2,9.9,control,5.4,multiorgan failure,3,1,44,Yes,P32_09_ACG,P32_09
+BX0252_045,P5/13_MFG,P5/13,MFG,E6,3.6,0.3,13.95,control,4.6,0,3,1,45,Yes,P5_13_MFG,P5_13
+BX0252_046,P5/13_MTG,P5/13,MTG,F6,3.4,0.3,14.49,control,4.6,0,3,1,46,Yes,P5_13_MTG,P5_13
+BX0252_047,P5/13_IPL,P5/13,IPL,G6,3.3,0.3,19.62,control,4.6,0,3,1,47,Yes,P5_13_IPL,P5_13
+BX0252_048,P5/13_ACG,P5/13,ACG,H6,3.8,0.3,20.7,control,4.6,0,3,1,48,Yes,P5_13_ACG,P5_13
+BX0252_049,P3/13_MFG,P3/13,MFG,A8,5,0.3,11.07,"short, no dementia",5.1,Lung cancer with liver mets,4,1,49,No,P3_13_MFG,P3_13
+BX0252_050,P3/13_MTG,P3/13,MTG,B7,4.7,0.3,13.86,"short, no dementia",5.1,Lung cancer with liver mets,4,1,50,No,P3_13_MTG,P3_13
+BX0252_051,P3/13_IPL,P3/13,IPL,C7,4.7,0.3,15.39,"short, no dementia",5.1,Lung cancer with liver mets,4,1,51,No,P3_13_IPL,P3_13
+BX0252_052,P3/13_ACG,P3/13,ACG,D7,4.5999999999999996,0.5,18.36,"short, no dementia",5.1,Lung cancer with liver mets,4,1,52,No,P3_13_ACG,P3_13
+BX0252_053,P22/12_MFG,P22/12,MFG,E7,4.0999999999999996,0.3,18,"short, with dementia",5,Of neurodegenerative disease_Urinary tract infection,4,1,53,Yes,P22_12_MFG,P22_12
+BX0252_054,P22/12_MTG,P22/12,MTG,F7,4,0.4,18.09,"short, with dementia",5,Of neurodegenerative disease_Urinary tract infection,4,1,54,Yes,P22_12_MTG,P22_12
+BX0252_055,P22/12_IPL,P22/12,IPL,G7,3.7,0.3,18.809999999999999,"short, with dementia",5,Of neurodegenerative disease_Urinary tract infection,4,1,55,Yes,P22_12_IPL,P22_12
+BX0252_056,P22/12_ACG,P22/12,ACG,H7,4.3,0.3,19.170000000000002,"short, with dementia",5,Of neurodegenerative disease_Urinary tract infection,4,1,56,Yes,P22_12_ACG,P22_12
+BX0252_057,P38/09_MFG,P38/09,MFG,A7,4.5,0.3,18.63,"long, no dementia",4.5,0,4,1,57,No,P38_09_MFG,P38_09
+BX0252_058,P38/09_MTG,P38/09,MTG,B8,3.8,0.3,15.66,"long, no dementia",4.5,0,4,1,58,No,P38_09_MTG,P38_09
+BX0252_059,P38/09_IPL,P38/09,IPL,C8,3.1,NA,19.350000000000001,"long, no dementia",4.5,0,4,1,59,No,P38_09_IPL,P38_09
+BX0252_060,P38/09_ACG,P38/09,ACG,D8,4.4000000000000004,0.2,16.38,"long, no dementia",4.5,0,4,1,60,No,P38_09_ACG,P38_09
+BX0252_061,P23/14_MFG,P23/14,MFG,E8,4.8,0.5,20.97,"long, with dementia",4.9,0,4,1,61,No,P23_14_MFG,P23_14
+BX0252_062,P23/14_MTG,P23/14,MTG,F8,4.0999999999999996,0.3,15.21,"long, with dementia",4.9,0,4,1,62,No,P23_14_MTG,P23_14
+BX0252_063,P23/14_IPL,P23/14,IPL,G8,3.9,0.3,22.14,"long, with dementia",4.9,0,4,1,63,No,P23_14_IPL,P23_14
+BX0252_064,P23/14_ACG,P23/14,ACG,H8,6,0.4,7.3979999999999997,"long, with dementia",4.9,0,4,1,64,No,P23_14_ACG,P23_14
+BX0252_065,P64/09_MFG,P64/09,MFG,A9,3.6,0.3,15.12,"short, with dementia",4.5,Of neurodegenerative disease_Bronchopneumonia,5,1,65,Yes,P64_09_MFG,P64_09
+BX0252_066,P64/09_MTG,P64/09,MTG,B9,2.9,0.4,19.8,"short, with dementia",4.5,Of neurodegenerative disease_Bronchopneumonia,5,1,66,Yes,P64_09_MTG,P64_09
+BX0252_067,P64/09_IPL,P64/09,IPL,C9,2.7,NA,15.93,"short, with dementia",4.5,Of neurodegenerative disease_Bronchopneumonia,5,1,67,Yes,P64_09_IPL,P64_09
+BX0252_068,P64/09_ACG,P64/09,ACG,D9,3.4,0.3,13.86,"short, with dementia",4.5,Of neurodegenerative disease_Bronchopneumonia,5,1,68,Yes,P64_09_ACG,P64_09
+BX0252_069,P30/09_MFG,P30/09,MFG,E9,5,0.3,21.69,"long, no dementia",4.6,0,5,1,69,No,P30_09_MFG,P30_09
+BX0252_070,P30/09_MTG,P30/09,MTG,F9,4.7,0.4,18.63,"long, no dementia",4.6,0,5,1,70,No,P30_09_MTG,P30_09
+BX0252_071,P30/09_IPL,P30/09,IPL,G9,4.4000000000000004,0.3,22.5,"long, no dementia",4.6,0,5,1,71,No,P30_09_IPL,P30_09
+BX0252_072,P30/09_ACG,P30/09,ACG,H9,5.4,0.4,10.98,"long, no dementia",4.6,0,5,1,72,No,P30_09_ACG,P30_09
+BX0252_073,P61/09_MFG,P61/09,MFG,A10,3.7,0.5,8.6129999999999995,control,4.7,Bronchopneumonia,5,1,73,No,P61_09_MFG,P61_09
+BX0252_074,P61/09_MTG,P61/09,MTG,B10,4,0.3,15.66,control,4.7,Bronchopneumonia,5,1,74,No,P61_09_MTG,P61_09
+BX0252_075,P61/09_IPL,P61/09,IPL,C10,4.3,0.3,18.899999999999999,control,4.7,Bronchopneumonia,5,1,75,No,P61_09_IPL,P61_09
+BX0252_076,P61/09_ACG,P61/09,ACG,D10,3.1,NA,4.2210000000000001,control,4.7,Bronchopneumonia,5,1,76,No,P61_09_ACG,P61_09
+BX0252_077,P56/18_MFG,P56/18,MFG,E10,4.5,0.3,18.72,control,5.9,0,5,1,77,No,P56_18_MFG,P56_18
+BX0252_078,P56/18_MTG,P56/18,MTG,F10,4.5999999999999996,0.3,17.010000000000002,control,5.9,0,5,1,78,No,P56_18_MTG,P56_18
+BX0252_079,P56/18_IPL,P56/18,IPL,G10,4.0999999999999996,0.3,16.649999999999999,control,5.9,0,5,1,79,No,P56_18_IPL,P56_18
+BX0252_080,P56/18_ACG,P56/18,ACG,H10,4.8,0.3,11.79,control,5.9,0,5,1,80,No,P56_18_ACG,P56_18
+BX0252_081,P45/09_MFG,P45/09,MFG,A11,4.5,0.4,13.05,"short, no dementia",5.5,After a fall,6,1,81,No,P45_09_MFG,P45_09
+BX0252_082,P45/09_MTG,P45/09,MTG,B11,4.5999999999999996,0.4,19.98,"short, no dementia",5.5,After a fall,6,1,82,No,P45_09_MTG,P45_09
+BX0252_083,P45/09_IPL,P45/09,IPL,C11,4,0.3,22.86,"short, no dementia",5.5,After a fall,6,1,83,No,P45_09_IPL,P45_09
+BX0252_084,P45/09_ACG,P45/09,ACG,D11,4.5,0.3,18.36,"short, no dementia",5.5,After a fall,6,1,84,No,P45_09_ACG,P45_09
+BX0252_085,P4/11_MFG,P4/11,MFG,E11,6.8,0.8,15.48,"long, no dementia",6.4,0,6,1,85,No,P4_11_MFG,P4_11
+BX0252_086,P4/11_MTG,P4/11,MTG,F11,5.3,0.5,13.86,"long, no dementia",6.4,0,6,1,86,No,P4_11_MTG,P4_11
+BX0252_087,P4/11_IPL,P4/11,IPL,G11,5.3,0.3,20.88,"long, no dementia",6.4,0,6,1,87,No,P4_11_IPL,P4_11
+BX0252_088,P4/11_ACG,P4/11,ACG,H11,5.7,0.6,12.96,"long, no dementia",6.4,0,6,1,88,No,P4_11_ACG,P4_11
+BX0252_089,P46/10_MFG,P46/10,MFG,A12,6,0.8,10.89,"long, with dementia",6.6,0,6,1,89,No,P46_10_MFG,P46_10
+BX0252_090,P46/10_MTG,P46/10,MTG,B12,5.9,0.5,15.3,"long, with dementia",6.6,0,6,1,90,No,P46_10_MTG,P46_10
+BX0252_091,P46/10_IPL,P46/10,IPL,C12,6,0.6,12.15,"long, with dementia",6.6,0,6,1,91,No,P46_10_IPL,P46_10
+BX0252_092,P46/10_ACG,P46/10,ACG,D12,7,0.6,9.09,"long, with dementia",6.6,0,6,1,92,No,P46_10_ACG,P46_10
+BX0252_093,P25/13_MFG,P25/13,MFG,E12,3.4,0.4,16.11,"long, with dementia",4.9,0,6,1,93,No,P25_13_MFG,P25_13
+BX0252_094,P25/13_MTG,P25/13,MTG,F12,3.7,0.3,10.71,"long, with dementia",4.9,0,6,1,94,No,P25_13_MTG,P25_13
+BX0252_095,P25/13_IPL,P25/13,IPL,G12,3,0.2,22.5,"long, with dementia",4.9,0,6,1,95,No,P25_13_IPL,P25_13
+BX0252_096,P25/13_ACG,P25/13,ACG,H12,3.2,0.2,11.52,"long, with dementia",4.9,0,6,1,96,No,P25_13_ACG,P25_13
+BX0252_101,P20/10_MFG,P20/10,MFG,A1,2.7,0.4,11.7,"short, no dementia",4,Of neurodegenerative disease_Urinary tract infection,7,2,1,No,P20_10_MFG,P20_10
+BX0252_102,P20/10_MTG,P20/10,MTG,B1,3.8,0.3,11.7,"short, no dementia",4,Of neurodegenerative disease_Urinary tract infection,7,2,2,No,P20_10_MTG,P20_10
+BX0252_103,P20/10_IPL,P20/10,IPL,C1,3.3,0.3,7.02,"short, no dementia",4,Of neurodegenerative disease_Urinary tract infection,7,2,3,No,P20_10_IPL,P20_10
+BX0252_104,P20/10_ACG,P20/10,ACG,D1,2.8,NA,7.9379999999999997,"short, no dementia",4,Of neurodegenerative disease_Urinary tract infection,7,2,4,No,P20_10_ACG,P20_10
+BX0252_105,P11/08_MFG,P11/08,MFG,E1,3,0.4,8.5410000000000004,"short, with dementia",4.1,Of neurodegenerative disease,7,2,5,No,P11_08_MFG,P11_08
+BX0252_106,P11/08_MTG,P11/08,MTG,F1,3.2,0.4,11.07,"short, with dementia",4.1,Of neurodegenerative disease,7,2,6,No,P11_08_MTG,P11_08
+BX0252_107,P11/08_IPL,P11/08,IPL,G1,2.9,NA,8.7390000000000008,"short, with dementia",4.1,Of neurodegenerative disease,7,2,7,No,P11_08_IPL,P11_08
+BX0252_108,P11/08_ACG,P11/08,ACG,H1,2.9,NA,11.43,"short, with dementia",4.1,Of neurodegenerative disease,7,2,8,No,P11_08_ACG,P11_08
+BX0252_109,P75/08_MFG,P75/08,MFG,A2,5,0.5,13.68,control,6.1,respiratory tract infection,7,2,9,No,P75_08_MFG,P75_08
+BX0252_110,P75/08_MTG,P75/08,MTG,B2,3.8,0.3,15.57,control,6.1,respiratory tract infection,7,2,10,No,P75_08_MTG,P75_08
+BX0252_111,P75/08_IPL,P75/08,IPL,C2,4.0999999999999996,0.4,24.75,control,6.1,respiratory tract infection,7,2,11,No,P75_08_IPL,P75_08
+BX0252_112,P75/08_ACG,P75/08,ACG,D2,4.9000000000000004,0.3,14.13,control,6.1,respiratory tract infection,7,2,12,No,P75_08_ACG,P75_08
+BX0252_113,P16/19_MFG,P16/19,MFG,E2,5.0999999999999996,0.5,11.88,control,6.1,0,7,2,13,No,P16_19_MFG,P16_19
+BX0252_114,P16/19_MTG,P16/19,MTG,F2,6,0.5,24.48,control,6.1,0,7,2,14,No,P16_19_MTG,P16_19
+BX0252_115,P16/19_IPL,P16/19,IPL,G2,6.1,0.6,13.14,control,6.1,0,7,2,15,No,P16_19_IPL,P16_19
+BX0252_116,P16/19_ACG,P16/19,ACG,H2,6.6,0.7,13.59,control,6.1,0,7,2,16,No,P16_19_ACG,P16_19
+BX0252_117,P69/18_MFG,P69/18,MFG,A3,6,0.7,12.24,"short, no dementia",5.6,Of neurodegenerative disease,8,2,17,No,P69_18_MFG,P69_18
+BX0252_118,P69/18_MTG,P69/18,MTG,B3,6.1,0.8,18.989999999999998,"short, no dementia",5.6,Of neurodegenerative disease,8,2,18,No,P69_18_MTG,P69_18
+BX0252_119,P69/18_IPL,P69/18,IPL,C3,4.4000000000000004,0.3,23.67,"short, no dementia",5.6,Of neurodegenerative disease,8,2,19,No,P69_18_IPL,P69_18
+BX0252_120,P69/18_ACG,P69/18,ACG,D3,6.2,0.5,15.39,"short, no dementia",5.6,Of neurodegenerative disease,8,2,20,No,P69_18_ACG,P69_18
+BX0252_121,P62/13_MFG,P62/13,MFG,E3,4,0.2,20.79,"short, with dementia",4.3,Of neurodegenerative disease,8,2,21,No,P62_13_MFG,P62_13
+BX0252_122,P62/13_MTG,P62/13,MTG,F3,4.3,0.3,18,"short, with dementia",4.3,Of neurodegenerative disease,8,2,22,No,P62_13_MTG,P62_13
+BX0252_123,P62/13_IPL,P62/13,IPL,G3,2.4,NA,16.920000000000002,"short, with dementia",4.3,Of neurodegenerative disease,8,2,23,No,P62_13_IPL,P62_13
+BX0252_124,P62/13_ACG,P62/13,ACG,H3,3.3,NA,11.52,"short, with dementia",4.3,Of neurodegenerative disease,8,2,24,No,P62_13_ACG,P62_13
+BX0252_125,P49/16_MFG,P49/16,MFG,A4,5,0.4,9.09,"long, no dementia",4.9,0,8,2,25,No,P49_16_MFG,P49_16
+BX0252_126,P49/16_MTG,P49/16,MTG,B4,5.0999999999999996,0.5,23.04,"long, no dementia",4.9,0,8,2,26,No,P49_16_MTG,P49_16
+BX0252_127,P49/16_IPL,P49/16,IPL,C4,4.7,0.3,17.64,"long, no dementia",4.9,0,8,2,27,No,P49_16_IPL,P49_16
+BX0252_128,P49/16_ACG,P49/16,ACG,D4,5.2,0.3,12.42,"long, no dementia",4.9,0,8,2,28,No,P49_16_ACG,P49_16
+BX0252_129,P58/09_MFG,P58/09,MFG,E4,5.4,0.5,17.100000000000001,"long, with dementia",5.3,0,8,2,29,No,P58_09_MFG,P58_09
+BX0252_130,P58/09_MTG,P58/09,MTG,F4,4.9000000000000004,0.4,21.42,"long, with dementia",5.3,0,8,2,30,No,P58_09_MTG,P58_09
+BX0252_131,P58/09_IPL,P58/09,IPL,G4,4.3,0.5,29.25,"long, with dementia",5.3,0,8,2,31,No,P58_09_IPL,P58_09
+BX0252_132,P58/09_ACG,P58/09,ACG,H4,4.5999999999999996,0.3,10.62,"long, with dementia",5.3,0,8,2,32,No,P58_09_ACG,P58_09
+BX0252_133,P13/09_MFG,P13/09,MFG,A5,2.6,0.6,8.0280000000000005,"short, with dementia",4.8,Of neurodegenerative disease,9,2,33,No,P13_09_MFG,P13_09
+BX0252_134,P13/09_MTG,P13/09,MTG,B5,3.7,0.4,14.85,"short, with dementia",4.8,Of neurodegenerative disease,9,2,34,No,P13_09_MTG,P13_09
+BX0252_135,P13/09_IPL,P13/09,IPL,C5,2.1,0.5,13.77,"short, with dementia",4.8,Of neurodegenerative disease,9,2,35,No,P13_09_IPL,P13_09
+BX0252_136,P13/09_ACG,P13/09,ACG,D5,4.0999999999999996,0.5,12.69,"short, with dementia",4.8,Of neurodegenerative disease,9,2,36,No,P13_09_ACG,P13_09
+BX0252_137,P66/11_MFG,P66/11,MFG,E5,6.3,0.8,21.78,control,5.8,n/a,9,2,37,No,P66_11_MFG,P66_11
+BX0252_138,P66/11_MTG,P66/11,MTG,F5,5,0.5,16.649999999999999,control,5.8,n/a,9,2,38,No,P66_11_MTG,P66_11
+BX0252_139,P66/11_IPL,P66/11,IPL,G5,5.7,0.5,19.440000000000001,control,5.8,n/a,9,2,39,No,P66_11_IPL,P66_11
+BX0252_140,P66/11_ACG,P66/11,ACG,H5,5.3,0.4,12.33,control,5.8,n/a,9,2,40,No,P66_11_ACG,P66_11
+BX0252_141,P48/15_MFG,P48/15,MFG,A6,5.2,0.6,21.78,control,4.3,0,9,2,41,No,P48_15_MFG,P48_15
+BX0252_142,P48/15_MTG,P48/15,MTG,B6,5.4,0.5,23.22,control,4.3,0,9,2,42,No,P48_15_MTG,P48_15
+BX0252_143,P48/15_IPL,P48/15,IPL,C6,5.3,0.4,24.12,control,4.3,0,9,2,43,No,P48_15_IPL,P48_15
+BX0252_144,P48/15_ACG,P48/15,ACG,D6,4.5999999999999996,0.5,13.23,control,4.3,0,9,2,44,No,P48_15_ACG,P48_15
+BX0252_145,P41/19_MFG,P41/19,MFG,E6,5.2,0.7,21.78,control,5.1,0,9,2,45,No,P41_19_MFG,P41_19
+BX0252_146,P41/19_MTG,P41/19,MTG,F6,5,0.5,21.78,control,5.1,0,9,2,46,No,P41_19_MTG,P41_19
+BX0252_147,P41/19_IPL,P41/19,IPL,G6,4.3,0.4,22.41,control,5.1,0,9,2,47,No,P41_19_IPL,P41_19
+BX0252_148,P41/19_ACG,P41/19,ACG,H6,5.0999999999999996,0.6,15.21,control,5.1,0,9,2,48,No,P41_19_ACG,P41_19
+BX0252_149,P47/00_MFG,P47/00,MFG,A7,3.9,0.3,19.53,"short, no dementia",4.2,"Possibly of neurodegenerative disease, but had also hx of prostate adenocarcinoma",10,2,49,No,P47_00_MFG,P47_00
+BX0252_150,P47/00_MTG,P47/00,MTG,B7,2.8,NA,21.06,"short, no dementia",4.2,"Possibly of neurodegenerative disease, but had also hx of prostate adenocarcinoma",10,2,50,No,P47_00_MTG,P47_00
+BX0252_151,P47/00_IPL,P47/00,IPL,C7,1.5,NA,16.11,"short, no dementia",4.2,"Possibly of neurodegenerative disease, but had also hx of prostate adenocarcinoma",10,2,51,No,P47_00_IPL,P47_00
+BX0252_152,P47/00_ACG,P47/00,ACG,D7,4,0.2,10.71,"short, no dementia",4.2,"Possibly of neurodegenerative disease, but had also hx of prostate adenocarcinoma",10,2,52,No,P47_00_ACG,P47_00
+BX0252_153,P84/08_MFG,P84/08,MFG,E7,5.5,0.5,27.99,"long, no dementia",5.1,0,10,2,53,No,P84_08_MFG,P84_08
+BX0252_154,P84/08_MTG,P84/08,MTG,F7,4.9000000000000004,0.4,24.66,"long, no dementia",5.1,0,10,2,54,No,P84_08_MTG,P84_08
+BX0252_155,P84/08_IPL,P84/08,IPL,G7,5,0.4,17.190000000000001,"long, no dementia",5.1,0,10,2,55,No,P84_08_IPL,P84_08
+BX0252_156,P84/08_ACG,P84/08,ACG,H7,5,0.3,18.809999999999999,"long, no dementia",5.1,0,10,2,56,No,P84_08_ACG,P84_08
+BX0252_157,P9/15_MFG,P9/15,MFG,A8,5.9,0.7,18.27,"long, with dementia",5.3,0,10,2,57,No,P9_15_MFG,P9_15
+BX0252_158,P9/15_MTG,P9/15,MTG,B8,4.8,0.3,19.8,"long, with dementia",5.3,0,10,2,58,No,P9_15_MTG,P9_15
+BX0252_159,P9/15_IPL,P9/15,IPL,C8,4.9000000000000004,0.5,23.67,"long, with dementia",5.3,0,10,2,59,No,P9_15_IPL,P9_15
+BX0252_160,P9/15_ACG,P9/15,ACG,D8,5.4,0.5,17.010000000000002,"long, with dementia",5.3,0,10,2,60,No,P9_15_ACG,P9_15
+BX0252_161,P57/18_MFG,P57/18,MFG,E8,5.5,0.5,15.3,control,5.1,0,10,2,61,No,P57_18_MFG,P57_18
+BX0252_162,P57/18_MTG,P57/18,MTG,F8,5,0.5,18.36,control,5.1,0,10,2,62,No,P57_18_MTG,P57_18
+BX0252_163,P57/18_IPL,P57/18,IPL,G8,4.8,0.4,15.57,control,5.1,0,10,2,63,No,P57_18_IPL,P57_18
+BX0252_164,P57/18_ACG,P57/18,ACG,H8,4.9000000000000004,0.5,14.4,control,5.1,0,10,2,64,No,P57_18_ACG,P57_18
+BX0252_165,P82/12_MFG,P82/12,MFG,A9,5.3,0.5,19.079999999999998,"short, with dementia",4.8,Of neurodegenerative disease_Urinary tract infection,11,2,65,No,P82_12_MFG,P82_12
+BX0252_166,P82/12_MTG,P82/12,MTG,B9,4.5999999999999996,0.3,23.49,"short, with dementia",4.8,Of neurodegenerative disease_Urinary tract infection,11,2,66,No,P82_12_MTG,P82_12
+BX0252_167,P82/12_IPL,P82/12,IPL,C9,5.4,0.5,21.06,"short, with dementia",4.8,Of neurodegenerative disease_Urinary tract infection,11,2,67,No,P82_12_IPL,P82_12
+BX0252_168,P82/12_ACG,P82/12,ACG,D9,4.8,0.2,12.06,"short, with dementia",4.8,Of neurodegenerative disease_Urinary tract infection,11,2,68,No,P82_12_ACG,P82_12
+BX0252_169,P67/10_MFG,P67/10,MFG,E9,5.8,0.7,13.5,control,4.6,Chest infection,11,2,69,No,P67_10_MFG,P67_10
+BX0252_170,P67/10_MTG,P67/10,MTG,F9,4.0999999999999996,0.4,22.05,control,4.6,Chest infection,11,2,70,No,P67_10_MTG,P67_10
+BX0252_171,P67/10_IPL,P67/10,IPL,G9,4.5999999999999996,0.2,15.3,control,4.6,Chest infection,11,2,71,No,P67_10_IPL,P67_10
+BX0252_172,P67/10_ACG,P67/10,ACG,H9,5,0.3,12.78,control,4.6,Chest infection,11,2,72,No,P67_10_ACG,P67_10
+BX0252_173,P47/11_MFG,P47/11,MFG,A10,6.5,0.6,21.33,control,5.7,bowel obstruction,11,2,73,No,P47_11_MFG,P47_11
+BX0252_174,P47/11_MTG,P47/11,MTG,B10,4.8,0.3,19.89,control,5.7,bowel obstruction,11,2,74,No,P47_11_MTG,P47_11
+BX0252_175,P47/11_IPL,P47/11,IPL,C10,5.8,0.5,15.93,control,5.7,bowel obstruction,11,2,75,No,P47_11_IPL,P47_11
+BX0252_176,P47/11_ACG,P47/11,ACG,D10,5.3,0.4,13.86,control,5.7,bowel obstruction,11,2,76,No,P47_11_ACG,P47_11
+BX0252_177,P47/14_MFG,P47/14,MFG,E10,7.1,1,15.3,control,5.5,0,11,2,77,No,P47_14_MFG,P47_14
+BX0252_178,P47/14_MTG,P47/14,MTG,F10,4.5999999999999996,0.4,14.13,control,5.5,0,11,2,78,No,P47_14_MTG,P47_14
+BX0252_179,P47/14_IPL,P47/14,IPL,G10,5,0.5,12.78,control,5.5,0,11,2,79,No,P47_14_IPL,P47_14
+BX0252_180,P47/14_ACG,P47/14,ACG,H10,5.9,0.7,10.08,control,5.5,0,11,2,80,No,P47_14_ACG,P47_14
+BX0252_181,P86/08_MFG,P86/08,MFG,A11,2.9,NA,18.09,"short, no dementia",3.7,Of neurodegenerative disease,12,2,81,No,P86_08_MFG,P86_08
+BX0252_182,P86/08_MTG,P86/08,MTG,B11,3,NA,13.68,"short, no dementia",3.7,Of neurodegenerative disease,12,2,82,No,P86_08_MTG,P86_08
+BX0252_183,P86/08_IPL,P86/08,IPL,C11,2.9,NA,9.9,"short, no dementia",3.7,Of neurodegenerative disease,12,2,83,No,P86_08_IPL,P86_08
+BX0252_184,P86/08_ACG,P86/08,ACG,D11,3.1,NA,13.41,"short, no dementia",3.7,Of neurodegenerative disease,12,2,84,No,P86_08_ACG,P86_08
+BX0252_185,P21/09_MFG,P21/09,MFG,E11,4.5,0.2,12.51,"long, no dementia",4.5,0,12,2,85,No,P21_09_MFG,P21_09
+BX0252_186,P21/09_MTG,P21/09,MTG,F11,3.1,NA,13.68,"long, no dementia",4.5,0,12,2,86,No,P21_09_MTG,P21_09
+BX0252_187,P21/09_IPL,P21/09,IPL,G11,2.8,NA,16.920000000000002,"long, no dementia",4.5,0,12,2,87,No,P21_09_IPL,P21_09
+BX0252_188,P21/09_ACG,P21/09,ACG,H11,3.4,0.2,11.07,"long, no dementia",4.5,0,12,2,88,No,P21_09_ACG,P21_09
+BX0252_189,P2/14_MFG,P2/14,MFG,A12,4.5999999999999996,0.4,13.77,"long, with dementia",4.8,0,12,2,89,No,P2_14_MFG,P2_14
+BX0252_190,P2/14_MTG,P2/14,MTG,B12,4.3,0.4,16.2,"long, with dementia",4.8,0,12,2,90,No,P2_14_MTG,P2_14
+BX0252_191,P2/14_IPL,P2/14,IPL,C12,4,0.3,9,"long, with dementia",4.8,0,12,2,91,No,P2_14_IPL,P2_14
+BX0252_192,P2/14_ACG,P2/14,ACG,D12,3.3,NA,7.6860000000000008,"long, with dementia",4.8,0,12,2,92,No,P2_14_ACG,P2_14
+BX0252_193,P82/10_MFG,P82/10,MFG,E12,5.7,0.5,9.36,control,5,metastatic colon carcinoma,12,2,93,No,P82_10_MFG,P82_10
+BX0252_194,P82/10_MTG,P82/10,MTG,F12,5,0.4,11.61,control,5,metastatic colon carcinoma,12,2,94,No,P82_10_MTG,P82_10
+BX0252_195,P82/10_IPL,P82/10,IPL,G12,5.5,0.4,9.09,control,5,metastatic colon carcinoma,12,2,95,No,P82_10_IPL,P82_10
+BX0252_196,P82/10_ACG,P82/10,ACG,H12,4,0.2,7.3620000000000001,control,5,metastatic colon carcinoma,12,2,96,No,P82_10_ACG,P82_10
+BX0252_201,P57/08_MFG,P57/08,MFG,A1,4.4000000000000004,0.3,11.43,"short, with dementia",4.5,Of neurodegenerative disease,13,3,1,No,P57_08_MFG,P57_08
+BX0252_202,P57/08_MTG,P57/08,MTG,B1,3.1,0.3,14.67,"short, with dementia",4.5,Of neurodegenerative disease,13,3,2,No,P57_08_MTG,P57_08
+BX0252_203,P57/08_IPL,P57/08,IPL,C1,3,NA,11.07,"short, with dementia",4.5,Of neurodegenerative disease,13,3,3,No,P57_08_IPL,P57_08
+BX0252_204,P57/08_ACG,P57/08,ACG,D1,3,NA,17.64,"short, with dementia",4.5,Of neurodegenerative disease,13,3,4,No,P57_08_ACG,P57_08
+BX0252_205,P66/10_MFG,P66/10,MFG,E1,6.6,0.5,7.8210000000000006,control,4.3,0,13,3,5,No,P66_10_MFG,P66_10
+BX0252_206,P66/10_MTG,P66/10,MTG,F1,6.2,0.6,14.94,control,4.3,0,13,3,6,No,P66_10_MTG,P66_10
+BX0252_207,P66/10_IPL,P66/10,IPL,G1,7.3,0.6,7.4610000000000012,control,4.3,0,13,3,7,No,P66_10_IPL,P66_10
+BX0252_208,P66/10_ACG,P66/10,ACG,H1,6.3,0.4,9.81,control,4.3,0,13,3,8,No,P66_10_ACG,P66_10
+BX0252_209,P38/19_MFG,P38/19,MFG,A2,6.9,0.8,15.66,control,6.6,0,13,3,9,No,P38_19_MFG,P38_19
+BX0252_210,P38/19_MTG,P38/19,MTG,B2,6,0.5,25.11,control,6.6,0,13,3,10,No,P38_19_MTG,P38_19
+BX0252_211,P38/19_IPL,P38/19,IPL,C2,6.9,0.7,18,control,6.6,0,13,3,11,No,P38_19_IPL,P38_19
+BX0252_212,P38/19_ACG,P38/19,ACG,D2,6.8,0.7,19.89,control,6.6,0,13,3,12,No,P38_19_ACG,P38_19
+BX0252_213,P59/08_MFG,P59/08,MFG,E2,5.8,0.4,17.010000000000002,control,5.6,respiratory tract infection,13,3,13,No,P59_08_MFG,P59_08
+BX0252_214,P59/08_MTG,P59/08,MTG,F2,6.3,0.5,19.260000000000002,control,5.6,respiratory tract infection,13,3,14,No,P59_08_MTG,P59_08
+BX0252_215,P59/08_IPL,P59/08,IPL,G2,6,0.5,17.190000000000001,control,5.6,respiratory tract infection,13,3,15,No,P59_08_IPL,P59_08
+BX0252_216,P59/08_ACG,P59/08,ACG,H2,5.5,0.3,12.87,control,5.6,respiratory tract infection,13,3,16,No,P59_08_ACG,P59_08
+BX0252_217,P23/08_MFG,P23/08,MFG,A3,5.5,0.4,13.86,"short, no dementia",4.5,Of neurodegenerative disease,14,3,17,No,P23_08_MFG,P23_08
+BX0252_218,P23/08_MTG,P23/08,MTG,B3,4.9000000000000004,0.4,22.95,"short, no dementia",4.5,Of neurodegenerative disease,14,3,18,No,P23_08_MTG,P23_08
+BX0252_219,P23/08_IPL,P23/08,IPL,C3,3.9,0.4,7.6680000000000001,"short, no dementia",4.5,Of neurodegenerative disease,14,3,19,No,P23_08_IPL,P23_08
+BX0252_220,P23/08_ACG,P23/08,ACG,D3,4.0999999999999996,0.3,11.07,"short, no dementia",4.5,Of neurodegenerative disease,14,3,20,No,P23_08_ACG,P23_08
+BX0252_221,P34/15_MFG,P34/15,MFG,E3,6,0.6,13.68,"long, no dementia",4.4,0,14,3,21,No,P34_15_MFG,P34_15
+BX0252_222,P34/15_MTG,P34/15,MTG,F3,5.4,0.6,20.52,"long, no dementia",4.4,0,14,3,22,No,P34_15_MTG,P34_15
+BX0252_223,P34/15_IPL,P34/15,IPL,G3,5.3,0.5,17.100000000000001,"long, no dementia",4.4,0,14,3,23,No,P34_15_IPL,P34_15
+BX0252_224,P34/15_ACG,P34/15,ACG,H3,5.7,0.5,12.96,"long, no dementia",4.4,0,14,3,24,No,P34_15_ACG,P34_15
+BX0252_225,P68/10_MFG,P68/10,MFG,A4,4.9000000000000004,0.4,8.4420000000000002,"long, with dementia",4.4,0,14,3,25,No,P68_10_MFG,P68_10
+BX0252_226,P68/10_MTG,P68/10,MTG,B4,3.7,0.3,18,"long, with dementia",4.4,0,14,3,26,No,P68_10_MTG,P68_10
+BX0252_227,P68/10_IPL,P68/10,IPL,C4,3.6,0.3,16.829999999999998,"long, with dementia",4.4,0,14,3,27,No,P68_10_IPL,P68_10
+BX0252_228,P68/10_ACG,P68/10,ACG,D4,3.3,0.4,10.8,"long, with dementia",4.4,0,14,3,28,No,P68_10_ACG,P68_10
+BX0252_229,P19/17_MFG,P19/17,MFG,E4,5.8,0.8,13.41,control,3.9,0,14,3,29,No,P19_17_MFG,P19_17
+BX0252_230,P19/17_MTG,P19/17,MTG,F4,4.4000000000000004,0.3,14.31,control,3.9,0,14,3,30,No,P19_17_MTG,P19_17
+BX0252_231,P19/17_IPL,P19/17,IPL,G4,4.4000000000000004,0.3,17.55,control,3.9,0,14,3,31,No,P19_17_IPL,P19_17
+BX0252_232,P19/17_ACG,P19/17,ACG,H4,4.9000000000000004,0.5,14.04,control,3.9,0,14,3,32,No,P19_17_ACG,P19_17
+BX0252_233,P33/05_MFG,P33/05,MFG,A5,5.9,0.7,17.100000000000001,"short, no dementia",4.5,Of neurodegenerative disease,15,3,33,No,P33_05_MFG,P33_05
+BX0252_234,P33/05_MTG,P33/05,MTG,B5,4.4000000000000004,0.7,19.62,"short, no dementia",4.5,Of neurodegenerative disease,15,3,34,No,P33_05_MTG,P33_05
+BX0252_235,P33/05_IPL,P33/05,IPL,C5,5,0.4,29.88,"short, no dementia",4.5,Of neurodegenerative disease,15,3,35,No,P33_05_IPL,P33_05
+BX0252_236,P33/05_ACG,P33/05,ACG,D5,6.3,0.6,15.12,"short, no dementia",4.5,Of neurodegenerative disease,15,3,36,No,P33_05_ACG,P33_05
+BX0252_237,P46/07_MFG,P46/07,MFG,E5,3.8,0.4,12.78,"short, with dementia",4.3,"Of neurodegenerative disease, but limited details",15,3,37,No,P46_07_MFG,P46_07
+BX0252_238,P46/07_MTG,P46/07,MTG,F5,3.1,NA,13.23,"short, with dementia",4.3,"Of neurodegenerative disease, but limited details",15,3,38,No,P46_07_MTG,P46_07
+BX0252_239,P46/07_IPL,P46/07,IPL,G5,3.5,0.5,13.59,"short, with dementia",4.3,"Of neurodegenerative disease, but limited details",15,3,39,No,P46_07_IPL,P46_07
+BX0252_240,P46/07_ACG,P46/07,ACG,H5,3.4,0.4,13.59,"short, with dementia",4.3,"Of neurodegenerative disease, but limited details",15,3,40,No,P46_07_ACG,P46_07
+BX0252_241,P24/17_MFG,P24/17,MFG,A6,4.7,0.3,19.89,control,4.7,0,15,3,41,No,P24_17_MFG,P24_17
+BX0252_242,P24/17_MTG,P24/17,MTG,B6,4,0.5,20.16,control,4.7,0,15,3,42,No,P24_17_MTG,P24_17
+BX0252_243,P24/17_IPL,P24/17,IPL,C6,4.2,0.5,17.91,control,4.7,0,15,3,43,No,P24_17_IPL,P24_17
+BX0252_244,P24/17_ACG,P24/17,ACG,D6,4,0.5,11.97,control,4.7,0,15,3,44,No,P24_17_ACG,P24_17
+BX0252_245,P80/17_MFG,P80/17,MFG,E6,6.9,1,24.3,control,5.4,0,15,3,45,No,P80_17_MFG,P80_17
+BX0252_246,P80/17_MTG,P80/17,MTG,F6,6.2,0.7,22.86,control,5.4,0,15,3,46,No,P80_17_MTG,P80_17
+BX0252_247,P80/17_IPL,P80/17,IPL,G6,5.8,0.7,21.6,control,5.4,0,15,3,47,No,P80_17_IPL,P80_17
+BX0252_248,P80/17_ACG,P80/17,ACG,H6,6.4,0.9,25.56,control,5.4,0,15,3,48,No,P80_17_ACG,P80_17
+BX0252_249,P67/18_MFG,P67/18,MFG,A7,5.5,0.5,17.010000000000002,"short, no dementia",4.8,"Of neurodegenerative disease_Sepsis, had had episode of choking in past",16,3,49,No,P67_18_MFG,P67_18
+BX0252_250,P67/18_MTG,P67/18,MTG,B7,5.2,0.4,26.91,"short, no dementia",4.8,"Of neurodegenerative disease_Sepsis, had had episode of choking in past",16,3,50,No,P67_18_MTG,P67_18
+BX0252_251,P67/18_IPL,P67/18,IPL,C7,5.2,0.4,14.22,"short, no dementia",4.8,"Of neurodegenerative disease_Sepsis, had had episode of choking in past",16,3,51,No,P67_18_IPL,P67_18
+BX0252_252,P67/18_ACG,P67/18,ACG,D7,5.5,0.5,19.260000000000002,"short, no dementia",4.8,"Of neurodegenerative disease_Sepsis, had had episode of choking in past",16,3,52,No,P67_18_ACG,P67_18
+BX0252_253,P32/20_MFG,P32/20,MFG,E7,4.0999999999999996,0.5,17.46,"short, no dementia",4.4,Of neurodegenerative disease,16,3,53,No,P32_20_MFG,P32_20
+BX0252_254,P32/20_MTG,P32/20,MTG,F7,4,0.7,13.68,"short, no dementia",4.4,Of neurodegenerative disease,16,3,54,No,P32_20_MTG,P32_20
+BX0252_255,P32/20_IPL,P32/20,IPL,G7,3.6,0.6,24.57,"short, no dementia",4.4,Of neurodegenerative disease,16,3,55,No,P32_20_IPL,P32_20
+BX0252_256,P32/20_ACG,P32/20,ACG,H7,3.6,0.4,14.4,"short, no dementia",4.4,Of neurodegenerative disease,16,3,56,No,P32_20_ACG,P32_20
+BX0252_257,P2/11_MFG,P2/11,MFG,A8,5.9,0.6,18.72,"long, no dementia",5.4,0,16,3,57,No,P2_11_MFG,P2_11
+BX0252_258,P2/11_MTG,P2/11,MTG,B8,5.5,0.6,26.55,"long, no dementia",5.4,0,16,3,58,No,P2_11_MTG,P2_11
+BX0252_259,P2/11_IPL,P2/11,IPL,C8,6.1,0.5,18.63,"long, no dementia",5.4,0,16,3,59,No,P2_11_IPL,P2_11
+BX0252_260,P2/11_ACG,P2/11,ACG,D8,5.4,0.5,16.11,"long, no dementia",5.4,0,16,3,60,No,P2_11_ACG,P2_11
+BX0252_261,P7/18_MFG,P7/18,MFG,E8,6,0.7,24.03,"long, with dementia",6.1,0,16,3,61,No,P7_18_MFG,P7_18
+BX0252_262,P7/18_MTG,P7/18,MTG,F8,4.0999999999999996,0.3,23.04,"long, with dementia",6.1,0,16,3,62,No,P7_18_MTG,P7_18
+BX0252_263,P7/18_IPL,P7/18,IPL,G8,3,NA,14.94,"long, with dementia",6.1,0,16,3,63,No,P7_18_IPL,P7_18
+BX0252_264,P7/18_ACG,P7/18,ACG,H8,3.8,0.2,11.97,"long, with dementia",6.1,0,16,3,64,No,P7_18_ACG,P7_18
+BX0252_265,P68/08_MFG,P68/08,MFG,A9,5.0999999999999996,0.5,26.37,"short, no dementia",5.3,Metastatic Merkel cell carcinoma,17,3,65,No,P68_08_MFG,P68_08
+BX0252_266,P68/08_MTG,P68/08,MTG,B9,4.2,0.5,15.93,"short, no dementia",5.3,Metastatic Merkel cell carcinoma,17,3,66,No,P68_08_MTG,P68_08
+BX0252_267,P68/08_IPL,P68/08,IPL,C9,5,0.7,23.94,"short, no dementia",5.3,Metastatic Merkel cell carcinoma,17,3,67,No,P68_08_IPL,P68_08
+BX0252_268,P68/08_ACG,P68/08,ACG,D9,4.4000000000000004,0.6,17.100000000000001,"short, no dementia",5.3,Metastatic Merkel cell carcinoma,17,3,68,No,P68_08_ACG,P68_08
+BX0252_269,P90/17_MFG,P90/17,MFG,E9,4.9000000000000004,0.5,17.91,"short, with dementia",5.1,Of neurodegenerative disease_Aspiration pneumonia,17,3,69,No,P90_17_MFG,P90_17
+BX0252_270,P90/17_MTG,P90/17,MTG,F9,4.3,0.4,18.27,"short, with dementia",5.1,Of neurodegenerative disease_Aspiration pneumonia,17,3,70,No,P90_17_MTG,P90_17
+BX0252_271,P90/17_IPL,P90/17,IPL,G9,3.9,0.4,16.47,"short, with dementia",5.1,Of neurodegenerative disease_Aspiration pneumonia,17,3,71,No,P90_17_IPL,P90_17
+BX0252_272,P90/17_ACG,P90/17,ACG,H9,4.5,0.3,6.8849999999999998,"short, with dementia",5.1,Of neurodegenerative disease_Aspiration pneumonia,17,3,72,No,P90_17_ACG,P90_17
+BX0252_273,P52/10_MFG,P52/10,MFG,A10,4.3,0.3,12.42,control,4.6,0,17,3,73,No,P52_10_MFG,P52_10
+BX0252_274,P52/10_MTG,P52/10,MTG,B10,3.4,0.5,10.71,control,4.6,0,17,3,74,No,P52_10_MTG,P52_10
+BX0252_275,P52/10_IPL,P52/10,IPL,C10,3.1,NA,15.12,control,4.6,0,17,3,75,No,P52_10_IPL,P52_10
+BX0252_276,P52/10_ACG,P52/10,ACG,D10,4.3,0.3,13.14,control,4.6,0,17,3,76,No,P52_10_ACG,P52_10
+BX0252_277,P36/14_MFG,P36/14,MFG,E10,5.9,0.6,20.61,control,5.7,0,17,3,77,No,P36_14_MFG,P36_14
+BX0252_278,P36/14_MTG,P36/14,MTG,F10,4.8,0.7,17.82,control,5.7,0,17,3,78,No,P36_14_MTG,P36_14
+BX0252_279,P36/14_IPL,P36/14,IPL,G10,4,0.3,18.63,control,5.7,0,17,3,79,No,P36_14_IPL,P36_14
+BX0252_280,P36/14_ACG,P36/14,ACG,H10,5.4,0.3,14.13,control,5.7,0,17,3,80,No,P36_14_ACG,P36_14
+BX0252_281,P16/05_MFG,P16/05,MFG,A11,3.7,0.5,19.8,"short, no dementia",4.1,Of neurodegenerative disease_Bronchopneumonia,18,3,81,No,P16_05_MFG,P16_05
+BX0252_282,P16/05_MTG,P16/05,MTG,B11,4.5,0.3,28.26,"short, no dementia",4.1,Of neurodegenerative disease_Bronchopneumonia,18,3,82,No,P16_05_MTG,P16_05
+BX0252_283,P16/05_IPL,P16/05,IPL,C11,4.2,0.5,19.440000000000001,"short, no dementia",4.1,Of neurodegenerative disease_Bronchopneumonia,18,3,83,No,P16_05_IPL,P16_05
+BX0252_284,P16/05_ACG,P16/05,ACG,D11,4.9000000000000004,0.4,12.6,"short, no dementia",4.1,Of neurodegenerative disease_Bronchopneumonia,18,3,84,No,P16_05_ACG,P16_05
+BX0252_285,P56/12_MFG,P56/12,MFG,E11,5.6,0.5,18.54,"short, with dementia",5.1,Of neurodegenerative disease_Chest infection,18,3,85,No,P56_12_MFG,P56_12
+BX0252_286,P56/12_MTG,P56/12,MTG,F11,4.8,0.3,14.85,"short, with dementia",5.1,Of neurodegenerative disease_Chest infection,18,3,86,No,P56_12_MTG,P56_12
+BX0252_287,P56/12_IPL,P56/12,IPL,G11,5,0.4,16.11,"short, with dementia",5.1,Of neurodegenerative disease_Chest infection,18,3,87,No,P56_12_IPL,P56_12
+BX0252_288,P56/12_ACG,P56/12,ACG,H11,4.5999999999999996,0.3,5.157,"short, with dementia",5.1,Of neurodegenerative disease_Chest infection,18,3,88,No,P56_12_ACG,P56_12
+BX0252_289,P26/18_MFG,P26/18,MFG,A12,7,1.2,16.02,"long, no dementia",5.7,0,18,3,89,No,P26_18_MFG,P26_18
+BX0252_290,P26/18_MTG,P26/18,MTG,B12,6.8,0.7,17.28,"long, no dementia",5.7,0,18,3,90,No,P26_18_MTG,P26_18
+BX0252_291,P26/18_IPL,P26/18,IPL,C12,6.7,1,12.96,"long, no dementia",5.7,0,18,3,91,No,P26_18_IPL,P26_18
+BX0252_292,P26/18_ACG,P26/18,ACG,D12,5.2,0.6,9.81,"long, no dementia",5.7,0,18,3,92,No,P26_18_ACG,P26_18
+BX0252_293,P59/13_MFG,P59/13,MFG,E12,7.4,0.9,13.23,"long, with dementia",6.2,0,18,3,93,No,P59_13_MFG,P59_13
+BX0252_294,P59/13_MTG,P59/13,MTG,F12,6.4,0.8,12.33,"long, with dementia",6.2,0,18,3,94,No,P59_13_MTG,P59_13
+BX0252_295,P59/13_IPL,P59/13,IPL,G12,6.4,0.8,13.32,"long, with dementia",6.2,0,18,3,95,No,P59_13_IPL,P59_13
+BX0252_296,P59/13_ACG,P59/13,ACG,H12,6.8,0.7,6.7589999999999995,"long, with dementia",6.2,0,18,3,96,No,P59_13_ACG,P59_13
+BX0252_301,P61/18_MFG,P61/18,MFG,A1,5,0.4,23.58,"short, no dementia",4.8,Of neurodegenerative disease,19,4,1,No,P61_18_MFG,P61_18
+BX0252_302,P61/18_MTG,P61/18,MTG,B1,5.4,0.6,15.84,"short, no dementia",4.8,Of neurodegenerative disease,19,4,2,No,P61_18_MTG,P61_18
+BX0252_303,P61/18_IPL,P61/18,IPL,C1,4.5,0.5,19.62,"short, no dementia",4.8,Of neurodegenerative disease,19,4,3,No,P61_18_IPL,P61_18
+BX0252_304,P61/18_ACG,P61/18,ACG,D1,5.3,0.4,14.04,"short, no dementia",4.8,Of neurodegenerative disease,19,4,4,No,P61_18_ACG,P61_18
+BX0252_305,P32/10_MFG,P32/10,MFG,E1,5.9,0.6,17.37,"short, with dementia",5.5,Of neurodegenerative disease_Bronchopneumonia,19,4,5,No,P32_10_MFG,P32_10
+BX0252_306,P32/10_MTG,P32/10,MTG,F1,5.0999999999999996,0.3,13.68,"short, with dementia",5.5,Of neurodegenerative disease_Bronchopneumonia,19,4,6,No,P32_10_MTG,P32_10
+BX0252_307,P32/10_IPL,P32/10,IPL,G1,4.2,0.5,22.5,"short, with dementia",5.5,Of neurodegenerative disease_Bronchopneumonia,19,4,7,No,P32_10_IPL,P32_10
+BX0252_308,P32/10_ACG,P32/10,ACG,H1,5.6,0.6,18.09,"short, with dementia",5.5,Of neurodegenerative disease_Bronchopneumonia,19,4,8,No,P32_10_ACG,P32_10
+BX0252_309,P17/16_MFG,P17/16,MFG,A2,5.0999999999999996,0.4,16.2,control,3.9,0,19,4,9,No,P17_16_MFG,P17_16
+BX0252_310,P17/16_MTG,P17/16,MTG,B2,4.5,0.3,17.82,control,3.9,0,19,4,10,No,P17_16_MTG,P17_16
+BX0252_311,P17/16_IPL,P17/16,IPL,C2,4.9000000000000004,0.2,1.4850000000000001,control,3.9,0,19,4,11,No,P17_16_IPL,P17_16
+BX0252_312,P17/16_ACG,P17/16,ACG,D2,4.8,0.3,13.41,control,3.9,0,19,4,12,No,P17_16_ACG,P17_16
+BX0252_313,P51/08_MFG,P51/08,MFG,E2,5.9,0.5,21.78,control,4.9,n/a,19,4,13,No,P51_08_MFG,P51_08
+BX0252_314,P51/08_MTG,P51/08,MTG,F2,4.8,0.4,14.22,control,4.9,n/a,19,4,14,No,P51_08_MTG,P51_08
+BX0252_315,P51/08_IPL,P51/08,IPL,G2,4.5999999999999996,0.3,32.31,control,4.9,n/a,19,4,15,No,P51_08_IPL,P51_08
+BX0252_316,P51/08_ACG,P51/08,ACG,H2,4.5,0.3,14.22,control,4.9,n/a,19,4,16,No,P51_08_ACG,P51_08
+BX0252_317,P54/09_MFG,P54/09,MFG,A3,4.5999999999999996,0.3,13.86,"short, no dementia",3.9,Of neurodegenerative disease,20,4,17,No,P54_09_MFG,P54_09
+BX0252_318,P54/09_MTG,P54/09,MTG,B3,3.6,0.4,16.11,"short, no dementia",3.9,Of neurodegenerative disease,20,4,18,No,P54_09_MTG,P54_09
+BX0252_319,P54/09_IPL,P54/09,IPL,C3,3.7,NA,14.85,"short, no dementia",3.9,Of neurodegenerative disease,20,4,19,No,P54_09_IPL,P54_09
+BX0252_320,P54/09_ACG,P54/09,ACG,D3,3.5,0.3,10.8,"short, no dementia",3.9,Of neurodegenerative disease,20,4,20,No,P54_09_ACG,P54_09
+BX0252_321,P67/16_MFG,P67/16,MFG,E3,7.4,0.9,18.54,"short, with dementia",5.4,Of neurodegenerative disease_Aspiration pneumonia,20,4,21,No,P67_16_MFG,P67_16
+BX0252_322,P67/16_MTG,P67/16,MTG,F3,5.8,0.5,19.440000000000001,"short, with dementia",5.4,Of neurodegenerative disease_Aspiration pneumonia,20,4,22,No,P67_16_MTG,P67_16
+BX0252_323,P67/16_IPL,P67/16,IPL,G3,5,0.3,23.76,"short, with dementia",5.4,Of neurodegenerative disease_Aspiration pneumonia,20,4,23,No,P67_16_IPL,P67_16
+BX0252_324,P67/16_ACG,P67/16,ACG,H3,5.9,0.6,28.89,"short, with dementia",5.4,Of neurodegenerative disease_Aspiration pneumonia,20,4,24,No,P67_16_ACG,P67_16
+BX0252_325,P48/20_MFG,P48/20,MFG,A4,6.4,0.9,18.899999999999999,"long, with dementia",5.6,NA,20,4,25,No,P48_20_MFG,P48_20
+BX0252_326,P48/20_MTG,P48/20,MTG,B4,6,0.4,25.02,"long, with dementia",5.6,NA,20,4,26,No,P48_20_MTG,P48_20
+BX0252_327,P48/20_IPL,P48/20,IPL,C4,6.4,0.7,21.15,"long, with dementia",5.6,NA,20,4,27,No,P48_20_IPL,P48_20
+BX0252_328,P48/20_ACG,P48/20,ACG,D4,6.2,0.7,18.09,"long, with dementia",5.6,NA,20,4,28,No,P48_20_ACG,P48_20
+BX0252_329,P11/14_MFG,P11/14,MFG,E4,5.2,0.5,19.62,"long, no dementia",5.2,0,20,4,29,No,P11_14_MFG,P11_14
+BX0252_330,P11/14_MTG,P11/14,MTG,F4,5.6,0.5,38.97,"long, no dementia",5.2,0,20,4,30,No,P11_14_MTG,P11_14
+BX0252_331,P11/14_IPL,P11/14,IPL,G4,4.4000000000000004,0.4,35.01,"long, no dementia",5.2,0,20,4,31,No,P11_14_IPL,P11_14
+BX0252_332,P11/14_ACG,P11/14,ACG,H4,5.2,0.5,22.23,"long, no dementia",5.2,0,20,4,32,No,P11_14_ACG,P11_14
+BX0252_333,P59/09_MFG,P59/09,MFG,A5,4.7,0.3,21.78,"short, with dementia",4.8,Ischaemia of gut,21,4,33,No,P59_09_MFG,P59_09
+BX0252_334,P59/09_MTG,P59/09,MTG,B5,4.5,0.2,23.58,"short, with dementia",4.8,Ischaemia of gut,21,4,34,No,P59_09_MTG,P59_09
+BX0252_335,P59/09_IPL,P59/09,IPL,C5,4.5,0.3,19.71,"short, with dementia",4.8,Ischaemia of gut,21,4,35,No,P59_09_IPL,P59_09
+BX0252_336,P59/09_ACG,P59/09,ACG,D5,4.3,0.3,23.67,"short, with dementia",4.8,Ischaemia of gut,21,4,36,No,P59_09_ACG,P59_09
+BX0252_337,P43/17_MFG,P43/17,MFG,E5,5.0999999999999996,0.6,20.25,"long, no dementia",4.8,0,21,4,37,No,P43_17_MFG,P43_17
+BX0252_338,P43/17_MTG,P43/17,MTG,F5,4.5999999999999996,0.4,25.92,"long, no dementia",4.8,0,21,4,38,No,P43_17_MTG,P43_17
+BX0252_339,P43/17_IPL,P43/17,IPL,G5,4.5,0.5,30.24,"long, no dementia",4.8,0,21,4,39,No,P43_17_IPL,P43_17
+BX0252_340,P43/17_ACG,P43/17,ACG,H5,5.6,0.6,24.3,"long, no dementia",4.8,0,21,4,40,No,P43_17_ACG,P43_17
+BX0252_341,P15/10_MFG,P15/10,MFG,A6,6.5,0.9,18.36,control,5.8,Myocardial infarction,21,4,41,No,P15_10_MFG,P15_10
+BX0252_342,P15/10_MTG,P15/10,MTG,B6,5.4,0.5,26.1,control,5.8,Myocardial infarction,21,4,42,No,P15_10_MTG,P15_10
+BX0252_343,P15/10_IPL,P15/10,IPL,C6,6.1,0.8,23.22,control,5.8,Myocardial infarction,21,4,43,No,P15_10_IPL,P15_10
+BX0252_344,P15/10_ACG,P15/10,ACG,D6,6.2,0.6,11.79,control,5.8,Myocardial infarction,21,4,44,No,P15_10_ACG,P15_10
+BX0252_345,P43/13_MFG,P43/13,MFG,E6,5.8,0.7,18.27,control,5.6,0,21,4,45,No,P43_13_MFG,P43_13
+BX0252_346,P43/13_MTG,P43/13,MTG,F6,5.4,0.6,19.079999999999998,control,5.6,0,21,4,46,No,P43_13_MTG,P43_13
+BX0252_347,P43/13_IPL,P43/13,IPL,G6,5.3,0.7,25.38,control,5.6,0,21,4,47,No,P43_13_IPL,P43_13
+BX0252_348,P43/13_ACG,P43/13,ACG,H6,5.4,0.8,18.09,control,5.6,0,21,4,48,No,P43_13_ACG,P43_13
+BX0252_349,P80/11_MFG,P80/11,MFG,A7,5.3,0.5,24.3,"short, no dementia",5.4,Gastrointestinal bleed,22,4,49,No,P80_11_MFG,P80_11
+BX0252_350,P80/11_MTG,P80/11,MTG,B7,4.9000000000000004,0.3,18.09,"short, no dementia",5.4,Gastrointestinal bleed,22,4,50,No,P80_11_MTG,P80_11
+BX0252_351,P80/11_IPL,P80/11,IPL,C7,5.2,0.4,23.58,"short, no dementia",5.4,Gastrointestinal bleed,22,4,51,No,P80_11_IPL,P80_11
+BX0252_352,P80/11_ACG,P80/11,ACG,D7,5.2,0.5,19.260000000000002,"short, no dementia",5.4,Gastrointestinal bleed,22,4,52,No,P80_11_ACG,P80_11
+BX0252_353,P83/16_MFG,P83/16,MFG,E7,4.8,0.5,16.47,"long, with dementia",5,0,22,4,53,No,P83_16_MFG,P83_16
+BX0252_354,P83/16_MTG,P83/16,MTG,F7,4.2,0.4,33.659999999999997,"long, with dementia",5,0,22,4,54,No,P83_16_MTG,P83_16
+BX0252_355,P83/16_IPL,P83/16,IPL,G7,4.5999999999999996,0.4,27.18,"long, with dementia",5,0,22,4,55,No,P83_16_IPL,P83_16
+BX0252_356,P83/16_ACG,P83/16,ACG,H7,4.3,0.3,21.24,"long, with dementia",5,0,22,4,56,No,P83_16_ACG,P83_16
+BX0252_357,P23/12_MFG,P23/12,MFG,A8,7,1.3,23.04,"long, no dementia",4.7,0,22,4,57,No,P23_12_MFG,P23_12
+BX0252_358,P23/12_MTG,P23/12,MTG,B8,6.7,1.3,27.63,"long, no dementia",4.7,0,22,4,58,No,P23_12_MTG,P23_12
+BX0252_359,P23/12_IPL,P23/12,IPL,C8,6,0.8,18.899999999999999,"long, no dementia",4.7,0,22,4,59,No,P23_12_IPL,P23_12
+BX0252_360,P23/12_ACG,P23/12,ACG,D8,4.2,0.4,7.9560000000000013,"long, no dementia",4.7,0,22,4,60,No,P23_12_ACG,P23_12
+BX0252_361,P56/08_MFG,P56/08,MFG,E8,5.2,0.4,26.37,"long, with dementia",5.2,0,22,4,61,No,P56_08_MFG,P56_08
+BX0252_362,P56/08_MTG,P56/08,MTG,F8,4.7,0.4,27.36,"long, with dementia",5.2,0,22,4,62,No,P56_08_MTG,P56_08
+BX0252_363,P56/08_IPL,P56/08,IPL,G8,3.9,0.3,18.899999999999999,"long, with dementia",5.2,0,22,4,63,No,P56_08_IPL,P56_08
+BX0252_364,P56/08_ACG,P56/08,ACG,H8,4,0.2,29.88,"long, with dementia",5.2,0,22,4,64,No,P56_08_ACG,P56_08
+BX0252_365,P47/05_MFG,P47/05,MFG,A9,5.9,0.8,49.23,"short, no dementia",5.8,Of neurodegenerative disease_Aspiration pneumonia,23,4,65,No,P47_05_MFG,P47_05
+BX0252_366,P47/05_MTG,P47/05,MTG,B9,5.5,0.8,36.81,"short, no dementia",5.8,Of neurodegenerative disease_Aspiration pneumonia,23,4,66,No,P47_05_MTG,P47_05
+BX0252_367,P47/05_IPL,P47/05,IPL,C9,5.7,0.6,37.35,"short, no dementia",5.8,Of neurodegenerative disease_Aspiration pneumonia,23,4,67,No,P47_05_IPL,P47_05
+BX0252_368,P47/05_ACG,P47/05,ACG,D9,6.6,0.9,21.69,"short, no dementia",5.8,Of neurodegenerative disease_Aspiration pneumonia,23,4,68,No,P47_05_ACG,P47_05
+BX0252_369,P13/17_MFG,P13/17,MFG,E9,4,0.5,21.06,"short, with dementia",4.6,Of neurodegenerative disease,23,4,69,No,P13_17_MFG,P13_17
+BX0252_370,P13/17_MTG,P13/17,MTG,F9,4.7,0.5,24.21,"short, with dementia",4.6,Of neurodegenerative disease,23,4,70,No,P13_17_MTG,P13_17
+BX0252_371,P13/17_IPL,P13/17,IPL,G9,3.9,0.5,25.65,"short, with dementia",4.6,Of neurodegenerative disease,23,4,71,No,P13_17_IPL,P13_17
+BX0252_372,P13/17_ACG,P13/17,ACG,H9,3.5,0.2,27.9,"short, with dementia",4.6,Of neurodegenerative disease,23,4,72,No,P13_17_ACG,P13_17
+BX0252_373,P54/15_MFG,P54/15,MFG,A10,4.9000000000000004,0.6,17.100000000000001,control,4.8,0,23,4,73,No,P54_15_MFG,P54_15
+BX0252_374,P54/15_MTG,P54/15,MTG,B10,4.3,0.8,22.95,control,4.8,0,23,4,74,No,P54_15_MTG,P54_15
+BX0252_375,P54/15_IPL,P54/15,IPL,C10,4.3,0.6,31.14,control,4.8,0,23,4,75,No,P54_15_IPL,P54_15
+BX0252_376,P54/15_ACG,P54/15,ACG,D10,3.9,0.5,18.63,control,4.8,0,23,4,76,No,P54_15_ACG,P54_15
+BX0252_377,P11/17_MFG,P11/17,MFG,E10,5.4,0.5,53.19,control,5.5,0,23,4,77,No,P11_17_MFG,P11_17
+BX0252_378,P11/17_MTG,P11/17,MTG,F10,5,0.3,21.42,control,5.5,0,23,4,78,No,P11_17_MTG,P11_17
+BX0252_379,P11/17_IPL,P11/17,IPL,G10,5.4,0.4,25.29,control,5.5,0,23,4,79,No,P11_17_IPL,P11_17
+BX0252_380,P11/17_ACG,P11/17,ACG,H10,5.7,0.4,7.5149999999999997,control,5.5,0,23,4,80,No,P11_17_ACG,P11_17
+BX0252_381,P62/15_MFG,P62/15,MFG,A11,5.5,0.5,19.170000000000002,"short, no dementia",6.4,Of neurodegenerative disease,24,4,81,No,P62_15_MFG,P62_15
+BX0252_382,P62/15_MTG,P62/15,MTG,B11,5.3,0.6,38.700000000000003,"short, no dementia",6.4,Of neurodegenerative disease,24,4,82,No,P62_15_MTG,P62_15
+BX0252_383,P62/15_IPL,P62/15,IPL,C11,5,0.5,47.7,"short, no dementia",6.4,Of neurodegenerative disease,24,4,83,No,P62_15_IPL,P62_15
+BX0252_384,P62/15_ACG,P62/15,ACG,D11,5.5,0.7,27.18,"short, no dementia",6.4,Of neurodegenerative disease,24,4,84,No,P62_15_ACG,P62_15
+BX0252_385,P68/05_MFG,P68/05,MFG,E11,7.1,1.4,44.19,"short, with dementia",5.9,Of neurodegenerative disease,24,4,85,No,P68_05_MFG,P68_05
+BX0252_386,P68/05_MTG,P68/05,MTG,F11,6.6,1.1000000000000001,21.6,"short, with dementia",5.9,Of neurodegenerative disease,24,4,86,No,P68_05_MTG,P68_05
+BX0252_387,P68/05_IPL,P68/05,IPL,G11,6.4,1,39.33,"short, with dementia",5.9,Of neurodegenerative disease,24,4,87,No,P68_05_IPL,P68_05
+BX0252_388,P68/05_ACG,P68/05,ACG,H11,6.8,1.5,27.9,"short, with dementia",5.9,Of neurodegenerative disease,24,4,88,No,P68_05_ACG,P68_05
+BX0252_389,P52/13_MFG,P52/13,MFG,A12,6.5,0.8,14.22,"long, no dementia",6.3,0,24,4,89,No,P52_13_MFG,P52_13
+BX0252_390,P52/13_MTG,P52/13,MTG,B12,6.2,0.8,22.23,"long, no dementia",6.3,0,24,4,90,No,P52_13_MTG,P52_13
+BX0252_391,P52/13_IPL,P52/13,IPL,C12,6.4,0.8,19.350000000000001,"long, no dementia",6.3,0,24,4,91,No,P52_13_IPL,P52_13
+BX0252_392,P52/13_ACG,P52/13,ACG,D12,6.8,1.3,20.7,"long, no dementia",6.3,0,24,4,92,No,P52_13_ACG,P52_13
+BX0252_393,P78/18_MFG,P78/18,MFG,E12,6.4,1.2,28.89,"long, with dementia",6.4,0,24,4,93,No,P78_18_MFG,P78_18
+BX0252_394,P78/18_MTG,P78/18,MTG,F12,6.2,0.8,25.65,"long, with dementia",6.4,0,24,4,94,No,P78_18_MTG,P78_18
+BX0252_395,P78/18_IPL,P78/18,IPL,G12,5.6,0.8,27.09,"long, with dementia",6.4,0,24,4,95,No,P78_18_IPL,P78_18
+BX0252_396,P78/18_ACG,P78/18,ACG,H12,6.8,0.8,19.440000000000001,"long, with dementia",6.4,0,24,4,96,No,P78_18_ACG,P78_18

@@ -1,6 +1,6 @@
 process STAR_pass2 {
 
-publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+publishDir "${projectDir}/output/STAR/align", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
@@ -22,10 +22,10 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
 script:
 sj_loc="${projectDir}/output/STAR/align"
 """
-limits=`sh ${baseDir}/sj_length.sh $merged_tab`
+limits=`sh ${projectDir}/../sj_length.sh $merged_tab`
 
 STAR --runThreadN 25 \
---genomeDir ${baseDir}/output/STAR/genome_dir \
+--genomeDir ${projectDir}/output/STAR/genome_dir \
 --readFilesIn  ${reads[0]}, ${reads[1]} \
 --readFilesCommand zcat \
 --outFileNamePrefix ${sampleID}_mapped_post_merge.BAM_ \

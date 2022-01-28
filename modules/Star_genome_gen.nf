@@ -1,12 +1,12 @@
 process Star_genome_gen {
 
-myDir = file("${baseDir}/output/STAR")
-myDir.mkdir()
+myDir = file("${projectDir}/output/STAR")
+myDir.mkdirs()
 
-myDir2 = file("${baseDir}/output/STAR/genome_dir")
-myDir2.mkdir()
+myDir2 = file("${projectDir}/output/STAR/genome_dir")
+myDir2.mkdirs()
 
-publishDir "${baseDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
+publishDir "${projectDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
 
     input:
     path(fasta)
@@ -16,7 +16,7 @@ publishDir "${baseDir}/output/STAR/genome_dir", mode: 'copy', overwrite: true
     val("${gdir_val}"), emit: gdir_val
 
     script:
-    gdir_val=file("${baseDir}/output/STAR/genome_dir")
+    gdir_val=file("${projectDir}/output/STAR/genome_dir")
 //    ref_dir="${baseDir}/output/reference_downloads"
     """
 STAR --runThreadN 25 \

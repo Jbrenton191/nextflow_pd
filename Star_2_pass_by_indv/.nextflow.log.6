@@ -1,0 +1,84 @@
+Dec-02 11:58:30.178 [main] DEBUG nextflow.cli.Launcher - $> nextflow run pipe_2.0.nf -bg -with-timeline 'pipe_2.0.nf_timeline_02_12_2021-11:58:29.html' -with-report 'pipe_2.0.nf_report_02_12_2021-11:58:29.html' -with-trace 'pipe_2.0.nf_trace_02_12_2021-11:58:29.txt' -with-dag 'pipe_2.0.nf_dag_02_12_2021-11:58:29.png'
+Dec-02 11:58:30.251 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.0
+Dec-02 11:58:30.476 [main] INFO  nextflow.cli.CmdRun - Launching `pipe_2.0.nf` [pedantic_payne] - revision: 07b5a6a016
+Dec-02 11:58:30.488 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Dec-02 11:58:30.489 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Dec-02 11:58:30.506 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-02 11:58:30.983 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
+Dec-02 11:58:30.984 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Dec-02 11:58:30.986 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Dec-02 11:58:30.992 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Dec-02 11:58:30.993 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Dec-02 11:58:30.996 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Dec-02 11:58:31.004 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Dec-02 11:58:31.041 [main] DEBUG nextflow.Session - Session uuid: 5324999a-c476-40ff-a398-994527dbc57d
+Dec-02 11:58:31.042 [main] DEBUG nextflow.Session - Run name: pedantic_payne
+Dec-02 11:58:31.042 [main] DEBUG nextflow.Session - Executor pool size: 256
+Dec-02 11:58:31.063 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.0 build 5552
+  Created: 02-05-2021 16:22 UTC (17:22 BST)
+  System: Linux 5.4.0-74-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 2900730@drihpc1 [128.40.163.130]
+  CPUs: 256 - Mem: 1007.5 GB (17.4 GB) - Swap: 8 GB (7.8 GB)
+Dec-02 11:58:31.084 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work [nfs]
+Dec-02 11:58:31.084 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/bin
+Dec-02 11:58:31.095 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Dec-02 11:58:31.105 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-02 11:58:31.736 [main] DEBUG nextflow.Session - Session start invoked
+Dec-02 11:58:31.740 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/pipe_2.0.nf_trace_02_12_2021-11:58:29.txt
+Dec-02 11:58:32.018 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-02 11:58:33.216 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DESeq, gtf_to_exons, select_metadata_cols, cluster_juncs, rseqc_junction_annotation, rseqc_RNA_fragment_size, rseqc_read_GC, salmon_quantification, rseqc_mismatch_profile, gencode_genemap, gtf_to_bed, get_packages, star_genome_gen, create_groupfiles, leafcutter, fastp, rseqc_inner_distance, star, STAR_2pass_indv, genome_download, salmon_index_gen, decoy_gen, salmon, rseqc, Star_genome_gen, create_gene_map, rseqc_clipping_profile, sam_sort_index, rseqc_read_distribution, fastqc, convert_juncs, multiqc_post_star_salmon, salmon_index, rseqc_bam_stat, rseqc_read_duplication
+Dec-02 11:58:33.363 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 11:58:33.363 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 11:58:33.367 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-02 11:58:33.372 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=1007.5 GB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Dec-02 11:58:33.432 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 11:58:33.432 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 11:58:33.468 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 11:58:33.469 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 11:58:33.597 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-02 11:58:33.597 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-02 11:58:33.599 [main] DEBUG nextflow.script.BindableDef - Bindable invocations=[fastqc]
+Dec-02 11:58:33.601 [main] DEBUG nextflow.Session - Session aborted -- Cause: Process 'fastqc' has been already used -- If you need to reuse the same component include it with a different name or include in a different workflow context
+Dec-02 11:58:33.616 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] take
+
+Dec-02 11:58:33.627 [main] ERROR nextflow.cli.Launcher - @unknown
+nextflow.exception.DuplicateProcessInvocation: Process 'fastqc' has been already used -- If you need to reuse the same component include it with a different name or include in a different workflow context
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:47)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:41)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:95)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:339)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at Script_46fbe914$_runScript_closure1$_closure2.doCall(Script_46fbe914:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:406)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:186)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:170)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
+	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:191)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:302)
+	at nextflow.cli.Launcher.run(Launcher.groovy:475)
+	at nextflow.cli.Launcher.main(Launcher.groovy:657)

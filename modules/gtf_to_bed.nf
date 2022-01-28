@@ -13,7 +13,7 @@ publishDir "${projectDir}/output/Samtools_Rseqc", mode: 'copy', overwrite: true
 
     script:
     """
-    $projectDir/gtf2bed $gtf_file > ${gtf_file}.bed
+    $projectDir/../gtf2bed $gtf_file > ${gtf_file}.bed
      rename 's/.gtf//' ${gtf_file}.bed
     """
 }
