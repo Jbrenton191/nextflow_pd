@@ -2,12 +2,12 @@ nextflow.enable.dsl=2
 
 //   params.data="${projectDir}/../../Regina_raw_fastqs/*R{1,3}*.fastq.gz"
 //   params.salmon_dir = "${projectDir}/output/Salmon/"
-     params.data="${projectDir}/../../ASAP_bulk_fastqs/Run2/*R{1,2}*.fastq.gz"  
+     params.data="${projectDir}/../../ASAP_bulk_fastqs/*R{1,2}*.fastq.gz"  
 
-     params.metadata_csv= "${projectDir}/20201229_MasterFile_SampleInfo.csv"
-     params.metadata_key= "${projectDir}/key_for_metadata.txt"
+     params.metadata_csv= "${projectDir}/../ASAP_samples_master_spreadsheet_25.8.21.csv"
+     params.metadata_key= "${projectDir}/../key_for_metadata.txt"
 
-   output_dir = "${baseDir}/output"
+     output_dir = "${baseDir}/output"
 
 
 include { get_packages } from '../modules/get_packages'
@@ -48,12 +48,10 @@ include { rseqc_RNA_fragment_size } from '../modules/rseqc_RNA_fragment_size'
 
 
 workflow {
-// data=Channel.fromFilePairs("${params.data}")
+data=Channel.fromFilePairs("${params.data}")
 
-x=Channel.fromFilePairs("${params.data}")
-data=x.take(4)
 
-fastqc(data)
+// fastqc(data)
 get_packages()
 output_dir=Channel.value("${baseDir}/output")
 fastp(data, get_packages.out.pack_done_val)
@@ -70,23 +68,23 @@ decoy_gen(genome_download.out.fasta, genome_download.out.transcripts)
 salmon_index(decoy_gen.out.gentrome, decoy_gen.out.decoys)
 salmon_quantification(salmon_index.out.whole_index.collect(), fastp.out.reads)
 
-// multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star.out.sj_tabs2.collect(), output_dir)
+multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star.out.sj_tabs2.collect(), output_dir)
 
 create_gene_map(genome_download.out.transcripts)
 
-// select_metadata_cols(params.metadata_csv, params.metadata_key, get_packages.out.pack_done_val)
+ select_metadata_cols(params.metadata_csv, params.metadata_key, get_packages.out.pack_done_val)
 
-// DESeq(salmon_quantification.out.quant_dirs.collect(), select_metadata_cols.out.metadata_selected_cols, create_gene_map.out.gene_map)
+ DESeq(salmon_quantification.out.quant_dirs.collect(), select_metadata_cols.out.metadata_selected_cols, create_gene_map.out.gene_map)
 
-star.out.sj_tabs2.view {"individual sj tabs : $it"}
-star.out.sj_tabs2.collect().view {"individual sj tabs : $it"}
+//star.out.sj_tabs2.view {"individual sj tabs : $it"}
+//star.out.sj_tabs2.collect().view {"individual sj tabs : $it"}
 
 convert_juncs(star.out.sj_loc, star.out.sj_tabs2.collect())
 cluster_juncs(convert_juncs.out.junc_list)
 gtf_to_exons(genome_download.out.gtf)
 
-// create_groupfiles(cluster_juncs.out.counts_file, select_metadata_cols.out.metadata_selected_cols)
-// leafcutter(cluster_juncs.out.counts_file, create_groupfiles.out.gf_out, gtf_to_exons.out.exon_file)
+ create_groupfiles(cluster_juncs.out.counts_file, select_metadata_cols.out.metadata_selected_cols)
+ leafcutter(cluster_juncs.out.counts_file, create_groupfiles.out.gf_out, gtf_to_exons.out.exon_file)
 /*
 rseqc_bam_stat(bams)
 rseqc_clipping_profile(bams

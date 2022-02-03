@@ -6,9 +6,11 @@ arguments <- parse_args(OptionParser(), positional_arguments = 1)
 gencode_fasta_file<-arguments$args[1]
 
 # base_dir<-"/home/jbrenton/nextflow_test"
-# gencode_fasta_file<-file.path(base_dir, 
+# gencode_fasta_file<-file.path(base_dir,
 # "/output/reference_downloads/gencode.v38.transcripts.fa")
 # # gencode_fasta_file<-file.path(base_dir, "output/Salmon/gentrome.fa")
+
+gencode_fasta_file<-"./output/reference_downloads/gencode.v38.transcripts.fa"
 
 gencode_fasta = readDNAStringSet(gencode_fasta_file)
 
@@ -17,13 +19,13 @@ writeLines("####### reading transcriptome FASTA")
 genes_gencode<- names(gencode_fasta)
 
 parseGencode<-function(genestring){
-  
+
   identifier<-sub("^(ENST.+)\\|(.+)\\|.+\\|.+\\|.+\\|(.+)\\|.+\\|(.+)\\|$", "\\1", genestring)
   geneName<-sub("^(ENST.+)\\|(.+)\\|.+\\|.+\\|.+\\|(.+)\\|.+\\|(.+)\\|$", "\\2", genestring)
   symbol<-sub("^(ENST.+)\\|(.+)\\|.+\\|.+\\|.+\\|(.+)\\|.+\\|(.+)\\|$", "\\3", genestring)
   description<-sub("^(ENST.+)\\|(.+)\\|.+\\|.+\\|.+\\|(.+)\\|.+\\|(.+)\\|$", "\\4", genestring)
-  
-  return(c(identifier, geneName, description))
+
+  return(c(identifier, geneName, symbol, description))
 }
 ######apply the function to the gencode information to extract the terms above
 
