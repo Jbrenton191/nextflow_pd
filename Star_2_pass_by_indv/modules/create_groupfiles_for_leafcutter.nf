@@ -18,6 +18,6 @@ process create_groupfiles {
     script:
     out_dir="${projectDir}/output/metadata_and_groupfiles"
     """
-    Rscript ${projectDir}/R_scripts/create_groupfiles_for_leafcutter.R $count_file $metadata_cols_path $out_dir
+    Rscript ${projectDir}/../R_scripts/create_groupfiles_for_leafcutter.R $count_file $metadata_cols_path $out_dir
     """
 }

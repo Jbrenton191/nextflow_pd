@@ -13,7 +13,7 @@ echo true
 
     script:
     """
-    Rscript ${projectDir}/R_scripts/STAR_splice_junction_merge.R $sj_loc -o .
+    Rscript ${projectDir}/../R_scripts/STAR_splice_junction_merge.R $sj_loc -o .
     """
 
 }

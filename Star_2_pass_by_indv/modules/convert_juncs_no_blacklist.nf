@@ -7,7 +7,7 @@ myDir.mkdirs()
 
     input:
     val(sj_loc)
-    path(sj_tabs)
+//    path(sj_tabs)
 
     output:
     path("*.txt"), emit: junc_list
@@ -16,6 +16,6 @@ myDir.mkdirs()
     script:
     out_dir="${projectDir}/output/leafcutter"
     """
-    Rscript ${projectDir}/R_scripts/convert_STAR_SJ_to_junc.R $sj_loc ${projectDir} ${out_dir} ${projectDir}/hg38-blacklist.v2.bed.gz
+    Rscript ${projectDir}/convert_STAR_SJ_to_junc.R $sj_loc ${projectDir} ${out_dir}
     """
 }

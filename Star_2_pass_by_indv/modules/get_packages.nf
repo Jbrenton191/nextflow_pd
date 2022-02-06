@@ -9,7 +9,7 @@ process get_packages {
 	script:
 	fin_val="Package download didn't fail"
 	"""
-	Rscript $projectDir/R_scripts/Rpackage_download.R
+	Rscript $projectDir/../R_scripts/Rpackage_download.R
 	"""
 
 // git clone https://github.com/RHReynolds/RNAseqProcessing.git

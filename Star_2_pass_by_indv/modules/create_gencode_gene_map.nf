@@ -15,6 +15,6 @@ publishDir "${projectDir}/output/Salmon", mode: 'move', overwrite: true
 
     script:
     """
-    Rscript "${projectDir}/R_scripts/create_gencode_gene_map.R" "$transcript_ref"
+    Rscript "${projectDir}/../R_scripts/create_gencode_gene_map.R" "$transcript_ref"
     """
 }

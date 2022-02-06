@@ -10,7 +10,7 @@ gencode_fasta_file<-arguments$args[1]
 # "/output/reference_downloads/gencode.v38.transcripts.fa")
 # # gencode_fasta_file<-file.path(base_dir, "output/Salmon/gentrome.fa")
 
-gencode_fasta_file<-"./output/reference_downloads/gencode.v38.transcripts.fa"
+# gencode_fasta_file<-"./output/reference_downloads/gencode.v38.transcripts.fa"
 
 gencode_fasta = readDNAStringSet(gencode_fasta_file)
 

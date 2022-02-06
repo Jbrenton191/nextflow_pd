@@ -37,6 +37,9 @@ include { create_groupfiles } from './modules/create_groupfiles_for_leafcutter'
 include { leafcutter } from './modules/leafcutter'
 
 workflow {
+genome_download()
+create_gene_map(genome_download.out.transcripts)
+/*
 data=Channel.fromFilePairs("${params.data}")
 get_packages()
 output_dir=Channel.value("${baseDir}/output")
@@ -71,4 +74,5 @@ gtf_to_exons(genome_download.out.gtf)
 
 create_groupfiles(cluster_juncs.out.counts_file, select_metadata_cols.out.metadata_selected_cols)
 leafcutter(cluster_juncs.out.counts_file, create_groupfiles.out.gf_out, gtf_to_exons.out.exon_file)
+*/
 }

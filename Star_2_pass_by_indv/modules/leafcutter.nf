@@ -20,6 +20,6 @@ process leafcutter {
 //  base_dir="${projectDir}"
     group_files_dir="${projectDir}/output/metadata_and_groupfiles"
     """
-    Rscript ${projectDir}/R_scripts/leafcutter_diff_splicing.R $count_file $group_files_dir $exon_file ${projectDir}
+    Rscript ${projectDir}/../R_scripts/leafcutter_diff_splicing.R $count_file $group_files_dir $exon_file ${projectDir}
     """
 }

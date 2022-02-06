@@ -14,7 +14,7 @@ publishDir "${projectDir}/output/leafcutter", mode: 'copy', overwrite: true
         
       	script:
         """
-        python ${projectDir}/leafcutter_cluster.py \
+        python ${projectDir}/../leafcutter_cluster.py \
         -j $junc_list \
         -r . \
         -l 1000000 \

@@ -1,82 +1,225 @@
-Dec-02 11:57:05.095 [main] DEBUG nextflow.cli.Launcher - $> nextflow run pipe_2.0.nf -bg -with-timeline 'pipe_2.0.nf_timeline_02_12_2021-11:57:03.html' -with-report 'pipe_2.0.nf_report_02_12_2021-11:57:03.html' -with-trace 'pipe_2.0.nf_trace_02_12_2021-11:57:03.txt' -with-dag 'pipe_2.0.nf_dag_02_12_2021-11:57:03.png'
-Dec-02 11:57:05.170 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.0
-Dec-02 11:57:05.194 [main] INFO  nextflow.cli.CmdRun - Launching `pipe_2.0.nf` [zen_shirley] - revision: c2629b248a
-Dec-02 11:57:05.208 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
-Dec-02 11:57:05.208 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
-Dec-02 11:57:05.225 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Dec-02 11:57:05.738 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
-Dec-02 11:57:05.740 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Dec-02 11:57:05.742 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
-Dec-02 11:57:05.774 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Dec-02 11:57:05.775 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Dec-02 11:57:05.778 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Dec-02 11:57:05.786 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Dec-02 11:57:05.825 [main] DEBUG nextflow.Session - Session uuid: 01f57d2c-d557-4e79-b6bd-ea9af4c48dea
-Dec-02 11:57:05.826 [main] DEBUG nextflow.Session - Run name: zen_shirley
-Dec-02 11:57:05.826 [main] DEBUG nextflow.Session - Executor pool size: 256
-Dec-02 11:57:05.855 [main] DEBUG nextflow.cli.CmdRun - 
-  Version: 21.04.0 build 5552
-  Created: 02-05-2021 16:22 UTC (17:22 BST)
+Jan-31 14:34:34.657 [main] DEBUG nextflow.cli.Launcher - $> nextflow run pipe_2.0.nf -resume nauseous_rosalind -with-timeline '_timeline_31_01_2022-14:30:16.html' -with-report '_report_31_01_2022-14:30:16.html' -with-trace '_trace_31_01_2022-14:30:16.txt' -with-dag '_dag_31_01_2022-14:30:16.png'
+Jan-31 14:34:36.439 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.0
+Jan-31 14:34:36.461 [main] INFO  nextflow.cli.CmdRun - Launching `pipe_2.0.nf` [thirsty_gates] - revision: 6f2d844564
+Jan-31 14:34:36.475 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Jan-31 14:34:36.476 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/nextflow.config
+Jan-31 14:34:36.494 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-31 14:34:37.091 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/driuser/.nextflow/plugins
+Jan-31 14:34:37.092 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-31 14:34:37.104 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-31 14:34:37.105 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-31 14:34:37.107 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-31 14:34:37.118 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-31 14:34:37.165 [main] DEBUG nextflow.Session - Session uuid: bc0b91b2-87b9-44b1-b1d6-2551d6b67ff3
+Jan-31 14:34:37.165 [main] DEBUG nextflow.Session - Run name: thirsty_gates
+Jan-31 14:34:37.166 [main] DEBUG nextflow.Session - Executor pool size: 256
+Jan-31 14:34:37.190 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.0 build 5640
+  Created: 11-11-2021 18:27 UTC (18:27 BST)
   System: Linux 5.4.0-74-generic
-  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.1+13-LTS
   Encoding: UTF-8 (UTF-8)
-  Process: 2900497@drihpc1 [128.40.163.130]
-  CPUs: 256 - Mem: 1007.5 GB (17.4 GB) - Swap: 8 GB (7.8 GB)
-Dec-02 11:57:05.897 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work [nfs]
-Dec-02 11:57:05.897 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/bin
-Dec-02 11:57:05.908 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Dec-02 11:57:05.918 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Dec-02 11:57:06.435 [main] DEBUG nextflow.Session - Session start invoked
-Dec-02 11:57:06.439 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/pipe_2.0.nf_trace_02_12_2021-11:57:03.txt
-Dec-02 11:57:06.718 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Dec-02 11:57:08.832 [main] DEBUG nextflow.Session - Session aborted -- Cause: Is a directory
-Dec-02 11:57:08.849 [main] ERROR nextflow.cli.Launcher - Is a directory
-java.io.IOException: Is a directory
-	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method)
-	at java.base/sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:48)
-	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
-	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
-	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:223)
-	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:65)
-	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:109)
-	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:103)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:185)
-	at java.base/java.io.BufferedReader.read1(BufferedReader.java:210)
-	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
-	at java.base/java.io.Reader.read(Reader.java:229)
-	at org.codehaus.groovy.runtime.IOGroovyMethods.getText(IOGroovyMethods.java:861)
-	at org.apache.groovy.nio.extensions.NioExtensions.getText(NioExtensions.java:397)
-	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:201)
-	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:142)
-	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
-	at nextflow.script.IncludeDef$__clinit__closure1.doCall(IncludeDef.groovy)
-	at jdk.internal.reflect.GeneratedMethodAccessor38.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
-	at groovy.lang.Closure.call(Closure.java:412)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
-	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
-	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
-	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
-	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:114)
-	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at Script_1db3b32e.runScript(Script_1db3b32e:45)
-	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:170)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
-	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
-	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:302)
-	at nextflow.cli.Launcher.run(Launcher.groovy:475)
-	at nextflow.cli.Launcher.main(Launcher.groovy:657)
+  Process: 670819@drihpc1 [128.40.163.130]
+  CPUs: 256 - Mem: 1007.5 GB (4.3 GB) - Swap: 8 GB (6.4 GB)
+Jan-31 14:34:37.386 [main] DEBUG nextflow.Session - Work-dir: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/work [nfs]
+Jan-31 14:34:37.386 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/bin
+Jan-31 14:34:37.394 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-31 14:34:37.404 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-31 14:34:37.447 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Jan-31 14:34:38.384 [main] DEBUG nextflow.Session - Session start invoked
+Jan-31 14:34:38.394 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/_trace_31_01_2022-14:30:16.txt
+Jan-31 14:34:39.223 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-31 14:34:42.286 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 257; maxThreads: 1000
+Jan-31 14:34:42.414 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:42.415 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:42.419 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jan-31 14:34:42.425 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=256; memory=1007.5 GB; capacity=256; pollInterval=100ms; dumpInterval=5m
+Jan-31 14:34:42.489 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:42.489 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.085 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.085 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.099 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.099 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.230 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.230 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.667 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.667 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.675 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.675 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.682 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.682 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.686 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.686 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:43.691 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:43.692 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.127 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.127 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.229 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.229 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.241 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.242 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.252 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.252 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.255 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.255 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.260 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.260 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.266 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.266 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.271 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.271 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.274 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.274 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.277 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.277 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.279 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.279 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.282 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-31 14:34:44.282 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-31 14:34:44.284 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: DESeq, gtf_to_exons, select_metadata_cols, cluster_juncs, rseqc_RNA_fragment_size, fastqc2, rseqc_junction_annotation, rseqc_read_GC, salmon_quantification, gencode_genemap, rseqc_mismatch_profile, gtf_to_bed, get_packages, star_genome_gen, create_groupfiles, leafcutter, rseqc_inner_distance, fastp, STAR_2pass_indv, star, genome_download, salmon_index_gen, decoy_gen, salmon, Star_genome_gen, rseqc, create_gene_map, rseqc_clipping_profile, sam_sort_index, rseqc_read_distribution, fastqc, convert_juncs, multiqc_post_star_salmon, salmon_index, rseqc_bam_stat, rseqc_read_duplication
+Jan-31 14:34:44.285 [main] DEBUG nextflow.Session - Ignite dataflow network (24)
+Jan-31 14:34:44.290 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc
+Jan-31 14:34:44.290 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /media/data/Jon/nextflow_pd/Star_2_pass_by_indv/../../ASAP_bulk_fastqs/; pattern: *R{1,2}*.fastq.gz; options: [:]
+Jan-31 14:34:44.291 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > get_packages
+Jan-31 14:34:44.292 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastp
+Jan-31 14:34:44.292 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > genome_download
+Jan-31 14:34:44.293 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc2
+Jan-31 14:34:44.293 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star_genome_gen
+Jan-31 14:34:44.295 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > star
+Jan-31 14:34:44.297 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gtf_to_bed
+Jan-31 14:34:44.298 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > sam_sort_index
+Jan-31 14:34:44.299 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > rseqc_read_distribution
+Jan-31 14:34:44.299 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > decoy_gen
+Jan-31 14:34:44.300 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > salmon_index
+Jan-31 14:34:44.301 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > salmon_quantification
+Jan-31 14:34:44.302 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multiqc_post_star_salmon
+Jan-31 14:34:44.303 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > create_gene_map
+Jan-31 14:34:44.304 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > select_metadata_cols
+Jan-31 14:34:44.305 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DESeq
+Jan-31 14:34:44.305 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > convert_juncs
+Jan-31 14:34:44.306 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > cluster_juncs
+Jan-31 14:34:44.307 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > gtf_to_exons
+Jan-31 14:34:44.309 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > create_groupfiles
+Jan-31 14:34:44.309 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > leafcutter
+Jan-31 14:34:44.310 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jan-31 14:34:44.310 [main] DEBUG nextflow.Session - Session await
+Jan-31 14:34:45.128 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [29/47ef40] Cached process > genome_download
+Jan-31 14:34:45.197 [Actor Thread 36] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=768; maxQueueSize=2304; keepAlive=1m
+Jan-31 14:34:45.692 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-31 14:34:45.700 [Task submitter] INFO  nextflow.Session - [18/c899b6] Submitted process > fastqc (127)
+Jan-31 14:34:45.783 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-31 14:34:45.784 [Task submitter] INFO  nextflow.Session - [d7/597ac0] Submitted process > fastqc (237)
+Jan-31 14:34:45.839 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-31 14:34:45.839 [Task submitter] INFO  nextflow.Session - [71/717393] Submitted process > fastqc (151)
+Jan-31 14:34:50.272 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Jan-31 14:34:50.300 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] fastp
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: R_packs_finished
+  port 2: (cntrl) -     ; channel: $
+
+[process] fastqc2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] star
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: genome_dir
+  port 2: (cntrl) -     ; channel: $
+
+[process] sam_sort_index
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: data
+  port 1: (cntrl) -     ; channel: $
+
+[process] rseqc_read_distribution
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bams
+  port 1: (value) OPEN  ; channel: bed_model
+  port 2: (cntrl) -     ; channel: $
+
+[process] salmon_index
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: gentrome
+  port 1: (value) OPEN  ; channel: decoys
+  port 2: (cntrl) -     ; channel: $
+
+[process] salmon_quantification
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: whole_index
+  port 1: (queue) OPEN  ; channel: -
+  port 2: (cntrl) -     ; channel: $
+
+[process] multiqc_post_star_salmon
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: salmon_files
+  port 1: (value) OPEN  ; channel: star_files
+  port 2: (value) bound ; channel: file_dir
+  port 3: (cntrl) -     ; channel: $
+
+[process] select_metadata_cols
+  status=ACTIVE
+  port 0: (value) bound ; channel: meta_csv
+  port 1: (value) bound ; channel: meta_key
+  port 2: (value) OPEN  ; channel: pack_done_val
+  port 3: (cntrl) -     ; channel: $
+
+[process] DESeq
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: quant_dirs
+  port 1: (value) OPEN  ; channel: metadata_cols
+  port 2: (value) OPEN  ; channel: gencodetx2gene
+  port 3: (cntrl) -     ; channel: $
+
+[process] convert_juncs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: sj_loc
+  port 1: (value) OPEN  ; channel: sj_tabs
+  port 2: (cntrl) -     ; channel: $
+
+[process] cluster_juncs
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: junc_list
+  port 1: (cntrl) -     ; channel: $
+
+[process] create_groupfiles
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: count_file
+  port 1: (value) OPEN  ; channel: metadata_cols_path
+  port 2: (cntrl) -     ; channel: $
+
+[process] leafcutter
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: count_file
+  port 1: (queue) OPEN  ; channel: group_files
+  port 2: (value) OPEN  ; channel: exon_file
+  port 3: (cntrl) -     ; channel: $
+
+Jan-31 14:34:50.305 [main] DEBUG nextflow.Session - Session await > all process finished
+Jan-31 14:34:50.318 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-31 14:34:50.326 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (3)
+Jan-31 14:34:50.469 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:50.675 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:50.925 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:51.114 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:51.320 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:51.524 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:51.867 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:52.555 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:52.788 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:52.984 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:53.205 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:53.403 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:53.632 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:53.832 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:54.036 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:54.248 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:54.462 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:54.678 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:54.881 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:55.081 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:55.312 [SIGINT handler] INFO  nextflow.Session - Adieu
+Jan-31 14:34:56.503 [SIGINT handler] INFO  nextflow.Session - Adieu
