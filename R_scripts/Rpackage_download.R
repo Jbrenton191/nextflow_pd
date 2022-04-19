@@ -26,3 +26,5 @@ if (!requireNamespace("leafcutter", quietly = TRUE)) devtools::install_github("d
 if (!requireNamespace("rtracklayer", quietly = TRUE)) BiocManager::install("rtracklayer")
 
 if (!requireNamespace("GenomicRanges", quietly = TRUE)) BiocManager::install("GenomicRanges")
+
+if (!requireNamespace("GenomicFeatures", quietly = TRUE)) BiocManager::install("GenomicFeatures")

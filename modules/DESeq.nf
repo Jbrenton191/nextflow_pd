@@ -21,6 +21,6 @@ publishDir "${projectDir}/output/DESeq", mode: 'move', overwrite: true
     gencode_tx2gene="${projectDir}/output/Salmon/${gencodetx2gene.name}"
     
     """
-    Rscript ${projectDir}/R_scripts/DESeq.R ${projectDir}/output/Salmon $meta_cols $gencode_tx2gene
+    Rscript ${projectDir}/R_scripts/DESeq.R ${projectDir}/output/Salmon $meta_cols $gencode_tx2gene ${projectDir}/hg38-blacklist.v2.bed.gz
     """
 }

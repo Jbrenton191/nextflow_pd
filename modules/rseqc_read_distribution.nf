@@ -1,13 +1,14 @@
 process rseqc_read_distribution {
 echo true
 
-conda 'python=2.7 rseqc'
+// conda 'python=2.7.14 bioconda::rseqc'
+// conda "${projectDir}/rseqc_env.yml"
 
 publishDir "${projectDir}/output/Samtools_Rseqc", mode: 'copy', overwrite: true
 
 input:
 path(bams)
-path(bed_model)
+each(bed_model)
 
 output:
 path("*")

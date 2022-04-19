@@ -4,10 +4,11 @@ library(Biostrings)
 library(GenomicRanges)
 library(GenomicFeatures)
 
-arguments <- parse_args(OptionParser(), positional_arguments = 1)
+arguments <- parse_args(OptionParser(), positional_arguments = 2)
 gtf_file<-arguments$args[1]
+path_to_ENCODE_blacklist<-arguments$args[2]
 
-path_to_ENCODE_blacklist<-"/home/jbrenton/nextflow_pd/hg38-blacklist.v2.bed.gz"
+# path_to_ENCODE_blacklist<-"../../../hg38-blacklist.v2.bed.gz"
 
 B_list_granges<-rtracklayer::import(path_to_ENCODE_blacklist)
 
@@ -27,4 +28,6 @@ blist_genes_no_vers<-gsub("^(ENSG.*)\\..*$", "\\1", blist_genes)
 
 blist_genes_no_vers<-unique(blist_genes_no_vers)
 
-write_csv(x = blist_genes_no_vers, file =blist_genes_no_vers, col_names = F)
+blist_genes_no_vers<-tibble(blist_genes_no_vers)
+
+write_csv(x = blist_genes_no_vers, file ="blist_genes_no_vers.csv", col_names = T)
