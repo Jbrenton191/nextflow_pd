@@ -4,7 +4,7 @@ process DESeq {
 myDir3 = file("${projectDir}/output/DESeq")
 myDir3.mkdirs()
 
-publishDir "${projectDir}/output/DESeq", mode: 'move', overwrite: true
+publishDir "${projectDir}/output/DESeq", mode: 'copy', overwrite: true
 
     input:
     path(quant_dirs)
