@@ -1,10 +1,8 @@
 nextflow.enable.dsl=2
 
-//  change below:
-	params.data="${projectDir}/../R1_001/*R{1,2}*.fastq.gz"
 //   params.data="${projectDir}/../../Regina_raw_fastqs/*R{1,3}*.fastq.gz"
 //   params.salmon_dir = "${projectDir}/output/Salmon/"
-//     params.data="${projectDir}/../../ASAP_bulk_fastqs/*R{1,2}*.fastq.gz"  
+     params.data="${projectDir}/../../ASAP_bulk_fastqs/*R{1,2}*.fastq.gz"  
 
      params.metadata_csv= "${projectDir}/../ASAP_samples_master_spreadsheet_25.8.21.csv"
      params.metadata_key= "${projectDir}/../key_for_metadata.txt"
@@ -50,46 +48,78 @@ include { rseqc_RNA_fragment_size } from './modules/rseqc_RNA_fragment_size'
 
 
 workflow {
-data=Channel.fromFilePairs("${params.data}")
+// data=Channel.fromFilePairs("${params.data}")
 
 
-fastqc(data)
-get_packages()
-output_dir=Channel.value("${baseDir}/output")
-fastp(data, get_packages.out.pack_done_val)
-genome_download()
-fastqc2(fastp.out.reads)
+// fastqc(data)
+//  get_packages()
+// output_dir=Channel.value("${baseDir}/output")
+// fastp(data, get_packages.out.pack_done_val)
+//  genome_download()
+// fastqc2(fastp.out.reads)
+// star_genome_gen(genome_download.out.fasta, genome_download.out.gtf)
 
-/*
-star_genome_gen(genome_download.out.fasta, genome_download.out.gtf)
-star(fastp.out.reads, star_genome_gen.out.gdir_val)
 
-gtf_to_bed(genome_download.out.gtf)
-sam_sort_index(star.out.bams)
-rseqc_read_distribution(sam_sort_index.out.sorted_bams, gtf_to_bed.out.bed_model)
+// star(fastp.out.reads, star_genome_gen.out.gdir_val)
 
-decoy_gen(genome_download.out.fasta, genome_download.out.transcripts)
-salmon_index(decoy_gen.out.gentrome, decoy_gen.out.decoys)
-salmon_quantification(salmon_index.out.whole_index.collect(), fastp.out.reads)
+// data2=Channel.fromFilePairs("${projectDir}/output/missing_star_files/*{1,2}*.gz")
+// data2.view()
 
-multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star.out.sj_tabs2.collect(), output_dir)
+// gdir="${projectDir}/output/STAR/genome_dir"
+// println "$gdir"
+// star(data2, gdir)
 
-create_gene_map(genome_download.out.transcripts)
+// data3=Channel.fromFilePairs("${projectDir}/output/fastp/*{1,2}*.gz")
 
- select_metadata_cols(params.metadata_csv, params.metadata_key, get_packages.out.pack_done_val)
+// gtf_to_bed(genome_download.out.gtf)
 
- DESeq(salmon_quantification.out.quant_dirs.collect(), select_metadata_cols.out.metadata_selected_cols, create_gene_map.out.gene_map)
+// star_bams=Channel.fromPath("${projectDir}/output/STAR/align/*bam")
+// sam_sort_index(star_bams)
+// rseqc_read_distribution(sam_sort_index.out.sorted_bams.collect(), gtf_to_bed.out.bed_model)
+
+sorted_bams=Channel.fromPath( "${projectDir}/output/Samtools_Rseqc/*.bam")
+// sorted_bams.collect().view()
+// data=sorted_bams.take( 4 )
+// data.view()
+// bed_model=Channel.fromPath( "${projectDir}/output/Samtools_Rseqc/*.bed")
+bed_model=Channel.value( "${projectDir}/output/Samtools_Rseqc/*.bed")
+// bed_model.view()
+rseqc_read_distribution(sorted_bams, bed_model)
+// rseqc_read_distribution(data, bed_model)
+
+
+
+
+// decoy_gen(genome_download.out.fasta, genome_download.out.transcripts)
+// salmon_index(decoy_gen.out.gentrome, decoy_gen.out.decoys)
+// salmon_index=Channel.fromPath("${projectDir}/output/Salmon/salmon_index")
+// salmon_quantification(salmon_index.collect(), data3)
+
+// multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star.out.sj_tabs2.collect(), output_dir)
+
+// create_gene_map(genome_download.out.transcripts)
+
+// select_metadata_cols(params.metadata_csv, params.metadata_key, get_packages.out.pack_done_val)
+
+// DESeq(salmon_quantification.out.quant_dirs.collect(), select_metadata_cols.out.metadata_selected_cols, create_gene_map.out.gene_map)
 
 //star.out.sj_tabs2.view {"individual sj tabs : $it"}
 //star.out.sj_tabs2.collect().view {"individual sj tabs : $it"}
 
-convert_juncs(star.out.sj_loc, star.out.sj_tabs2.collect())
-cluster_juncs(convert_juncs.out.junc_list)
+/*
+sj_tabs2=Channel.fromPath("${projectDir}/output/STAR/align/*SJ*")
+sj_loc="${projectDir}/output/STAR/align"
+
+convert_juncs(sj_loc, sj_tabs2.collect())
+cluster_juncs(convert_juncs.out.junc_list.collect())
 gtf_to_exons(genome_download.out.gtf)
 
  create_groupfiles(cluster_juncs.out.counts_file, select_metadata_cols.out.metadata_selected_cols)
  leafcutter(cluster_juncs.out.counts_file, create_groupfiles.out.gf_out, gtf_to_exons.out.exon_file)
 
+*/
+
+/*
 rseqc_bam_stat(bams)
 rseqc_clipping_profile(bams
 rseqc_inner_distance(bams, bed_model)
@@ -101,4 +131,5 @@ rseqc_RNA_fragment_size(bams, bed_model)
 */
 
 // multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star.out.sj_tabs2.collect(), output_dir)
+
 }

@@ -1,9 +1,9 @@
 process gtf_to_exons {
 
-myDir = file("${projectDir}/output/leafcutter")
+myDir = file("${params.output}/leafcutter")
 myDir.mkdirs()
 
-publishDir "${projectDir}/output/leafcutter", mode: 'copy', overwrite: true
+publishDir "${params.output}/leafcutter", mode: 'copy', overwrite: true
 
         input:
         path(gtf)

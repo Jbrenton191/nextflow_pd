@@ -1,6 +1,6 @@
 process cluster_juncs {
 
-publishDir "${projectDir}/output/leafcutter", mode: 'copy', overwrite: true
+publishDir "${params.output}/leafcutter", mode: 'copy', overwrite: true
 
       conda 'python=2.7.14'
 

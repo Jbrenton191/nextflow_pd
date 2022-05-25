@@ -2,10 +2,10 @@ process multiqc_post_star_salmon {
 
 cache = 'lenient'
 
-myDir3 = file("${projectDir}/output/multiqc")
+myDir3 = file("${params.output}/multiqc")
 myDir3.mkdir()
 
-publishDir "${projectDir}/output/multiqc", mode: 'copy', overwrite: true
+publishDir "${params.output}/multiqc", mode: 'copy', overwrite: true
 
     input:
     path(salmon_files)

@@ -30,7 +30,7 @@ convert_STAR_SJ_to_junc <- function(sj_dir_path, output_path, filter_out_blackli
   for(i in 1:length(paths)){
     
     sample_name <- paths[i] %>%
-      str_replace("/.*/", "") %>%
+      str_replace("/.*/", "") %>%convert_STAR_SJ_to_junc
       str_replace("_SJ.out.tab", "")
     
     cat("Loading splice junctions from:", paths[i],"\n")
@@ -99,16 +99,16 @@ convert_STAR_SJ_to_junc <- function(sj_dir_path, output_path, filter_out_blackli
   }
   
   # write a .txt file with each
-  #junc_df <- tibble(junc_file_name = list.files(path = output_path, pattern = "_SJ_leafcutter.junc", full.names = TRUE))
+ # junc_df <- tibble(junc_file_name = list.files(path = output_path, pattern = "_SJ_leafcutter.junc", full.names = TRUE))
   
-  #write_delim(junc_df,
-  #            path = str_c(output_path, "/list_juncfiles.txt"),
-   #           delim = "\t",
-    #          col_names = F)
+ # write_delim(junc_df,
+ #             path = str_c(output_path, "/list_juncfiles.txt"),
+ #             delim = "\t",
+ #             col_names = F)
   
 }
 
-convert_STAR_SJ_to_junc(sj_dir_path, output_path, filter_out_blacklist_regions=T, path_to_ENCODE_blacklist = blacklist_path)
+convert_STAR_SJ_to_junc(sj_dir_path, output_path, filter_out_blacklist_regions=F)
 
 junc_df <- tibble(junc_file_name = list.files(path = output_path,
                                               pattern = "_SJ_leafcutter.junc", full.names = TRUE))

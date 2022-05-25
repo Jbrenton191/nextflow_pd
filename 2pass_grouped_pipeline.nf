@@ -1,12 +1,14 @@
 nextflow.enable.dsl=2
 
-   params.data="${baseDir}/../ASAP_bulk_fastqs/*R{1,2}*.fastq.gz"
+ //  params.data="${projectDir}/../ASAP_bulk_fastqs/*R{1,2}*.fastq.gz"
    params.salmon_dir = "${projectDir}/output/Salmon/"
    params.metadata_csv= "${projectDir}/ASAP_samples_master_spreadsheet_25.8.21.csv"
    params.metadata_key= "${projectDir}/key_for_metadata.txt"
 
-   output_dir = "${baseDir}/output"
+ params.data="${projectDir}/Star_2_pass_by_indv/output/fastp/*{1,2}*.fastq.gz"  
 
+   // output_dir = "${baseDir}/output"
+   params.output= "${projectDir}/output_merge_2pass"
 
 include { get_packages } from './modules/get_packages'
 include { genome_download } from './modules/gencode_genome_download'
@@ -38,45 +40,45 @@ include { leafcutter } from './modules/leafcutter'
 
 workflow {
 
-//data=Channel.fromFilePairs("${params.data}")
+data=Channel.fromFilePairs("${params.data}")
+data=data.take(6)
  get_packages()
+ fastqc(data)
 //output_dir=Channel.value("${baseDir}/output")
-//fastp(data, get_packages.out.pack_done_val)
- genome_download()
+// fastp(data, get_packages.out.pack_done_val)
+genome_download()
 
-/*
-fastqc(fastp.out.reads)
+// fastqc(fastp.out.reads)
 star_genome_gen(genome_download.out.fasta, genome_download.out.gtf)
-star_1(fastp.out.reads, star_genome_gen.out.gdir_val)
-star_merge(star_1.out.sj_loc, star_1.out.sj_tabs.toList())
-star_2(fastp.out.reads, star_merge.out.merged_tab)
+// star_1(fastp.out.reads, star_genome_gen.out.gdir_val)
+star_1(data, star_genome_gen.out.gdir)
 
-// gtf_to_bed(genome_download.out.gtf)
-// sam_sort_index(star_2.out.bams)
+sj_loc="${params.output}/STAR/align"
+star_merge(sj_loc, star_1.out.sj_tabs.collect())
+// star_2(fastp.out.reads, star_merge.out.merged_tab)
+star_2(data, star_merge.out.merged_tab)
+
+gtf_to_bed(genome_download.out.gtf)
+sam_sort_index(star_2.out.bams)
 // rseqc(gtf_to_bed.out.bed_model, sam_sort_index.out.sorted_bams, sam_sort_index.out.bam_dir, sam_sort_index.out.bam_indexes.collect())
 
-*/
-data=Channel.fromFilePairs("/data/RNAseq_PD/tissue_polyA_samples/QC/fastp/*R{1,3}*.fastq.gz")
-data2=data.take(5)
- decoy_gen(genome_download.out.fasta, genome_download.out.transcripts)
- salmon_index(decoy_gen.out.gentrome, decoy_gen.out.decoys)
- salmon_quantification(salmon_index.out.whole_index.toList(), data2)
+decoy_gen(genome_download.out.fasta, genome_download.out.transcripts)
+salmon_index(decoy_gen.out.gentrome, decoy_gen.out.decoys)
+// salmon_quantification(salmon_index.out.whole_index.collect(), fastp.out.reads)
+salmon_quantification(salmon_index.out.whole_index.collect(), data)
 
-/*
-multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star_2.out.sj_tabs2.collect(), output_dir)
-
+multiqc_post_star_salmon(salmon_quantification.out.quant_dirs.collect(), star_2.out.sj_tabs2.collect(), params.output)
 
 create_gene_map(genome_download.out.transcripts)
 
 select_metadata_cols(params.metadata_csv, params.metadata_key, get_packages.out.pack_done_val)
+// DESeq(salmon_quantification.out.quant_dirs.collect(), select_metadata_cols.out.metadata_selected_cols, create_gene_map.out.gene_map)
 
-DESeq(salmon_quantification.out.quant_dirs.collect(), select_metadata_cols.out.metadata_selected_cols, create_gene_map.out.gene_map)
-
-convert_juncs(star_2.out.sj_loc, star_2.out.sj_tabs2.toList())
+convert_juncs(sj_loc, star_2.out.sj_tabs2.collect())
 cluster_juncs(convert_juncs.out.junc_list)
 gtf_to_exons(genome_download.out.gtf)
 
 create_groupfiles(cluster_juncs.out.counts_file, select_metadata_cols.out.metadata_selected_cols)
-leafcutter(cluster_juncs.out.counts_file, create_groupfiles.out.gf_out, gtf_to_exons.out.exon_file)
-*/
+// leafcutter(cluster_juncs.out.counts_file, create_groupfiles.out.gf_out, gtf_to_exons.out.exon_file)
+
 }

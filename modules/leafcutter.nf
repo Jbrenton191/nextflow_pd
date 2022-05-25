@@ -1,11 +1,11 @@
 nextflow.enable.dsl=2
 
-myDir = file("${projectDir}/output/leafcutter/diff_splicing")
-myDir.mkdirs()
-
 process leafcutter {
 
-    publishDir "${projectDir}/output/leafcutter/diff_splicing", mode: 'copy', overwrite: true
+myDir = file("${params.output}/leafcutter/diff_splicing")
+myDir.mkdirs()
+
+    publishDir "${params.output}/leafcutter/diff_splicing", mode: 'copy', overwrite: true
 
     input:
     val(count_file)
@@ -18,7 +18,7 @@ process leafcutter {
     
     script:
 //  base_dir="${projectDir}"
-    group_files_dir="${projectDir}/output/metadata_and_groupfiles"
+    group_files_dir="${params.output}/metadata_and_groupfiles"
     """
     Rscript ${projectDir}/R_scripts/leafcutter_diff_splicing.R $count_file $group_files_dir $exon_file ${projectDir}
     """

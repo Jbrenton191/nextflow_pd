@@ -1,6 +1,9 @@
 process STAR_2pass_indv {
 
-publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+myDir = file("${params.output}/STAR/align")
+	myDir.mkdirs()
+
+publishDir "${params.output}/STAR/align", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
@@ -20,7 +23,7 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
         tuple val(sampleID), path('*Log.progress.out'), emit: log_progress
 
 script:
-sj_loc="${projectDir}/output/STAR/align"
+sj_loc="${params.output}/STAR/align"
 """
 STAR --runThreadN 25 \
 --genomeDir $genome_dir \

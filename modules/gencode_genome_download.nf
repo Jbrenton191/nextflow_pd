@@ -1,10 +1,10 @@
 process genome_download {
 
 
-myDir3 = file("${baseDir}/output/reference_downloads")
+myDir3 = file("${params.output}/reference_downloads")
 myDir3.mkdir()
 
-publishDir "${baseDir}/output/reference_downloads", mode: 'copy', overwrite: true
+publishDir "${params.output}/reference_downloads", mode: 'copy', overwrite: true
 
 	output:
 	path("*primary_assembly*.fa"), emit: fasta

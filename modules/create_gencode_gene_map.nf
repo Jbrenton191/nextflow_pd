@@ -2,10 +2,10 @@ nextflow.enable.dsl=2
 process gencode_genemap {
 
 
-myDir3 = file("${projectDir}/output/Salmon")
+myDir3 = file("${params.output}/Salmon")
 myDir3.mkdir()
 
-publishDir "${projectDir}/output/Salmon", mode: 'move', overwrite: true
+publishDir "${params.output}/Salmon", mode: 'move', overwrite: true
 
     input:
     path(transcript_ref)

@@ -1,14 +1,17 @@
 process STAR_2pass_indv {
 
-publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
+myDir2 = file("${params.output}/STAR/align")
+myDir2.mkdirs()
+
+publishDir "${params.output}/STAR/align", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)
     val(genome_dir)
-	
+
     output:
-  	path("*SJ.out.tab"), emit: sj_tabs2
-  	val(sj_loc), emit: sj_loc
+  	path("*SJ.out.tab"), emit: sj_tabs
+  //	val(sj_loc), emit: sj_loc
         path('*BAM_Aligned.sortedByCoord.out.bam'), emit: bams
 
         tuple val(sampleID), path('*sortedByCoord.out.bam'), optional:true, emit: bam_sorted
@@ -20,9 +23,9 @@ publishDir "${baseDir}/output/STAR/align", mode: 'copy', overwrite: true
         tuple val(sampleID), path('*Log.progress.out'), emit: log_progress
 
 script:
-sj_loc="${projectDir}/output/STAR/align"
+// sj_loc="${params.output}/STAR/align"
 """
-STAR --runThreadN 25 \
+STAR --runThreadN 22 \
 --genomeDir $genome_dir \
 --readFilesIn  ${reads[0]}, ${reads[1]} \
 --readFilesCommand zcat \

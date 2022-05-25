@@ -1,10 +1,10 @@
 nextflow.enable.dsl=2
 process DESeq {
 
-myDir3 = file("${projectDir}/output/DESeq")
+myDir3 = file("${params.output}/DESeq")
 myDir3.mkdirs()
 
-publishDir "${projectDir}/output/DESeq", mode: 'copy', overwrite: true
+publishDir "${params.output}/DESeq", mode: 'copy', overwrite: true
 
     input:
     path(quant_dirs)
@@ -17,10 +17,10 @@ publishDir "${projectDir}/output/DESeq", mode: 'copy', overwrite: true
     path("samples_removed_from_DESeq_comparisons_because_of_NAs.csv"), emit: not_used_samples_metadata
 
     script:
-    meta_cols="${projectDir}/output/metadata_and_groupfiles/${metadata_cols.name}"
-    gencode_tx2gene="${projectDir}/output/Salmon/${gencodetx2gene.name}"
+    meta_cols="${params.output}/metadata_and_groupfiles/${metadata_cols.name}"
+    gencode_tx2gene="${params.output}/Salmon/${gencodetx2gene.name}"
     
     """
-    Rscript ${projectDir}/R_scripts/DESeq.R ${projectDir}/output/Salmon $meta_cols $gencode_tx2gene ${projectDir}/hg38-blacklist.v2.bed.gz
+    Rscript ${projectDir}/R_scripts/DESeq.R ${params.output}/Salmon $meta_cols $gencode_tx2gene ${projectDir}/hg38-blacklist.v2.bed.gz
     """
 }

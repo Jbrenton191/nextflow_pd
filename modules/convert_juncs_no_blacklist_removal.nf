@@ -1,21 +1,21 @@
 process convert_juncs {
 
-myDir = file("${params.output}/leafcutter")
+myDir = file("${params.output}leafcutter")
 myDir.mkdirs()
 
     publishDir "${params.output}/leafcutter", mode: 'copy', overwrite: true
 
     input:
     val(sj_loc)
-    path(sj_tabs)
+//    path(sj_tabs)
 
     output:
     path("*.txt"), emit: junc_list
-    // path("*.junc"), emit: junc_files
+//    path("*.junc"), emit: junc_files
 
     script:
     out_dir="${params.output}/leafcutter"
     """
-    Rscript ${projectDir}/R_scripts/convert_STAR_SJ_to_junc.R $sj_loc ${out_dir} ${projectDir}/hg38-blacklist.v2.bed.gz
+    Rscript ${projectDir}/R_scripts/convert_juncs_no_blacklist_removal.R $sj_loc ${out_dir}
     """
 }

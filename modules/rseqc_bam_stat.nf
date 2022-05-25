@@ -1,9 +1,14 @@
 process rseqc_bam_stat {
 echo true
 
-conda 'python=2.7 rseqc'
+// conda 'rseqc'
 
-publishDir "${projectDir}/output/Samtools_Rseqc", mode: 'copy', overwrite: true
+myDir = file("${params.output}/Rseqc")
+myDir.mkdir()
+// conda 'python=2.7.14 bioconda::rseqc'
+// conda "${projectDir}/rseqc_env.yml"
+
+publishDir "${params.output}/Rseqc", mode: 'copy', overwrite: true
 
 input:
 path(bams)

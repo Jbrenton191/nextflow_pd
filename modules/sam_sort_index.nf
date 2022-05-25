@@ -1,9 +1,9 @@
 process sam_sort_index {
 
-myDir = file("${projectDir}/output/Samtools_Rseqc")
+myDir = file("${params.output}/Samtools")
 myDir.mkdir()
 
-publishDir "${projectDir}/output/Samtools_Rseqc", mode: 'copy', overwrite: true
+publishDir "${params.output}/Samtools", mode: 'copy', overwrite: true
 
 input:
 path(data)
@@ -14,7 +14,7 @@ path("*.bam"), emit: sorted_bams
 val(bam_dir), emit: bam_dir
 
 script:
-bam_dir="${projectDir}/output/Samtools_Rseqc"
+bam_dir="${params.output}/Samtools"
 """
 name=`echo "$data" | sed 's/_mapped.*//g'`
 samtools sort -m 1000000000 $data -o ./\${name}_Aligned.sortedBysamtools.out.bam

@@ -1,6 +1,6 @@
 process salmon {
 
-publishDir "${projectDir}/output/Salmon", mode: 'copy', overwrite: true
+publishDir "${params.output}/Salmon", mode: 'copy', overwrite: true
 
 	input:
 	path(whole_index)

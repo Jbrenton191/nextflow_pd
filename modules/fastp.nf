@@ -1,8 +1,8 @@
 process fastp {
-  myDir2 = file("${projectDir}/output/fastp")
+  myDir2 = file("${params.output}/fastp")
   myDir2.mkdir()
 
-    publishDir "${projectDir}/output/fastp", mode: 'copy', overwrite: true
+    publishDir "${params.output}/fastp", mode: 'copy', overwrite: true
 
     input:
     tuple val(sampleID), path(reads)

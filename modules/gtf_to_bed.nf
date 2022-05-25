@@ -1,9 +1,9 @@
 process gtf_to_bed {
 
-myDir = file("${projectDir}/output/Samtools_Rseqc")
+myDir = file("${params.output}/Samtools_Rseqc")
 myDir.mkdirs()
 
-publishDir "${projectDir}/output/Samtools_Rseqc", mode: 'copy', overwrite: true
+publishDir "${params.output}/Samtools_Rseqc", mode: 'copy', overwrite: true
 
     input:
     path(gtf_file)

@@ -1,11 +1,11 @@
 process Star_merge {
 
-publishDir "${projectDir}/output/STAR/align", mode: 'copy', overwrite: true
+publishDir "${params.output}/STAR/align", mode: 'copy', overwrite: true
 
 echo true
 
     input:
-    val(sj_loc)
+    path(sj_loc)
     path(sj_tabs)
 
     output:
